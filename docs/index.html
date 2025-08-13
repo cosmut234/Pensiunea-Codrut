@@ -1,0 +1,1213 @@
+ 
+
+
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pensiunea Codruț - Moieciu, România | Bran</title>
+    <meta name="description" content="Pensiune premium în Moieciu, la poalele Munților Bucegi. Cazare de lux cu facilități excelente și priveliști spectaculoase.">
+    <link rel="stylesheet" href="../dist/output.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Custom CSS for animations and effects */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        @keyframes slideUp {
+            from { transform: translateY(50px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+        
+        .fade-in {
+            animation: fadeIn 1s ease-in-out forwards;
+        }
+        
+        .slide-up {
+            animation: slideUp 0.8s ease-out forwards;
+        }
+        
+        .parallax {
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        
+        .glow-on-hover {
+            transition: all 0.3s ease;
+        }
+        
+        .glow-on-hover:hover {
+            box-shadow: 0 0 15px rgba(239, 68, 68, 0.7);
+            transform: translateY(-2px);
+        }
+        
+        .icon-hover {
+            transition: all 0.3s ease;
+        }
+        
+        .icon-hover:hover {
+            transform: scale(1.1);
+            color: #e73939;
+        }
+        
+        .nav-transparent {
+            background-color: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(10px);
+            transition: all 0.3s ease;
+        }
+        
+        .nav-scrolled {
+            background-color: rgba(255, 255, 255, 0.95);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .room-card {
+            transition: all 0.3s ease;
+        }
+        
+        .room-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        
+        .testimonial-slide {
+            transition: opacity 0.5s ease, transform 0.5s ease;
+        }
+        
+        .gallery-item {
+            transition: all 0.3s ease;
+        }
+        
+        .gallery-item:hover {
+            transform: scale(1.02);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+        
+        .lightbox {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.9);
+            z-index: 1000;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        .lightbox-content {
+            max-width: 90%;
+            max-height: 90%;
+        }
+        
+        .lightbox-close {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            color: white;
+            font-size: 30px;
+            cursor: pointer;
+        }
+        
+        .input-field {
+            transition: all 0.3s ease;
+            border-bottom: 2px solid #e5e7eb;
+        }
+        
+        .input-field:focus {
+            border-bottom-color: #ef4444;
+        }
+        
+        .calendar-day {
+            transition: all 0.2s ease;
+        }
+        
+        .calendar-day:hover {
+            background-color: #fee2e2;
+        }
+        
+        .calendar-day.selected {
+            background-color: #ef4444;
+            color: white;
+        }
+        
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .parallax {
+                background-attachment: scroll;
+            }
+            
+            .hero-text {
+                font-size: 2.5rem !important;
+            }
+            
+            .section-title {
+                font-size: 1.8rem !important;
+            }
+        }
+    </style>
+</head>
+<body class="font-sans bg-white text-gray-900">
+    <!-- Navigation -->
+    <nav id="navbar" class="nav-transparent fixed w-full z-50 py-4 px-6 md:px-12">
+        <div class="container mx-auto flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold text-gray-900 flex items-center">
+                <span class="text-red-500">Pensiunea</span> Codruț
+            </a>
+            
+            <div class="hidden md:flex space-x-8">
+                <a href="#home" class="text-gray-900 hover:text-red-500 transition">Acasă</a>
+                <a href="#about" class="text-gray-900 hover:text-red-500 transition">Despre noi</a>
+                <a href="#rooms" class="text-gray-900 hover:text-red-500 transition">Camere</a>
+                <a href="#gallery" class="text-gray-900 hover:text-red-500 transition">Galerie</a>
+                <a href="#contact" class="text-gray-900 hover:text-red-500 transition">Contact</a>
+            </div>
+            
+            <div class="hidden md:block">
+                <a href="#booking" class="bg-red-500 hover:bg-red-600 text-white px-6 py-2 rounded-full glow-on-hover transition">
+                    Rezervă acum
+                </a>
+            </div>
+            
+            <button id="mobile-menu-button" class="md:hidden text-gray-900">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </div>
+        
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white py-4 px-6 shadow-lg">
+            <div class="flex flex-col space-y-4">
+                <a href="#home" class="text-gray-900 hover:text-red-500 transition">Acasă</a>
+                <a href="#about" class="text-gray-900 hover:text-red-500 transition">Despre noi</a>
+                <a href="#rooms" class="text-gray-900 hover:text-red-500 transition">Camere</a>
+                <a href="#gallery" class="text-gray-900 hover:text-red-500 transition">Galerie</a>
+                <a href="#contact" class="text-gray-900 hover:text-red-500 transition">Contact</a>
+                <a href="#booking" class="bg-red-500 hover:bg-red-600 text-white px-6 py-2 rounded-full glow-on-hover transition text-center">
+                    Rezervă acum
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="relative h-screen flex items-center justify-center overflow-hidden">
+        <div class="absolute inset-0 bg-black opacity-40"></div>
+        <div class="parallax bg-cover bg-center absolute inset-0" style="background-image: url('https://mediaim.expedia.com/destination/2/7ee96e7f329e9ad7922d1be157732105.jpg');"></div>
+        
+        <div class="container mx-auto px-6 z-10 text-center slide-up">
+            <h1 class="hero-text text-5xl md:text-7xl font-bold text-white mb-6">
+                Pensiunea <span class="text-red-500">Codruț</span>
+            </h1>
+            <p class="text-xl md:text-2xl text-white mb-8 max-w-2xl mx-auto">
+                Locul unde te simti Acasa, departe de Casa
+            </p>
+           <a href="https://wa.me/40742599860" 
+   class="bg-red-500 hover:bg-red-600 text-white px-8 py-3 rounded-full text-lg font-medium glow-on-hover inline-block transition">
+    Rezervă acum
+</a>
+
+<a href="https://www.google.com/search?tbm=lcl&sxsrf=AE3TifPwq_mY5RwEep0vrbyKbsnZzkUSSA:1755094105737&q=Pensiunea+Codrut+Recenzii&rflfq=1&num=20&stick=H4sIAAAAAAAAAONgkxK2MDU3NzY0MDMwNbQ0NzQzNjG03MDI-IpRMiA1rzizNC81UcE5P6WotEQhKDU5Na8qM3MRK245ADeQHatSAAAA&rldimm=8577310605197163419&hl=ro-RO#lkt=LocalPoiReviews" 
+   target="_blank" 
+   class="bg-red border border-white text-white px-8 py-3 rounded-full text-lg font-medium glow-on-hover inline-block transition mt-4">
+    Vezi recenziile pe Google
+</a>
+
+        </div>
+        
+        <div class="absolute bottom-10 left-0 right-0 text-center">
+            <a href="#about" class="text-white animate-bounce inline-block">
+                <i class="fas fa-chevron-down text-2xl"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16 fade-in">
+                <h2 class="section-title text-3xl md:text-4xl font-bold mb-4">Despre <span class="text-red-500">Pensiunea Codruț</span></h2>
+                <div class="w-20 h-1 bg-red-500 mx-auto mb-6"></div>
+                <p class="text-gray-600 max-w-3xl mx-auto">
+                    O poveste de pasiune și dedicare transformată într-un sanctuar de relaxare și reconectare cu natura.
+                </p>
+            </div>
+            
+            <div class="flex flex-col md:flex-row items-center gap-12">
+                <div class="md:w-1/2 fade-in">
+                    <div class="relative overflow-hidden rounded-xl shadow-lg">
+                        <img src="https://www.meetsun.ro/wp-content/uploads/2017/10/Moieciu-de-sus-Amfiteatru-15.jpg" alt="Pensiunea Codruț" class="w-full h-auto">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-70"></div>
+                        <div class="absolute bottom-0 left-0 p-6 text-white">
+                            <h3 class="text-xl font-semibold">Moieciu, România</h3>
+                            <p>La poalele Munților Bucegi</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="md:w-1/2 slide-up">
+                    <h3 class="text-2xl font-semibold mb-4">Povestea noastră</h3>
+                    <p class="text-gray-600 mb-6">
+                        Pensiunea Codruț a luat naștere din dorința de a crea un spațiu autentic, unde tradiția se îmbină cu confortul modern. Înființată în 2004 de familia Arzoiu, pensiunea a evoluat constant, devenind un punct de referință în turismul din zona Bran-Moieciu.
+                    </p>
+                    
+                    <h3 class="text-2xl font-semibold mb-4">Valorile noastre</h3>
+                    <div class="space-y-4">
+                        <div class="flex items-start">
+                            <div class="bg-red-100 p-2 rounded-full mr-4">
+                                <i class="fas fa-heart text-red-500 icon-hover"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-medium text-gray-900">Pasiune pentru ospitalitate</h4>
+                                <p class="text-gray-600 text-sm">Ne dedicăm cu drag fiecărui oaspete, creând experiențe personalizate.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="bg-red-100 p-2 rounded-full mr-4">
+                                <i class="fas fa-leaf text-red-500 icon-hover"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-medium text-gray-900">Respect pentru natură</h4>
+                                <p class="text-gray-600 text-sm">Folosim materiale eco și promovăm turismul sustenabil.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="bg-red-100 p-2 rounded-full mr-4">
+                                <i class="fas fa-utensils text-red-500 icon-hover"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-medium text-gray-900">Gastronomie autentică</h4>
+                                <p class="text-gray-600 text-sm">Încurajăm rețetele de acasă, cu ajutorul unei bucătării complet utilate.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <a href="#contact" class="mt-8 inline-block border border-red-500 text-red-500 hover:bg-red-500 hover:text-white px-6 py-2 rounded-full transition">
+                        Află mai multe
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rooms Section -->
+    <section id="rooms" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16 fade-in">
+                <h2 class="section-title text-3xl md:text-4xl font-bold mb-4">Camere și <span class="text-red-500">Tarife</span></h2>
+                <div class="w-20 h-1 bg-red-500 mx-auto mb-6"></div>
+                <p class="text-gray-600 max-w-3xl mx-auto">
+                    Spații rafinate, proiectate pentru confort maxim și relaxare. Alege varianta perfectă pentru experiența ta.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Room 1 -->
+                <div class="room-card bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition">
+                    <div class="relative overflow-hidden h-64">
+                        <img src="https://i.postimg.cc/7h1NpgWf/camera.jpg" alt="Camera Dublă Standard" class="w-full h-full object-cover">
+                        <div class="absolute top-4 right-4 bg-red-500 text-white px-3 py-1 rounded-full text-sm font-medium">
+                            Popular
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Camera Dublă Standard</h3>
+                        <p class="text-gray-600 text-sm mb-4">Perfectă pentru un cuplu, cu balcon si baie propie</p>
+                        
+                        <div class="flex items-center mb-4">
+                            <div class="flex mr-4">
+                                <i class="fas fa-user text-gray-400 mr-1"></i>
+                                <span class="text-sm text-gray-600">2 persoane</span>
+                            </div>
+                            <div class="flex">
+                                <i class="fas fa-expand text-gray-400 mr-1"></i>
+                                <span class="text-sm text-gray-600">16 mp</span>
+                            </div>
+                        </div>
+                        
+                        <div class="mb-4">
+                            <span class="text-2xl font-bold text-gray-900">220 RON</span>
+                            <span class="text-sm text-gray-500">/ noapte</span>
+                        </div>
+                        
+                        <a href="https://wa.me/40742599860" class="block w-full bg-red-500 hover:bg-red-600 text-white text-center py-2 rounded-full glow-on-hover transition">
+                            Rezervă acum
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Room 2 -->
+                <div class="room-card bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition">
+                    <div class="relative overflow-hidden h-64">
+                        <img src="https://i.postimg.cc/50Z6VTCt/Whats-App-Image-2025-08-13-at-12-07-04-6960d524.jpg" alt="Camera Family" class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Camera Family</h3>
+                        <p class="text-gray-600 text-sm mb-4">Camera Family dispune de un pat dublu și o canapea extensibilă, oferind confort pentru o familie. Cu balcon si baie propie.</p>
+                        
+                        <div class="flex items-center mb-4">
+                            <div class="flex mr-4">
+                                <i class="fas fa-user text-gray-400 mr-1"></i>
+                                <span class="text-sm text-gray-600">2 Adulti si 2 Copii</span>
+                            </div>
+                            <div class="flex">
+                                <i class="fas fa-expand text-gray-400 mr-1"></i>
+                                <span class="text-sm text-gray-600">25 mp</span>
+                            </div>
+                        </div>
+                        
+                        <div class="mb-4">
+                            <span class="text-2xl font-bold text-gray-900">300 RON</span>
+                            <span class="text-sm text-gray-500">/ noapte</span>
+                        </div>
+                        
+                        <a href="https://wa.me/40742599860" class="block w-full bg-red-500 hover:bg-red-600 text-white text-center py-2 rounded-full glow-on-hover transition">
+                            Rezervă acum
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Room 3 -->
+                <div class="room-card bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition">
+                    <div class="relative overflow-hidden h-64">
+                        <img src="https://www.turistinfo.ro/images/cazare/614285.jpg" alt="Apartament Familial" class="w-full h-full object-cover">
+                        <div class="absolute top-4 right-4 bg-red-500 text-white px-3 py-1 rounded-full text-sm font-medium">
+                            Oferta!
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Inchiriere Integrala</h3>
+                        <p class="text-gray-600 text-sm mb-4">Casa ta, integral, pentru tine.</p>
+                        
+                        <div class="flex items-center mb-4">
+                            <div class="flex mr-4">
+                                <i class="fas fa-user text-gray-400 mr-1"></i>
+                                <span class="text-sm text-gray-600">22 persoane</span>
+                            </div>
+                            <div class="flex">
+                                <i class="fas fa-expand text-gray-400 mr-1"></i>
+                                <span class="text-sm text-gray-600">11 Camere</span>
+                            </div>
+                        </div>
+                        
+                        <div class="mb-4">
+                            <span class="text-2xl font-bold text-gray-900">Cere Oferta!</span>
+                            <span class="text-sm text-gray-500">/ minim 2 nopti</span>
+                        </div>
+                        
+                        <a href="https://wa.me/40742599860" class="block w-full bg-red-500 hover:bg-red-600 text-white text-center py-2 rounded-full glow-on-hover transition">
+                            Rezervă acum
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <a href="tel:+40742599860" class="inline-block border border-red-500 text-red-500 hover:bg-red-500 hover:text-white px-6 py-2 rounded-full transition">
+                    Rezervă-ți vacanța telefonic!
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Facilities Section -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16 fade-in">
+                <h2 class="section-title text-3xl md:text-4xl font-bold mb-4">Facilități</h2>
+                <div class="w-20 h-1 bg-red-500 mx-auto mb-6"></div>
+                <p class="text-gray-600 max-w-3xl mx-auto">
+                    Tot ce ai nevoie pentru o vacanță perfectă într-un singur loc.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
+                <div class="text-center">
+                    <div class="bg-red-100 w-16 h-16 mx-auto rounded-full flex items-center justify-center mb-4 icon-hover">
+                        <i class="fas fa-wifi text-red-500 text-2xl"></i>
+                    </div>
+                    <h4 class="font-medium">Wi-Fi gratuit</h4>
+                </div>
+                
+                <div class="text-center">
+                    <div class="bg-red-100 w-16 h-16 mx-auto rounded-full flex items-center justify-center mb-4 icon-hover">
+                        <i class="fas fa-parking text-red-500 text-2xl"></i>
+                    </div>
+                    <h4 class="font-medium">Parcare privată</h4>
+                </div>
+                
+                <div class="text-center">
+                    <div class="bg-red-100 w-16 h-16 mx-auto rounded-full flex items-center justify-center mb-4 icon-hover">
+                        <i class="fas fa-bowling-ball text-red-500 text-2xl"></i>
+                    </div>
+                    <h4 class="font-medium">Biliard,Air-Hockey,Pinpong</h4>
+                </div>
+                
+                <div class="text-center">
+                    <div class="bg-red-100 w-16 h-16 mx-auto rounded-full flex items-center justify-center mb-4 icon-hover">
+                        <i class="fas fa-hot-tub text-red-500 text-2xl"></i>
+                    </div>
+                    <h4 class="font-medium">Ciubăr</h4>
+                </div>
+                
+                <div class="text-center">
+                    <div class="bg-red-100 w-16 h-16 mx-auto rounded-full flex items-center justify-center mb-4 icon-hover">
+                        <i class="fas fa-fire text-red-500 text-2xl"></i>
+                    </div>
+                    <h4 class="font-medium">Zonă grătar</h4>
+                </div>
+                
+                <div class="text-center">
+                    <div class="bg-red-100 w-16 h-16 mx-auto rounded-full flex items-center justify-center mb-4 icon-hover">
+                        <i class="fas fa-child text-red-500 text-2xl"></i>
+                    </div>
+                    <h4 class="font-medium">Loc de joacă pentru cei mici</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16 fade-in">
+                <h2 class="section-title text-3xl md:text-4xl font-bold mb-4">Părerea <span class="text-red-500">Oaspeților</span></h2>
+                <div class="w-20 h-1 bg-red-500 mx-auto mb-6"></div>
+                <p class="text-gray-600 max-w-3xl mx-auto">
+                    Descoperă experiențele celor care au ales să se relaxeze la Pensiunea Codruț.
+                </p>
+            </div>
+            
+            <div class="max-w-4xl mx-auto relative">
+                <div id="testimonial-slider" class="overflow-hidden">
+                    <div class="flex transition-transform duration-300 ease-in-out">
+                        <!-- Testimonial 1 -->
+                        <div class="testimonial-slide min-w-full px-4">
+                            <div class="bg-white p-8 rounded-xl shadow-md">
+                                <div class="flex items-center mb-6">
+                                    <div class="flex-shrink-0">
+                                        <img src="https://randomuser.me/api/portraits/women/43.jpg" alt="Arina Ungureanu" class="w-12 h-12 rounded-full">
+                                    </div>
+                                    <div class="ml-4">
+                                        <h4 class="font-semibold">Arina Ungureanu</h4>
+                                        <div class="flex text-yellow-400 text-sm">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <p class="text-gray-600 italic">
+                                    "Am petrecut un weekend la pensiunea Codrut si nu am decat cuvinte de lauda. Camere curate, bucatarie utilata complet, curte foarte frumoasa si spatioasa si o comunicare foarte buna cu gazdele care sunt deschise si gata sa indeplineasca orice necesitate. Recomand!"
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <!-- Testimonial 2 -->
+                        <div class="testimonial-slide min-w-full px-4">
+                            <div class="bg-white p-8 rounded-xl shadow-md">
+                                <div class="flex items-center mb-6">
+                                    <div class="flex-shrink-0">
+                                        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Ion Ionescu" class="w-12 h-12 rounded-full">
+                                    </div>
+                                    <div class="ml-4">
+                                        <h4 class="font-semibold">Marius din București
+</h4>
+                                        <div class="flex text-yellow-400 text-sm">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <p class="text-gray-600 italic">
+                                    "Confort super, gazda extraordinara!
+Camerele cu balcon, curățenie impecabila, bucătărie utilata, totul la superlativ."
+                                </p>
+                            </div>
+                        </div>
+                        
+                        <!-- Testimonial 3 -->
+                        <div class="testimonial-slide min-w-full px-4">
+                            <div class="bg-white p-8 rounded-xl shadow-md">
+                                <div class="flex items-center mb-6">
+                                    <div class="flex-shrink-0">
+                                        <img src="https://randomuser.me/api/portraits/women/65.jpg" alt="Elena Dumitrescu" class="w-12 h-12 rounded-full">
+                                    </div>
+                                    <div class="ml-4">
+                                        <h4 class="font-semibold">Raisa din Bucuresti
+</h4>
+                                        <div class="flex text-yellow-400 text-sm">
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star"></i>
+                                            <i class="fas fa-star-half-alt"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <p class="text-gray-600 italic">
+                                    "Am inchiriat Vila Codruț o familie de 10 adulti si 6 copii pentru 4 nopti (inclusiv Crăciunul) și vrem să spunem că la locație găsești mult mai mult decât ai avea nevoie (și pentru copii și pentru adulti) si doamna Andreea se interesează mereu sa fie totul bine pentru toată lumea si deși familia locuiește tot in aceeași vila nu ii simți că ar fi acolo.
+Această vilă îți oferă tot confortul de a te simți ca acasă. O recomandăm cu toată inima.
+Mulțumim doamnei Andreea si familiei."
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Navigation buttons -->
+                <div class="flex justify-center mt-8 space-x-2">
+                    <button id="testimonial-prev" class="w-10 h-10 rounded-full bg-white shadow-md flex items-center justify-center hover:bg-red-500 hover:text-white transition">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <button id="testimonial-next" class="w-10 h-10 rounded-full bg-white shadow-md flex items-center justify-center hover:bg-red-500 hover:text-white transition">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+       </div>
+</section>
+
+<!-- JavaScript for slider -->
+<script>
+const prevBtn = document.getElementById('testimonial-prev');
+const nextBtn = document.getElementById('testimonial-next');
+const slider = document.querySelector('#testimonial-slider .flex');
+const slides = document.querySelectorAll('.testimonial-slide');
+
+let currentIndex = 0;
+
+function updateSlider() {
+  slider.style.transform = `translateX(-${currentIndex * 100}%)`;
+}
+
+nextBtn.addEventListener('click', () => {
+  currentIndex = (currentIndex + 1) % slides.length;
+  updateSlider();
+});
+
+prevBtn.addEventListener('click', () => {
+  currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+  updateSlider();
+});
+</script>
+              
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16 fade-in">
+                <h2 class="section-title text-3xl md:text-4xl font-bold mb-4">Galerie <span class="text-red-500">Foto</span></h2>
+                <div class="w-20 h-1 bg-red-500 mx-auto mb-6"></div>
+                <p class="text-gray-600 max-w-3xl mx-auto">
+                    Explorează atmosfera Pensiunii Codruț și frumusețea zonei Bran-Moieciu.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Gallery Item 1 -->
+                <div class="gallery-item rounded-xl overflow-hidden shadow-md cursor-pointer" onclick="openLightbox('https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80')">
+                    <img src="https://i.postimg.cc/sgGzQ6J1/Whats-App-Image-2025-08-13-at-13-34-03-a0f2c992.jpg" alt="Pensiunea Codruț" class="w-full h-64 object-cover">
+                    <div class="p-4 bg-white">
+                        <h4 class="font-medium">Vedere exterior</h4>
+                    </div>
+                </div>
+                
+                <!-- Gallery Item 2 -->
+                <div class="gallery-item rounded-xl overflow-hidden shadow-md cursor-pointer" onclick="openLightbox('https://images.unsplash.com/photo-1631049307264-da0ec9d70340?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80')">
+                    <img src="https://i.postimg.cc/K8Sqf021/Whats-App-Image-2025-08-13-at-13-34-05-81816511.jpg" alt="Camera dublă" class="w-full h-64 object-cover">
+                    <div class="p-4 bg-white">
+                        <h4 class="font-medium">Camera dublă</h4>
+                    </div>
+                </div>
+                
+                <!-- Gallery Item 3 -->
+                <div class="gallery-item rounded-xl overflow-hidden shadow-md cursor-pointer" onclick="openLightbox('https://images.unsplash.com/photo-1566669437685-b446a27b8bb2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80')">
+                    <img src="https://i.postimg.cc/c4cbTVsr/Whats-App-Image-2025-08-13-at-15-48-54-ff71f885.jpg" alt="Camera superioară" class="w-full h-64 object-cover">
+                    <div class="p-4 bg-white">
+                        <h4 class="font-medium">Camera Family</h4>
+                    </div>
+                </div>
+                
+                <!-- Gallery Item 4 -->
+                <div class="gallery-item rounded-xl overflow-hidden shadow-md cursor-pointer" onclick="openLightbox('https://images.unsplash.com/photo-1596394516093-501ba68a0ba6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80')">
+                    <img src="https://i.postimg.cc/T1R6STm4/Whats-App-Image-2025-08-13-at-15-42-05-1ace851a.jpg" alt="Apartament familial" class="w-full h-64 object-cover">
+                    <div class="p-4 bg-white">
+                        <h4 class="font-medium">Bucatarie</h4>
+                    </div>
+                </div>
+                
+                <!-- Gallery Item 5 -->
+                <div class="gallery-item rounded-xl overflow-hidden shadow-md cursor-pointer" onclick="openLightbox('https://images.unsplash.com/photo-1584132967334-10e028bd69f7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80')">
+                    <img src="https://www.casadinbran.ro/images/2024/02/22/center.jpg" alt="Zona Bran-Moieciu" class="w-full h-64 object-cover">
+                    <div class="p-4 bg-white">
+                        <h4 class="font-medium">Zona Bran-Moieciu</h4>
+                    </div>
+                </div>
+                
+                <!-- Gallery Item 6 -->
+                <div class="gallery-item rounded-xl overflow-hidden shadow-md cursor-pointer" onclick="openLightbox('https://images.unsplash.com/photo-1519046904884-53103b34b206?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80')">
+                    <img src="https://www.turistinfo.ro/images/cazare/1239231.jpg" alt="Restaurant" class="w-full h-64 object-cover">
+                    <div class="p-4 bg-white">
+                        <h4 class="font-medium">Terasa</h4>
+                    </div>
+                </div>
+
+                <!-- Gallery Item 7 -->
+<div class="gallery-item rounded-xl overflow-hidden shadow-md cursor-pointer" onclick="openLightbox('https://i.postimg.cc/Y9k6h0xx/ciubar-mare.jpg')">
+    <img src="https://i.postimg.cc/GhYc23J6/Whats-App-Image-2025-08-13-at-15-56-30-21d723a6.jpg" alt="Ciubăr" class="w-full h-64 object-cover">
+    <div class="p-4 bg-white">
+        <h4 class="font-medium">Ciubăr</h4>
+    </div>
+</div>
+
+<!-- Gallery Item 8 -->
+<div class="gallery-item rounded-xl overflow-hidden shadow-md cursor-pointer" onclick="openLightbox('https://i.postimg.cc/LXvRC2Hh/biliard-mare.jpg')">
+    <img src="https://i.postimg.cc/RhSYgSHN/Whats-App-Image-2025-08-13-at-17-55-04-378ef885.jpg" alt="Biliard" class="w-full h-64 object-cover">
+    <div class="p-4 bg-white">
+        <h4 class="font-medium">Zona Gratar</h4>
+    </div>
+</div>
+
+<!-- Gallery Item 9 -->
+<div class="gallery-item rounded-xl overflow-hidden shadow-md cursor-pointer" onclick="openLightbox('https://i.postimg.cc/vHj8z4St/loc-de-joaca-mare.jpg')">
+    <img src="https://i.postimg.cc/bw9thqDz/Whats-App-Image-2025-08-13-at-16-45-44-313f6540.jpg" alt="Loc de joacă" class="w-full h-64 object-cover">
+    <div class="p-4 bg-white">
+        <h4 class="font-medium">Loc de joacă</h4>
+    </div>
+</div>
+<!-- Gallery Item 10 -->
+<div class="gallery-item rounded-xl overflow-hidden shadow-md cursor-pointer" onclick="openLightbox('https://i.postimg.cc/Y9k6h0xx/ciubar-mare.jpg')">
+    <img src="https://i.postimg.cc/T2J0XgBs/Whats-App-Image-2025-08-13-at-15-56-30-99ce4901.jpg" alt="Ciubăr" class="w-full h-64 object-cover">
+    <div class="p-4 bg-white">
+        <h4 class="font-medium">Grup Sanitar</h4>
+    </div>
+</div>
+
+<!-- Gallery Item 11 -->
+<div class="gallery-item rounded-xl overflow-hidden shadow-md cursor-pointer" onclick="openLightbox('https://i.postimg.cc/LXvRC2Hh/biliard-mare.jpg')">
+    <img src="https://i.postimg.cc/vHt29Jtm/Whats-App-Image-2025-08-13-at-16-20-23-1f964007.jpg" alt="Biliard" class="w-full h-64 object-cover">
+    <div class="p-4 bg-white">
+        <h4 class="font-medium">Biliard</h4>
+    </div>
+</div>
+
+<!-- Gallery Item 12 -->
+<div class="gallery-item rounded-xl overflow-hidden shadow-md cursor-pointer" onclick="openLightbox('https://i.postimg.cc/vHj8z4St/loc-de-joaca-mare.jpg')">
+    <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/19/e1/8f/b2/knock-on-the-door-of.jpg?w=1400&h=800&s=1" alt="Loc de joacă" class="w-full h-64 object-cover">
+    <div class="p-4 bg-white">
+        <h4 class="font-medium">Castelul Bran</h4>
+    </div>
+</div>
+
+            </div>
+            
+            <!-- Video Section -->
+            <div class="mt-16 text-center fade-in">
+                <h3 class="text-2xl font-semibold mb-6">Descoperă atmosfera noastră</h3>
+                <div class="aspect-w-16 aspect-h-9 bg-gray-200 rounded-xl overflow-hidden shadow-md max-w-4xl mx-auto">
+                    <iframe class="w-full h-96" src="https://www.youtube.com/embed/lWXaGnV1mPk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Lightbox -->
+        <div id="lightbox" class="lightbox">
+            <span class="lightbox-close" onclick="closeLightbox()">&times;</span>
+            <img id="lightbox-img" src="" alt="" class="lightbox-content">
+        </div>
+    </section>
+
+    <!-- Booking Section -->
+   
+<div class="flex flex-col items-center gap-6 my-8">
+    <!-- Buton Telefon -->
+    <a href="tel:0742599860" 
+       class="bg-red-500 border-4 border-black text-white font-semibold px-6 py-3 rounded-full hover:bg-red-600 transition">
+         Sună acum - 0742 599 860
+    </a>
+
+    <!-- Buton WhatsApp -->
+    <a href="https://wa.me/40742599860" target="_blank"
+       class="bg-red-500 border-4 border-white text-white font-semibold px-6 py-3 rounded-full hover:bg-red-600 transition">
+         WhatsApp - 0742 599 860
+    </a>
+</div>
+
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16 fade-in">
+                <h2 class="section-title text-3xl md:text-4xl font-bold mb-4">Contact <span class="text-red-500">Informații</span></h2>
+                <div class="w-20 h-1 bg-red-500 mx-auto mb-6"></div>
+                <p class="text-gray-600 max-w-3xl mx-auto">
+                    Suntem mereu bucuroși să răspundem la întrebările și solicitările dumneavoastră.
+                </p>
+            </div>
+            
+          
+                
+                <div class="md:w-1/2 slide-up">
+                    <div class="bg-gray-50 p-8 rounded-xl shadow-sm h-full">
+                        <h3 class="text-xl font-semibold mb-6">Date de contact</h3>
+                        
+                        <div class="space-y-6">
+                            <div class="flex items-start">
+                                <div class="bg-red-100 p-3 rounded-full mr-4">
+                                    <i class="fas fa-map-marker-alt text-red-500"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-medium text-gray-900">Adresă</h4>
+                                    <p class="text-gray-600">Strada Principala nr. 418b, Moieciu De Jos, Județul Brașov, România</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="bg-red-100 p-3 rounded-full mr-4">
+                                    <i class="fas fa-phone-alt text-red-500"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-medium text-gray-900">Telefon</h4>
+                                    <p class="text-gray-600">+40 742 599 860</p>
+                                   
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="bg-red-100 p-3 rounded-full mr-4">
+                                    <i class="fas fa-envelope text-red-500"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-medium text-gray-900">Email</h4>
+                                    <p class="text-gray-600">pensiuneacodrut@yahoo.com</p>
+                                   
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="bg-red-100 p-3 rounded-full mr-4">
+                                    <i class="fas fa-clock text-red-500"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-medium text-gray-900">Program recepție</h4>
+                                    <p class="text-gray-600">Luni - Duminică: 08:00 - 22:00</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-8">
+                            <h4 class="font-medium mb-4">Urmărește-ne pe social media</h4>
+                            <div class="flex space-x-4">
+                                <a href="https://www.facebook.com/p/Pensiunea-Codrut-Moieciu-100063481511416/" class="bg-gray-200 hover:bg-red-500 hover:text-white w-10 h-10 rounded-full flex items-center justify-center transition">
+                                    <i class="fab fa-facebook-f"></i>
+                                </a>
+                                <a href="https://www.instagram.com/pensiunea_codrut_moieciudejos/?hl=en" class="bg-gray-200 hover:bg-red-500 hover:text-white w-10 h-10 rounded-full flex items-center justify-center transition">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                                <a href="#" class="bg-gray-200 hover:bg-red-500 hover:text-white w-10 h-10 rounded-full flex items-center justify-center transition">
+                                    <i class="fab fa-tripadvisor"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-12 rounded-xl overflow-hidden shadow-lg fade-in">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2722.264751171304!2d25.3239914!3d45.4877152!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40b3378bd2f43bc1%3A0x7708ba8d06f7bb9b!2sPensiunea+Codrut!5e0!3m2!1sro!2sro!4v1691940000000!5m2!1sro!2sro" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" width="100%" height="450" style="border:1;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Pensiunea Codruț</h3>
+                    <p class="text-gray-400">
+                        Oaza de relaxare la poalele Munților Bucegi. Experiențe memorabile într-un cadru natural spectaculos.
+                    </p>
+                </div>
+                
+                <div>
+                    <h4 class="font-semibold mb-4">Link-uri rapide</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#home" class="text-gray-400 hover:text-white transition">Acasă</a></li>
+                        <li><a href="#about" class="text-gray-400 hover:text-white transition">Despre noi</a></li>
+                        <li><a href="#rooms" class="text-gray-400 hover:text-white transition">Camere</a></li>
+                        <li><a href="#gallery" class="text-gray-400 hover:text-white transition">Galerie</a></li>
+                        <li><a href="#contact" class="text-gray-400 hover:text-white transition">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="font-semibold mb-4">Contact</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li class="flex items-start">
+                            <i class="fas fa-map-marker-alt mt-1 mr-2 text-sm"></i>
+                            <span>Strada Principala nr. 418b, Moieciu, Brașov</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-phone-alt mr-2 text-sm"></i>
+                            <span>+40742599860</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-envelope mr-2 text-sm"></i>
+                            <span>pensiuneacodrut@yahoo.com</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="font-semibold mb-4">Newsletter</h4>
+                    <p class="text-gray-400 mb-4">
+                        Abonează-te pentru a primi oferte exclusive și noutăți.
+                    </p>
+                    <form class="flex">
+                        <input type="email" placeholder="Email" class="px-4 py-2 rounded-l-lg w-full text-gray-900">
+                        <button type="submit" class="bg-red-500 hover:bg-red-600 px-4 py-2 rounded-r-lg">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 text-sm">
+                    &copy; 2023 Pensiunea Codruț. Toate drepturile rezervate.
+                </p>
+                
+                <div class="flex space-x-6 mt-4 md:mt-0">
+                    <a href="https://www.facebook.com/p/Pensiunea-Codrut-Moieciu-100063481511416/" class="text-gray-400 hover:text-white transition">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="https://www.instagram.com/pensiunea_codrut_moieciudejos/?hl=en" class="text-gray-400 hover:text-white transition">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white transition">
+                        <i class="fab fa-tripadvisor"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/40742599860" class="fixed bottom-6 right-6 bg-green-500 hover:bg-green-600 text-white w-14 h-14 rounded-full flex items-center justify-center shadow-lg z-40 transition-transform hover:scale-110">
+        <i class="fab fa-whatsapp text-2xl"></i>
+    </a>
+
+    <!-- Booking Success Modal -->
+    <div id="booking-success" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden">
+        <div class="bg-white p-8 rounded-xl max-w-md w-full mx-4 text-center">
+            <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                <i class="fas fa-check text-green-500 text-2xl"></i>
+            </div>
+            <h3 class="text-2xl font-bold mb-2">Rezervare confirmată!</h3>
+            <p class="text-gray-600 mb-6">
+                Mulțumim pentru rezervarea dumneavoastră. V-am trimis un email cu toate detaliile. Ne vedem curând la Pensiunea Codruț!
+            </p>
+            <button onclick="closeBookingSuccess()" class="bg-red-500 hover:bg-red-600 text-white px-6 py-2 rounded-full transition">
+                Închide
+            </button>
+        </div>
+    </div>
+
+    <!-- Contact Success Modal -->
+    <div id="contact-success" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden">
+        <div class="bg-white p-8 rounded-xl max-w-md w-full mx-4 text-center">
+            <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                <i class="fas fa-check text-green-500 text-2xl"></i>
+            </div>
+            <h3 class="text-2xl font-bold mb-2">Mesaj trimis!</h3>
+            <p class="text-gray-600 mb-6">
+                Vă mulțumim pentru mesaj. Vă vom răspunde în cel mai scurt timp posibil.
+            </p>
+            <button onclick="closeContactSuccess()" class="bg-red-500 hover:bg-red-600 text-white px-6 py-2 rounded-full transition">
+                Închide
+            </button>
+        </div>
+    </div>
+
+    <script>
+        // Mobile menu toggle
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+
+        // Navbar scroll effect
+        window.addEventListener('scroll', function() {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 100) {
+                navbar.classList.add('nav-scrolled');
+            } else {
+                navbar.classList.remove('nav-scrolled');
+            }
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close mobile menu if open
+                    const mobileMenu = document.getElementById('mobile-menu');
+                    if (!mobileMenu.classList.contains('hidden')) {
+                        mobileMenu.classList.add('hidden');
+                    }
+                }
+            });
+        });
+
+        // Testimonial slider
+        let currentTestimonial = 0;
+        const testimonials = document.querySelectorAll('.testimonial-slide');
+        const totalTestimonials = testimonials.length;
+        
+        function showTestimonial(index) {
+            testimonials.forEach((testimonial, i) => {
+                testimonial.style.opacity = i === index ? '1' : '0';
+                testimonial.style.transform = i === index ? 'translateX(0)' : `translateX(${i < index ? '-' : ''}100%)`;
+            });
+        }
+        
+        document.getElementById('testimonial-next').addEventListener('click', function() {
+            currentTestimonial = (currentTestimonial + 1) % totalTestimonials;
+            showTestimonial(currentTestimonial);
+        });
+        
+        document.getElementById('testimonial-prev').addEventListener('click', function() {
+            currentTestimonial = (currentTestimonial - 1 + totalTestimonials) % totalTestimonials;
+            showTestimonial(currentTestimonial);
+        });
+        
+        // Auto-rotate testimonials
+        setInterval(() => {
+            currentTestimonial = (currentTestimonial + 1) % totalTestimonials;
+            showTestimonial(currentTestimonial);
+        }, 5000);
+        
+        // Lightbox functionality
+        function openLightbox(imageSrc) {
+            const lightbox = document.getElementById('lightbox');
+            const lightboxImg = document.getElementById('lightbox-img');
+            
+            lightboxImg.src = imageSrc;
+            lightbox.style.display = 'flex';
+            document.body.style.overflow = 'hidden';
+        }
+        
+        function closeLightbox() {
+            const lightbox = document.getElementById('lightbox');
+            lightbox.style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+        
+        // Close lightbox when clicking outside the image
+        document.getElementById('lightbox').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeLightbox();
+            }
+        });
+        
+        // Booking form functionality
+        document.getElementById('booking-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            document.getElementById('booking-success').classList.remove('hidden');
+        });
+        
+        function closeBookingSuccess() {
+            document.getElementById('booking-success').classList.add('hidden');
+        }
+        
+        // Contact form functionality
+        document.getElementById('contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            document.getElementById('contact-success').classList.remove('hidden');
+        });
+        
+        function closeContactSuccess() {
+            document.getElementById('contact-success').classList.add('hidden');
+        }
+        
+        // Calendar functionality
+        const months = ["Ianuarie", "Februarie", "Martie", "Aprilie", "Mai", "Iunie", "Iulie", "August", "Septembrie", "Octombrie", "Noiembrie", "Decembrie"];
+        const daysInMonth = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
+        
+        let currentDate = new Date();
+        let currentMonth = currentDate.getMonth();
+        let currentYear = currentDate.getFullYear();
+        
+        function renderCalendar() {
+            const calendarDays = document.querySelector('#booking-calendar .grid.grid-cols-7');
+            calendarDays.innerHTML = '';
+            
+            // Add day names
+            const dayNames = ['L', 'M', 'M', 'J', 'V', 'S', 'D'];
+            dayNames.forEach(day => {
+                const dayElement = document.createElement('div');
+                dayElement.className = 'text-sm font-medium text-gray-500 py-1';
+                dayElement.textContent = day;
+                calendarDays.appendChild(dayElement);
+            });
+            
+            // Get first day of month
+            const firstDay = new Date(currentYear, currentMonth, 1).getDay();
+            // Adjust for Monday as first day (0 becomes 6, 1 becomes 0, etc.)
+            const adjustedFirstDay = (firstDay + 6) % 7;
+            
+            // Get days in month (account for leap years)
+            const days = daysInMonth[currentMonth];
+            const isLeapYear = (currentYear % 4 === 0 && currentYear % 100 !== 0) || currentYear % 400 === 0;
+            const febDays = currentMonth === 1 && isLeapYear ? 29 : daysInMonth[1];
+            
+            // Add empty cells for days before the first day of the month
+            for (let i = 0; i < adjustedFirstDay; i++) {
+                const emptyDay = document.createElement('div');
+                emptyDay.className = 'py-2';
+                calendarDays.appendChild(emptyDay);
+            }
+            
+            // Add days of the month
+            for (let i = 1; i <= (currentMonth === 1 ? febDays : days); i++) {
+                const dayElement = document.createElement('div');
+                dayElement.className = 'py-2 calendar-day text-center cursor-pointer';
+                dayElement.textContent = i;
+                
+                // Mark today
+                if (i === currentDate.getDate() && currentMonth === currentDate.getMonth() && currentYear === currentDate.getFullYear()) {
+                    dayElement.classList.add('font-bold', 'text-red-500');
+                }
+                
+                // Add click event
+                dayElement.addEventListener('click', function() {
+                    // Remove selected class from all days
+                    document.querySelectorAll('.calendar-day').forEach(day => {
+                        day.classList.remove('selected');
+                    });
+                    
+                    // Add selected class to clicked day
+                    this.classList.add('selected');
+                    
+                    // Update check-in/check-out fields
+                    const selectedDate = new Date(currentYear, currentMonth, parseInt(this.textContent));
+                    const formattedDate = `${selectedDate.getDate()} ${months[selectedDate.getMonth()]} ${selectedDate.getFullYear()}`;
+                    
+                    if (!document.getElementById('check-in').value || document.getElementById('check-out').value) {
+                        document.getElementById('check-in').value = formattedDate;
+                        document.getElementById('check-out').value = '';
+                    } else {
+                        const checkInDate = new Date(currentYear, currentMonth, parseInt(this.textContent));
+                        const existingCheckIn = document.getElementById('check-in').value;
+                        const existingCheckInParts = existingCheckIn.split(' ');
+                        const existingCheckInDate = new Date(parseInt(existingCheckInParts[2]), months.indexOf(existingCheckInParts[1]), parseInt(existingCheckInParts[0]));
+                        
+                        if (checkInDate > existingCheckInDate) {
+                            document.getElementById('check-out').value = formattedDate;
+                        } else {
+                            document.getElementById('check-in').value = formattedDate;
+                            document.getElementById('check-out').value = '';
+                        }
+                    }
+                    
+                    // Update booking summary
+                    updateBookingSummary();
+                });
+                
+                calendarDays.appendChild(dayElement);
+            }
+            
+            // Update month/year display
+            document.getElementById('current-month').textContent = `${months[currentMonth]} ${currentYear}`;
+        }
+        
+        // Previous month button
+        document.getElementById('prev-month').addEventListener('click', function() {
+            currentMonth--;
+            if (currentMonth < 0) {
+                currentMonth = 11;
+                currentYear--;
+            }
+            renderCalendar();
+        });
+        
+        // Next month button
+        document.getElementById('next-month').addEventListener('click', function() {
+            currentMonth++;
+            if (currentMonth > 11) {
+                currentMonth = 0;
+                currentYear++;
+            }
+            renderCalendar();
+        });
+        
+        // Update booking summary
+        function updateBookingSummary() {
+            const roomType = document.getElementById('room-type').value;
+            const checkIn = document.getElementById('check-in').value;
+            const checkOut = document.getElementById('check-out').value;
+            const guests = document.getElementById('guests').value;
+            
+            if (roomType) {
+                let roomName, roomPrice;
+                
+                switch(roomType) {
+                    case 'double-standard':
+                        roomName = 'Camera Dublă Standard';
+                        roomPrice = 250;
+                        break;
+                    case 'superior':
+                        roomName = 'Camera Superioară';
+                        roomPrice = 320;
+                        break;
+                    case 'family':
+                        roomName = 'Apartament Familial';
+                        roomPrice = 450;
+                        break;
+                }
+                
+                document.getElementById('summary-room').textContent = roomName;
+                
+                if (checkIn && checkOut) {
+                    const checkInParts = checkIn.split(' ');
+                    const checkOutParts = checkOut.split(' ');
+                    
+                    const checkInDate = new Date(parseInt(checkInParts[2]), months.indexOf(checkInParts[1]), parseInt(checkInParts[0]));
+                    const checkOutDate = new Date(parseInt(checkOutParts[2]), months.indexOf(checkOutParts[1]), parseInt(checkOutParts[0]));
+                    
+                    const timeDiff = Math.abs(checkOutDate - checkInDate);
+                    const nights = Math.ceil(timeDiff / (1000 * 60 * 60 * 24));
+                    
+                    document.getElementById('summary-dates').textContent = `${checkIn} - ${checkOut} (${nights} nopți)`;
+                    document.getElementById('summary-total').textContent = `${roomPrice * nights} RON`;
+                } else if (checkIn) {
+                    document.getElementById('summary-dates').textContent = `${checkIn} - Selectează check-out`;
+                    document.getElementById('summary-total').textContent = '-';
+                } else {
+                    document.getElementById('summary-dates').text
