@@ -170,7 +170,7 @@
             </div>
             
             <div class="hidden md:block">
-                <a href="#booking" class="bg-red-500 hover:bg-red-600 text-white px-6 py-2 rounded-full glow-on-hover transition">
+                <a href="https://api.whatsapp.com/send/?phone=40742599860&text&type=phone_number&app_absent=0" class="bg-red-500 hover:bg-red-600 text-white px-6 py-2 rounded-full glow-on-hover transition">
                     Rezervă acum
                 </a>
             </div>
@@ -188,7 +188,7 @@
                 <a href="#rooms" class="text-gray-900 hover:text-red-500 transition">Camere</a>
                 <a href="#gallery" class="text-gray-900 hover:text-red-500 transition">Galerie</a>
                 <a href="#contact" class="text-gray-900 hover:text-red-500 transition">Contact</a>
-                <a href="#booking" class="bg-red-500 hover:bg-red-600 text-white px-6 py-2 rounded-full glow-on-hover transition text-center">
+                <a href="https://api.whatsapp.com/send/?phone=40742599860&text&type=phone_number&app_absent=0" class="bg-red-500 hover:bg-red-600 text-white px-6 py-2 rounded-full glow-on-hover transition text-center">
                     Rezervă acum
                 </a>
             </div>
@@ -874,24 +874,31 @@ prevBtn.addEventListener('click', () => {
                     </ul>
                 </div>
                 
-                <div>
-                    <h4 class="font-semibold mb-4">Newsletter</h4>
-                    <p class="text-gray-400 mb-4">
-                        Abonează-te pentru a primi oferte exclusive și noutăți.
-                    </p>
-                    <form class="flex">
-                        <input type="email" placeholder="Email" class="px-4 py-2 rounded-l-lg w-full text-gray-900">
-                        <button type="submit" class="bg-red-500 hover:bg-red-600 px-4 py-2 rounded-r-lg">
-                            <i class="fas fa-paper-plane"></i>
-                        </button>
-                    </form>
-                </div>
-            </div>
-            
+          
             <div class="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
                 <p class="text-gray-400 text-sm">
-                    &copy; 2023 Pensiunea Codruț. Toate drepturile rezervate.
+                    &copy; 2007 Arzoiu Andrea Elena PFA Pensiunea Codruț. Toate drepturile rezervate.
+                     CUI 22104717
                 </p>
+                <a href="gdpr.html" 
+   style="
+       display: inline-block;
+       padding: 12px 24px;
+       background-color: black;
+       color: white;
+       border-radius: 30px;
+       text-decoration: none;
+       font-weight: bold;
+       transition: all 0.3s ease;
+        margin-top: 20px;
+       margin-bottom: 20px;
+       
+   "
+   onmouseover="this.style.backgroundColor='#333'; this.style.transform='scale(1.05)';"
+   onmouseout="this.style.backgroundColor='black'; this.style.transform='scale(1)';">
+   Politica de confidențialitate
+</a>
+
                 
                 <div class="flex space-x-6 mt-4 md:mt-0">
                     <a href="https://www.facebook.com/p/Pensiunea-Codrut-Moieciu-100063481511416/" class="text-gray-400 hover:text-white transition">
@@ -908,43 +915,26 @@ prevBtn.addEventListener('click', () => {
         </div>
     </footer>
 
+    <!-- Centered clickable ANPC logo -->
+<div class="flex justify-center my-8">
+  <a href="https://anpc.ro/ce-este-sal/" target="_blank" rel="noopener noreferrer">
+    <img
+      src="https://untold-universe-public-resources-dev.s3.eu-west-1.amazonaws.com/neversea/info/anpc.png"
+      alt="Sigla ANPC"
+      class="h-20 w-auto transition-transform duration-300 hover:scale-110"
+    >
+  </a>
+</div>
+
+
     <!-- WhatsApp Floating Button -->
     <a href="https://wa.me/40742599860" class="fixed bottom-6 right-6 bg-green-500 hover:bg-green-600 text-white w-14 h-14 rounded-full flex items-center justify-center shadow-lg z-40 transition-transform hover:scale-110">
         <i class="fab fa-whatsapp text-2xl"></i>
     </a>
 
-    <!-- Booking Success Modal -->
-    <div id="booking-success" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden">
-        <div class="bg-white p-8 rounded-xl max-w-md w-full mx-4 text-center">
-            <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
-                <i class="fas fa-check text-green-500 text-2xl"></i>
-            </div>
-            <h3 class="text-2xl font-bold mb-2">Rezervare confirmată!</h3>
-            <p class="text-gray-600 mb-6">
-                Mulțumim pentru rezervarea dumneavoastră. V-am trimis un email cu toate detaliile. Ne vedem curând la Pensiunea Codruț!
-            </p>
-            <button onclick="closeBookingSuccess()" class="bg-red-500 hover:bg-red-600 text-white px-6 py-2 rounded-full transition">
-                Închide
-            </button>
-        </div>
-    </div>
+   
 
-    <!-- Contact Success Modal -->
-    <div id="contact-success" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden">
-        <div class="bg-white p-8 rounded-xl max-w-md w-full mx-4 text-center">
-            <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
-                <i class="fas fa-check text-green-500 text-2xl"></i>
-            </div>
-            <h3 class="text-2xl font-bold mb-2">Mesaj trimis!</h3>
-            <p class="text-gray-600 mb-6">
-                Vă mulțumim pentru mesaj. Vă vom răspunde în cel mai scurt timp posibil.
-            </p>
-            <button onclick="closeContactSuccess()" class="bg-red-500 hover:bg-red-600 text-white px-6 py-2 rounded-full transition">
-                Închide
-            </button>
-        </div>
-    </div>
-
+   
     <script>
         // Mobile menu toggle
         document.getElementById('mobile-menu-button').addEventListener('click', function() {
@@ -1036,178 +1026,5 @@ prevBtn.addEventListener('click', () => {
             }
         });
         
-        // Booking form functionality
-        document.getElementById('booking-form').addEventListener('submit', function(e) {
-            e.preventDefault();
-            document.getElementById('booking-success').classList.remove('hidden');
-        });
-        
-        function closeBookingSuccess() {
-            document.getElementById('booking-success').classList.add('hidden');
-        }
-        
-        // Contact form functionality
-        document.getElementById('contact-form').addEventListener('submit', function(e) {
-            e.preventDefault();
-            document.getElementById('contact-success').classList.remove('hidden');
-        });
-        
-        function closeContactSuccess() {
-            document.getElementById('contact-success').classList.add('hidden');
-        }
-        
-        // Calendar functionality
-        const months = ["Ianuarie", "Februarie", "Martie", "Aprilie", "Mai", "Iunie", "Iulie", "August", "Septembrie", "Octombrie", "Noiembrie", "Decembrie"];
-        const daysInMonth = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
-        
-        let currentDate = new Date();
-        let currentMonth = currentDate.getMonth();
-        let currentYear = currentDate.getFullYear();
-        
-        function renderCalendar() {
-            const calendarDays = document.querySelector('#booking-calendar .grid.grid-cols-7');
-            calendarDays.innerHTML = '';
-            
-            // Add day names
-            const dayNames = ['L', 'M', 'M', 'J', 'V', 'S', 'D'];
-            dayNames.forEach(day => {
-                const dayElement = document.createElement('div');
-                dayElement.className = 'text-sm font-medium text-gray-500 py-1';
-                dayElement.textContent = day;
-                calendarDays.appendChild(dayElement);
-            });
-            
-            // Get first day of month
-            const firstDay = new Date(currentYear, currentMonth, 1).getDay();
-            // Adjust for Monday as first day (0 becomes 6, 1 becomes 0, etc.)
-            const adjustedFirstDay = (firstDay + 6) % 7;
-            
-            // Get days in month (account for leap years)
-            const days = daysInMonth[currentMonth];
-            const isLeapYear = (currentYear % 4 === 0 && currentYear % 100 !== 0) || currentYear % 400 === 0;
-            const febDays = currentMonth === 1 && isLeapYear ? 29 : daysInMonth[1];
-            
-            // Add empty cells for days before the first day of the month
-            for (let i = 0; i < adjustedFirstDay; i++) {
-                const emptyDay = document.createElement('div');
-                emptyDay.className = 'py-2';
-                calendarDays.appendChild(emptyDay);
-            }
-            
-            // Add days of the month
-            for (let i = 1; i <= (currentMonth === 1 ? febDays : days); i++) {
-                const dayElement = document.createElement('div');
-                dayElement.className = 'py-2 calendar-day text-center cursor-pointer';
-                dayElement.textContent = i;
-                
-                // Mark today
-                if (i === currentDate.getDate() && currentMonth === currentDate.getMonth() && currentYear === currentDate.getFullYear()) {
-                    dayElement.classList.add('font-bold', 'text-red-500');
-                }
-                
-                // Add click event
-                dayElement.addEventListener('click', function() {
-                    // Remove selected class from all days
-                    document.querySelectorAll('.calendar-day').forEach(day => {
-                        day.classList.remove('selected');
-                    });
-                    
-                    // Add selected class to clicked day
-                    this.classList.add('selected');
-                    
-                    // Update check-in/check-out fields
-                    const selectedDate = new Date(currentYear, currentMonth, parseInt(this.textContent));
-                    const formattedDate = `${selectedDate.getDate()} ${months[selectedDate.getMonth()]} ${selectedDate.getFullYear()}`;
-                    
-                    if (!document.getElementById('check-in').value || document.getElementById('check-out').value) {
-                        document.getElementById('check-in').value = formattedDate;
-                        document.getElementById('check-out').value = '';
-                    } else {
-                        const checkInDate = new Date(currentYear, currentMonth, parseInt(this.textContent));
-                        const existingCheckIn = document.getElementById('check-in').value;
-                        const existingCheckInParts = existingCheckIn.split(' ');
-                        const existingCheckInDate = new Date(parseInt(existingCheckInParts[2]), months.indexOf(existingCheckInParts[1]), parseInt(existingCheckInParts[0]));
-                        
-                        if (checkInDate > existingCheckInDate) {
-                            document.getElementById('check-out').value = formattedDate;
-                        } else {
-                            document.getElementById('check-in').value = formattedDate;
-                            document.getElementById('check-out').value = '';
-                        }
-                    }
-                    
-                    // Update booking summary
-                    updateBookingSummary();
-                });
-                
-                calendarDays.appendChild(dayElement);
-            }
-            
-            // Update month/year display
-            document.getElementById('current-month').textContent = `${months[currentMonth]} ${currentYear}`;
-        }
-        
-        // Previous month button
-        document.getElementById('prev-month').addEventListener('click', function() {
-            currentMonth--;
-            if (currentMonth < 0) {
-                currentMonth = 11;
-                currentYear--;
-            }
-            renderCalendar();
-        });
-        
-        // Next month button
-        document.getElementById('next-month').addEventListener('click', function() {
-            currentMonth++;
-            if (currentMonth > 11) {
-                currentMonth = 0;
-                currentYear++;
-            }
-            renderCalendar();
-        });
-        
-        // Update booking summary
-        function updateBookingSummary() {
-            const roomType = document.getElementById('room-type').value;
-            const checkIn = document.getElementById('check-in').value;
-            const checkOut = document.getElementById('check-out').value;
-            const guests = document.getElementById('guests').value;
-            
-            if (roomType) {
-                let roomName, roomPrice;
-                
-                switch(roomType) {
-                    case 'double-standard':
-                        roomName = 'Camera Dublă Standard';
-                        roomPrice = 250;
-                        break;
-                    case 'superior':
-                        roomName = 'Camera Superioară';
-                        roomPrice = 320;
-                        break;
-                    case 'family':
-                        roomName = 'Apartament Familial';
-                        roomPrice = 450;
-                        break;
-                }
-                
-                document.getElementById('summary-room').textContent = roomName;
-                
-                if (checkIn && checkOut) {
-                    const checkInParts = checkIn.split(' ');
-                    const checkOutParts = checkOut.split(' ');
-                    
-                    const checkInDate = new Date(parseInt(checkInParts[2]), months.indexOf(checkInParts[1]), parseInt(checkInParts[0]));
-                    const checkOutDate = new Date(parseInt(checkOutParts[2]), months.indexOf(checkOutParts[1]), parseInt(checkOutParts[0]));
-                    
-                    const timeDiff = Math.abs(checkOutDate - checkInDate);
-                    const nights = Math.ceil(timeDiff / (1000 * 60 * 60 * 24));
-                    
-                    document.getElementById('summary-dates').textContent = `${checkIn} - ${checkOut} (${nights} nopți)`;
-                    document.getElementById('summary-total').textContent = `${roomPrice * nights} RON`;
-                } else if (checkIn) {
-                    document.getElementById('summary-dates').textContent = `${checkIn} - Selectează check-out`;
-                    document.getElementById('summary-total').textContent = '-';
-                } else {
-                    document.getElementById('summary-dates').text
+</script>
+       
