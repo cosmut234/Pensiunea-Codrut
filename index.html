@@ -157,7 +157,7 @@
     <!-- Navigation -->
     <nav id="navbar" class="nav-transparent fixed w-full z-50 py-4 px-6 md:px-12">
         <div class="container mx-auto flex justify-between items-center">
-            <a href="#" class="text-2xl font-bold text-gray-900 flex items-center">
+            <a href="#home" class="text-2xl font-bold text-gray-900 flex items-center">
                 <span class="text-red-500">Pensiunea</span> Codruț
             </a>
             
@@ -175,9 +175,9 @@
                 </a>
             </div>
             
-            <button id="mobile-menu-button" class="md:hidden text-gray-900">
-                <i class="fas fa-bars text-2xl"></i>
-            </button>
+           <button id="mobile-menu-button" class="md:hidden text-gray-900" aria-label="Deschide meniul">
+  <i class="fas fa-bars text-2xl" aria-hidden="true"></i>
+</button>
         </div>
         
         <!-- Mobile menu -->
@@ -198,7 +198,7 @@
     <!-- Hero Section -->
     <section id="home" class="relative h-screen flex items-center justify-center overflow-hidden">
         <div class="absolute inset-0 bg-black opacity-40"></div>
-        <div class="parallax bg-cover bg-center absolute inset-0" style="background-image: url('https://mediaim.expedia.com/destination/2/7ee96e7f329e9ad7922d1be157732105.jpg');"></div>
+        <div class="parallax bg-cover bg-center absolute inset-0" style="background-image: url(img/hero.webp);"></div>
         
         <div class="container mx-auto px-6 z-10 text-center slide-up">
             <h1 class="hero-text text-5xl md:text-7xl font-bold text-white mb-6">
@@ -241,7 +241,7 @@
             <div class="flex flex-col md:flex-row items-center gap-12">
                 <div class="md:w-1/2 fade-in">
                     <div class="relative overflow-hidden rounded-xl shadow-lg">
-                        <img src="https://www.meetsun.ro/wp-content/uploads/2017/10/Moieciu-de-sus-Amfiteatru-15.jpg" alt="Pensiunea Codruț" class="w-full h-auto">
+                        <img src="img/moieciu.webp" alt="Pensiunea Codruț" class="w-full h-auto" loading="lazy">
                         <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-70"></div>
                         <div class="absolute bottom-0 left-0 p-6 text-white">
                             <h3 class="text-xl font-semibold">Moieciu, România</h3>
@@ -312,7 +312,7 @@
                 <!-- Room 1 -->
                 <div class="room-card bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition">
                     <div class="relative overflow-hidden h-64">
-                        <img src="https://i.postimg.cc/7h1NpgWf/camera.jpg" alt="Camera Dublă Standard" class="w-full h-full object-cover">
+                        <img src="img/cameras.webp" alt="Camera Dublă Standard" class="w-full h-full object-cover" loading="lazy">
                         <div class="absolute top-4 right-4 bg-red-500 text-white px-3 py-1 rounded-full text-sm font-medium">
                             Popular
                         </div>
@@ -346,7 +346,7 @@
                 <!-- Room 2 -->
                 <div class="room-card bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition">
                     <div class="relative overflow-hidden h-64">
-                        <img src="https://i.postimg.cc/50Z6VTCt/Whats-App-Image-2025-08-13-at-12-07-04-6960d524.jpg" alt="Camera Family" class="w-full h-full object-cover">
+                        <img src="img/camerad.webp" alt="Camera Family" class="w-full h-full object-cover" loading="lazy">
                     </div>
                     <div class="p-6">
                         <h3 class="text-xl font-semibold mb-2">Camera Family</h3>
@@ -377,7 +377,7 @@
                 <!-- Room 3 -->
                 <div class="room-card bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition">
                     <div class="relative overflow-hidden h-64">
-                        <img src="https://www.turistinfo.ro/images/cazare/614285.jpg" alt="Apartament Familial" class="w-full h-full object-cover">
+                        <img src="img/pensiune.webp" alt="Apartament Familial" class="w-full h-full object-cover" loading="lazy">
                         <div class="absolute top-4 right-4 bg-red-500 text-white px-3 py-1 rounded-full text-sm font-medium">
                             Oferta!
                         </div>
@@ -493,10 +493,10 @@
                             <div class="bg-white p-8 rounded-xl shadow-md">
                                 <div class="flex items-center mb-6">
                                     <div class="flex-shrink-0">
-                                        <img src="https://randomuser.me/api/portraits/women/43.jpg" alt="Arina Ungureanu" class="w-12 h-12 rounded-full">
+                                        <img src="img/madalina.webp" alt="Arina Ungureanu" class="w-12 h-12 rounded-full" loading="lazy">
                                     </div>
                                     <div class="ml-4">
-                                        <h4 class="font-semibold">Arina Ungureanu</h4>
+                                        <h4 class="font-semibold">Madalina B</h4>
                                         <div class="flex text-yellow-400 text-sm">
                                             <i class="fas fa-star"></i>
                                             <i class="fas fa-star"></i>
@@ -507,7 +507,7 @@
                                     </div>
                                 </div>
                                 <p class="text-gray-600 italic">
-                                    "Am petrecut un weekend la pensiunea Codrut si nu am decat cuvinte de lauda. Camere curate, bucatarie utilata complet, curte foarte frumoasa si spatioasa si o comunicare foarte buna cu gazdele care sunt deschise si gata sa indeplineasca orice necesitate. Recomand!"
+                                    "Cea mai frumoasă cabană! ❤️ Totul la superlativ, camerele foarte curate, curtea destul de mare, un loc minunat pentru relaxare alături de cei dragi! Iar gazdele au fost de nota 10+ foarte amabili și simpatici!"
                                 </p>
                             </div>
                         </div>
@@ -517,10 +517,10 @@
                             <div class="bg-white p-8 rounded-xl shadow-md">
                                 <div class="flex items-center mb-6">
                                     <div class="flex-shrink-0">
-                                        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Ion Ionescu" class="w-12 h-12 rounded-full">
+                                        <img src="img/miaela.png" alt="Ion Ionescu" class="w-12 h-12 rounded-full" loading="lazy">
                                     </div>
                                     <div class="ml-4">
-                                        <h4 class="font-semibold">Marius din București
+                                        <h4 class="font-semibold">Mihaela Claudia
 </h4>
                                         <div class="flex text-yellow-400 text-sm">
                                             <i class="fas fa-star"></i>
@@ -532,8 +532,7 @@
                                     </div>
                                 </div>
                                 <p class="text-gray-600 italic">
-                                    "Confort super, gazda extraordinara!
-Camerele cu balcon, curățenie impecabila, bucătărie utilata, totul la superlativ."
+                                   Experiența a fost una deosebită, gazde primitoare şi foarte discrete, curățenie, loc de joacă pentru adulți şi copii. Cam tot ceea ce ai putea cere de la o pensiune pentru a sta fără griji cu trei copii mici si mari. Recomandăm cu căldură!!
                                 </p>
                             </div>
                         </div>
@@ -543,10 +542,10 @@ Camerele cu balcon, curățenie impecabila, bucătărie utilata, totul la supe
                             <div class="bg-white p-8 rounded-xl shadow-md">
                                 <div class="flex items-center mb-6">
                                     <div class="flex-shrink-0">
-                                        <img src="https://randomuser.me/api/portraits/women/65.jpg" alt="Elena Dumitrescu" class="w-12 h-12 rounded-full">
+                                        <img src="img/liana.png" alt="Elena Dumitrescu" class="w-12 h-12 rounded-full" loading="lazy">
                                     </div>
                                     <div class="ml-4">
-                                        <h4 class="font-semibold">Raisa din Bucuresti
+                                        <h4 class="font-semibold">Liana Tofan
 </h4>
                                         <div class="flex text-yellow-400 text-sm">
                                             <i class="fas fa-star"></i>
@@ -558,9 +557,7 @@ Camerele cu balcon, curățenie impecabila, bucătărie utilata, totul la supe
                                     </div>
                                 </div>
                                 <p class="text-gray-600 italic">
-                                    "Am inchiriat Vila Codruț o familie de 10 adulti si 6 copii pentru 4 nopti (inclusiv Crăciunul) și vrem să spunem că la locație găsești mult mai mult decât ai avea nevoie (și pentru copii și pentru adulti) si doamna Andreea se interesează mereu sa fie totul bine pentru toată lumea si deși familia locuiește tot in aceeași vila nu ii simți că ar fi acolo.
-Această vilă îți oferă tot confortul de a te simți ca acasă. O recomandăm cu toată inima.
-Mulțumim doamnei Andreea si familiei."
+                                    O locatie de vis, peisaje superbe.Gazda foarte primitoare, saritoare, dornica sa ajute, oameni deosebiti! Camere frumos amenajate, loc de joaca pentru copiii, bucatarie complet utilata, curatenie ( gasesti la intrare dezinfectant, servetele, masti, inclusiv la fiecare etaj).Pret la cazare de bun simt! Va multumim pentru tot!
                                 </p>
                             </div>
                         </div>
@@ -620,95 +617,95 @@ prevBtn.addEventListener('click', () => {
             
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                 <!-- Gallery Item 1 -->
-                <div class="gallery-item rounded-xl overflow-hidden shadow-md cursor-pointer" onclick="openLightbox('https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80')">
-                    <img src="https://i.postimg.cc/sgGzQ6J1/Whats-App-Image-2025-08-13-at-13-34-03-a0f2c992.jpg" alt="Pensiunea Codruț" class="w-full h-64 object-cover">
+                <div class="gallery-item rounded-xl overflow-hidden shadow-md cursor-pointer" >
+                    <img src="img/biliard.webp" alt="Pensiunea Codruț" class="w-full h-64 object-cover" loading="lazy">
                     <div class="p-4 bg-white">
-                        <h4 class="font-medium">Vedere exterior</h4>
+                        <h4 class="font-medium">Biliard</h4>
                     </div>
                 </div>
                 
                 <!-- Gallery Item 2 -->
-                <div class="gallery-item rounded-xl overflow-hidden shadow-md cursor-pointer" onclick="openLightbox('https://images.unsplash.com/photo-1631049307264-da0ec9d70340?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80')">
-                    <img src="https://i.postimg.cc/K8Sqf021/Whats-App-Image-2025-08-13-at-13-34-05-81816511.jpg" alt="Camera dublă" class="w-full h-64 object-cover">
+                <div class="gallery-item rounded-xl overflow-hidden shadow-md cursor-pointer">
+                    <img src="img/camsim.webp" alt="Camera dublă" class="w-full h-64 object-cover" loading="lazy">
                     <div class="p-4 bg-white">
                         <h4 class="font-medium">Camera dublă</h4>
                     </div>
                 </div>
                 
                 <!-- Gallery Item 3 -->
-                <div class="gallery-item rounded-xl overflow-hidden shadow-md cursor-pointer" onclick="openLightbox('https://images.unsplash.com/photo-1566669437685-b446a27b8bb2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80')">
-                    <img src="https://i.postimg.cc/c4cbTVsr/Whats-App-Image-2025-08-13-at-15-48-54-ff71f885.jpg" alt="Camera superioară" class="w-full h-64 object-cover">
+                <div class="gallery-item rounded-xl overflow-hidden shadow-md cursor-pointer" >
+                    <img src="img/camerad.webp" alt="Camera superioară" class="w-full h-64 object-cover" loading="lazy">
                     <div class="p-4 bg-white">
                         <h4 class="font-medium">Camera Family</h4>
                     </div>
                 </div>
                 
                 <!-- Gallery Item 4 -->
-                <div class="gallery-item rounded-xl overflow-hidden shadow-md cursor-pointer" onclick="openLightbox('https://images.unsplash.com/photo-1596394516093-501ba68a0ba6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80')">
-                    <img src="https://i.postimg.cc/T1R6STm4/Whats-App-Image-2025-08-13-at-15-42-05-1ace851a.jpg" alt="Apartament familial" class="w-full h-64 object-cover">
+                <div class="gallery-item rounded-xl overflow-hidden shadow-md cursor-pointer" >
+                    <img src="img/buc.webp" alt="Apartament familial" class="w-full h-64 object-cover" loading="lazy">
                     <div class="p-4 bg-white">
                         <h4 class="font-medium">Bucatarie</h4>
                     </div>
                 </div>
                 
                 <!-- Gallery Item 5 -->
-                <div class="gallery-item rounded-xl overflow-hidden shadow-md cursor-pointer" onclick="openLightbox('https://images.unsplash.com/photo-1584132967334-10e028bd69f7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80')">
-                    <img src="https://www.casadinbran.ro/images/2024/02/22/center.jpg" alt="Zona Bran-Moieciu" class="w-full h-64 object-cover">
+                <div class="gallery-item rounded-xl overflow-hidden shadow-md cursor-pointer" >
+                    <img src="img/zona.webp" alt="Zona Bran-Moieciu" class="w-full h-64 object-cover" loading="lazy">
                     <div class="p-4 bg-white">
                         <h4 class="font-medium">Zona Bran-Moieciu</h4>
                     </div>
                 </div>
                 
                 <!-- Gallery Item 6 -->
-                <div class="gallery-item rounded-xl overflow-hidden shadow-md cursor-pointer" onclick="openLightbox('https://images.unsplash.com/photo-1519046904884-53103b34b206?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80')">
-                    <img src="https://www.turistinfo.ro/images/cazare/1239231.jpg" alt="Restaurant" class="w-full h-64 object-cover">
+                <div class="gallery-item rounded-xl overflow-hidden shadow-md cursor-pointer">
+                    <img src="img/terasa.webp" alt="Restaurant" class="w-full h-64 object-cover" loading="lazy">
                     <div class="p-4 bg-white">
                         <h4 class="font-medium">Terasa</h4>
                     </div>
                 </div>
 
                 <!-- Gallery Item 7 -->
-<div class="gallery-item rounded-xl overflow-hidden shadow-md cursor-pointer" onclick="openLightbox('https://i.postimg.cc/Y9k6h0xx/ciubar-mare.jpg')">
-    <img src="https://i.postimg.cc/GhYc23J6/Whats-App-Image-2025-08-13-at-15-56-30-21d723a6.jpg" alt="Ciubăr" class="w-full h-64 object-cover">
+<div class="gallery-item rounded-xl overflow-hidden shadow-md cursor-pointer" >
+    <img src="img/ciubar.webp" alt="Ciubăr" class="w-full h-64 object-cover" loading="lazy">
     <div class="p-4 bg-white">
         <h4 class="font-medium">Ciubăr</h4>
     </div>
 </div>
 
 <!-- Gallery Item 8 -->
-<div class="gallery-item rounded-xl overflow-hidden shadow-md cursor-pointer" onclick="openLightbox('https://i.postimg.cc/LXvRC2Hh/biliard-mare.jpg')">
-    <img src="https://i.postimg.cc/RhSYgSHN/Whats-App-Image-2025-08-13-at-17-55-04-378ef885.jpg" alt="Biliard" class="w-full h-64 object-cover">
+<div class="gallery-item rounded-xl overflow-hidden shadow-md cursor-pointer" >
+    <img src="img/gratar.webp" alt="Biliard" class="w-full h-64 object-cover" loading="lazy">
     <div class="p-4 bg-white">
         <h4 class="font-medium">Zona Gratar</h4>
     </div>
 </div>
 
 <!-- Gallery Item 9 -->
-<div class="gallery-item rounded-xl overflow-hidden shadow-md cursor-pointer" onclick="openLightbox('https://i.postimg.cc/vHj8z4St/loc-de-joaca-mare.jpg')">
-    <img src="https://i.postimg.cc/bw9thqDz/Whats-App-Image-2025-08-13-at-16-45-44-313f6540.jpg" alt="Loc de joacă" class="w-full h-64 object-cover">
+<div class="gallery-item rounded-xl overflow-hidden shadow-md cursor-pointer" >
+    <img src="img/joaca.webp" alt="Loc de joacă" class="w-full h-64 object-cover" loading="lazy">
     <div class="p-4 bg-white">
         <h4 class="font-medium">Loc de joacă</h4>
     </div>
 </div>
 <!-- Gallery Item 10 -->
-<div class="gallery-item rounded-xl overflow-hidden shadow-md cursor-pointer" onclick="openLightbox('https://i.postimg.cc/Y9k6h0xx/ciubar-mare.jpg')">
-    <img src="https://i.postimg.cc/T2J0XgBs/Whats-App-Image-2025-08-13-at-15-56-30-99ce4901.jpg" alt="Ciubăr" class="w-full h-64 object-cover">
+<div class="gallery-item rounded-xl overflow-hidden shadow-md cursor-pointer">
+    <img src="img/baie.webp" alt="Ciubăr" class="w-full h-64 object-cover" loading="lazy">
     <div class="p-4 bg-white">
         <h4 class="font-medium">Grup Sanitar</h4>
     </div>
 </div>
 
 <!-- Gallery Item 11 -->
-<div class="gallery-item rounded-xl overflow-hidden shadow-md cursor-pointer" onclick="openLightbox('https://i.postimg.cc/LXvRC2Hh/biliard-mare.jpg')">
-    <img src="https://i.postimg.cc/vHt29Jtm/Whats-App-Image-2025-08-13-at-16-20-23-1f964007.jpg" alt="Biliard" class="w-full h-64 object-cover">
+<div class="gallery-item rounded-xl overflow-hidden shadow-md cursor-pointer">
+    <img src="img/ext.webp" alt="Biliard" class="w-full h-64 object-cover" loading="lazy">
     <div class="p-4 bg-white">
-        <h4 class="font-medium">Biliard</h4>
+        <h4 class="font-medium">Vedere Exterior</h4>
     </div>
 </div>
 
 <!-- Gallery Item 12 -->
-<div class="gallery-item rounded-xl overflow-hidden shadow-md cursor-pointer" onclick="openLightbox('https://i.postimg.cc/vHj8z4St/loc-de-joaca-mare.jpg')">
-    <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/19/e1/8f/b2/knock-on-the-door-of.jpg?w=1400&h=800&s=1" alt="Loc de joacă" class="w-full h-64 object-cover">
+<div class="gallery-item rounded-xl overflow-hidden shadow-md cursor-pointer" >
+    <img src="img/knock-on-the-door-of.jpg" alt="Loc de joacă" class="w-full h-64 object-cover" loading="lazy">
     <div class="p-4 bg-white">
         <h4 class="font-medium">Castelul Bran</h4>
     </div>
@@ -997,11 +994,7 @@ prevBtn.addEventListener('click', () => {
             showTestimonial(currentTestimonial);
         });
         
-        // Auto-rotate testimonials
-        setInterval(() => {
-            currentTestimonial = (currentTestimonial + 1) % totalTestimonials;
-            showTestimonial(currentTestimonial);
-        }, 5000);
+      
         
         // Lightbox functionality
         function openLightbox(imageSrc) {
