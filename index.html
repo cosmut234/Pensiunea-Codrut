@@ -10,6 +10,10 @@
     <meta name="description" content="Pensiune premium în Moieciu, la poalele Munților Bucegi. Cazare de lux cu facilități excelente și priveliști spectaculoase.">
     <link rel="stylesheet" href="../dist/output.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preload" as="image" href="/img/hero.webp" type="image/webp">
+    <link rel="preconnect" href="https://www.youtube.com">
+    <link rel="preconnect" href="https://i.ytimg.com">
+    
     <style>
         /* Custom CSS for animations and effects */
         @keyframes fadeIn {
@@ -972,27 +976,7 @@ prevBtn.addEventListener('click', () => {
             });
         });
 
-        // Testimonial slider
-        let currentTestimonial = 0;
-        const testimonials = document.querySelectorAll('.testimonial-slide');
-        const totalTestimonials = testimonials.length;
-        
-        function showTestimonial(index) {
-            testimonials.forEach((testimonial, i) => {
-                testimonial.style.opacity = i === index ? '1' : '0';
-                testimonial.style.transform = i === index ? 'translateX(0)' : `translateX(${i < index ? '-' : ''}100%)`;
-            });
-        }
-        
-        document.getElementById('testimonial-next').addEventListener('click', function() {
-            currentTestimonial = (currentTestimonial + 1) % totalTestimonials;
-            showTestimonial(currentTestimonial);
-        });
-        
-        document.getElementById('testimonial-prev').addEventListener('click', function() {
-            currentTestimonial = (currentTestimonial - 1 + totalTestimonials) % totalTestimonials;
-            showTestimonial(currentTestimonial);
-        });
+     
         
       
         
