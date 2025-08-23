@@ -1,0 +1,13 @@
+User-agent: *
+Allow: /
+
+# Nu indexa fișierele CSS/JS inutile din folderele de build
+Disallow: /dist/
+Disallow: /node_modules/
+Disallow: /vendor/
+
+# Poze și media ok de indexat
+Allow: /img/
+
+# Sitemap declarat
+Sitemap: https://pensiuneacodrut.com/sitemap.xml
