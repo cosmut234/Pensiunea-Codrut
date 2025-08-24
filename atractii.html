@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="ro" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Top 10 Atracții Turistice lângă Moieciu și Bran | Pensiunea Codruț</title>
+  <meta name="description" content="Descoperă cele mai frumoase locuri de vizitat în jurul Moieciului și Branului: Castelul Bran, Cheile Grădiștei, traseele din Bucegi și multe altele. Ideal pentru vacanțe în munte, drumeții și cultură.">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Custom Styles -->
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+    .hero-bg {
+      background-image: linear-gradient(to bottom, rgba(0,0,0,0.5), rgba(0,0,0,0.8)), url('https://images.unsplash.com/photo-1605489171814-54f7174506c4?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80');
+      background-size: cover;
+      background-position: center;
+    }
+    .card-hover:hover {
+      transform: translateY(-8px);
+      transition: all 0.3s ease-out;
+    }
+    .fade-in {
+      opacity: 0;
+      animation: fadeIn 1s ease-in-out forwards;
+    }
+    @keyframes fadeIn {
+      to { opacity: 1; }
+    }
+    .stagger-fade-in {
+      animation: fadeIn 0.8s ease-in-out forwards;
+    }
+    .stagger-1 { animation-delay: 0.2s; }
+    .stagger-2 { animation-delay: 0.4s; }
+    .stagger-3 { animation-delay: 0.6s; }
+    .stagger-4 { animation-delay: 0.8s; }
+    .stagger-5 { animation-delay: 1s; }
+  </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+  <!-- Navbar -->
+  <nav class="bg-white shadow-md fixed w-full top-0 z-50 transition-all duration-300">
+    <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+      <a href="#" class="text-2xl font-bold text-red-600">Pensiunea Codruț</a>
+      <ul class="hidden md:flex space-x-8 text-gray-700">
+        <li><a href="#atractii" class="hover:text-red-600 transition">Atracții</a></li>
+        <li><a href="#recomandari" class="hover:text-red-600 transition">Recomandări</a></li>
+        <li><a href="#contact" class="hover:text-red-600 transition">Contact</a></li>
+      </ul>
+      <a href="#contact" class="bg-red-600 text-white px-5 py-2 rounded-full hover:bg-red-700 transition">Rezervă acum</a>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero-bg h-[90vh] flex items-center justify-center text-center text-white relative">
+    <div class="max-w-4xl px-6 fade-in">
+      <h1 class="text-4xl md:text-6xl font-bold mb-6 leading-tight">
+        Top 10 Atracții Turistice lângă Moieciu și Bran
+      </h1>
+      <p class="text-lg md:text-xl opacity-90 mb-8">
+        De la Castelul Bran la Cheile Grădiștei și traseele din Bucegi – cele mai frumoase locuri de explorat în inima Carpaților.
+      </p>
+      <a href="#atractii" class="inline-block mt-4 bg-red-600 text-white px-8 py-3 rounded-full hover:bg-red-700 transition transform hover:scale-105">
+        Explorează acum
+      </a>
+    </div>
+  </section>
+
+  <!-- Attractions Section -->
+  <main id="atractii" class="container mx-auto px-6 py-20">
+    <h2 class="text-4xl font-bold text-center text-gray-900 mb-12 fade-in">Descoperă Minunile Zonei</h2>
+
+    <!-- Attractions Grid -->
+    <div class="grid gap-12 md:grid-cols-2 lg:grid-cols-3">
+
+      <!-- 1. Castelul Bran -->
+      <article class="bg-white rounded-xl shadow-lg overflow-hidden card-hover fade-in">
+        <img src="https://images.unsplash.com/photo-1605489171814-54f7174506c4?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Castelul Bran" class="w-full h-56 object-cover">
+        <div class="p-6">
+          <h3 class="text-2xl font-bold text-gray-900 mb-3">Castelul Bran</h3>
+          <p class="text-gray-600 mb-4">
+            Cunoscut internațional ca „Castelul lui Dracula”, acest monument istoric medieval este un simbol al Transilvaniei. Construit în secolul al XIV-lea pentru apărarea frontierelor, oferă vizitatorilor o combinație unică de istorie reală și legendă. Muzeul din interior expune obiecte aparținând reginei Maria și oferă vederi spectaculoase spre Carpați.
+          </p>
+          <a href="https://www.bran-castle.com/" target="_blank" class="text-red-600 hover:underline text-sm">Vezi programul oficial →</a>
+        </div>
+      </article>
+
+      <!-- 2. Cheile Grădiștei -->
+      <article class="bg-white rounded-xl shadow-lg overflow-hidden card-hover fade-in stagger-1">
+        <img src="https://images.unsplash.com/photo-1594215508712-5a428e60492c?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Cheile Grădiștei" class="w-full h-56 object-cover">
+        <div class="p-6">
+          <h3 class="text-2xl font-bold text-gray-900 mb-3">Cheile Grădiștei</h3>
+          <p class="text-gray-600 mb-4">
+            Un complex natural impresionant, unde stâncile verticale se ridică de-a lungul râului Dâmbovița. Ideal pentru drumeții, escaladă sau doar pentru relaxare. În ultimii ani, zona a fost modernizată cu poduri de lemn, scări sigure și platforme de observație. Perfect pentru familii și pasionați de natură.
+          </p>
+          <a href="https://cheilegradistei.ro/" target="_blank" class="text-red-600 hover:underline text-sm">Descoperă traseele →</a>
+        </div>
+      </article>
+
+      <!-- 3. Parcul Național Bucegi -->
+      <article class="bg-white rounded-xl shadow-lg overflow-hidden card-hover fade-in stagger-2">
+        <img src="https://images.unsplash.com/photo-1601758174501-2a394d845843?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Parcul Bucegi" class="w-full h-56 object-cover">
+        <div class="p-6">
+          <h3 class="text-2xl font-bold text-gray-900 mb-3">Parcul Național Bucegi</h3>
+          <p class="text-gray-600 mb-4">
+            O destinație de vis pentru iubitorii de munte. Cu trasee pentru toate nivelurile – de la ușoare plimbări până la ascensiuni provocatoare – Bucegii oferă priveliști uimitoare, flora și fauna protejată și aer curat. Nu rata Cheagul cu frânghii, Babele sau Sfinxul – monumente naturale unice.
+          </p>
+          <a href="https://www.rncb.ro/" target="_blank" class="text-red-600 hover:underline text-sm">Vezi harta oficială →</a>
+        </div>
+      </article>
+
+      <!-- 4. Cetatea Râșnov -->
+      <article class="bg-white rounded-xl shadow-lg overflow-hidden card-hover fade-in stagger-3">
+        <img src="https://images.unsplash.com/photo-1605489171814-54f7174506c4?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Cetatea Râșnov" class="w-full h-56 object-cover">
+        <div class="p-6">
+          <h3 class="text-2xl font-bold text-gray-900 mb-3">Cetatea Râșnov</h3>
+          <p class="text-gray-600 mb-4">
+            O fortăreață medievală construită în secolul al XIII-lea pentru protejarea populației locale. Situată pe un vârf de munte, oferă o vedere panoramică asupra întregii Țări Bârsei. Vizita este educativă și impresionantă, cu tunuri, turnuri de veghe și o fântână istorică.
+          </p>
+          <a href="https://rasnov.ro/cetatea-rasnov/" target="_blank" class="text-red-600 hover:underline text-sm">Program și prețuri →</a>
+        </div>
+      </article>
+
+      <!-- 5. Peștera Dâmbovicioara -->
+      <article class="bg-white rounded-xl shadow-lg overflow-hidden card-hover fade-in stagger-4">
+        <img src="https://images.unsplash.com/photo-1621547930921-9e666f15a392?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Peștera Dâmbovicioara" class="w-full h-56 object-cover">
+        <div class="p-6">
+          <h3 class="text-2xl font-bold text-gray-900 mb-3">Peștera Dâmbovicioara</h3>
+          <p class="text-gray-600 mb-4">
+            Una dintre cele mai spectaculoase peșteri din Carpați, cu stalactite, stalagmite și galerii naturale. Accesibilă doar cu ghid, această excursie este perfectă pentru aventurieri. Temperatura constantă de 4°C face din ea o destinație răcoroasă în vara fierbinte.
+          </p>
+          <a href="https://speleo.org/" target="_blank" class="text-red-600 hover:underline text-sm">Ghid speologic →</a>
+        </div>
+      </article>
+
+      <!-- 6. Rezervația de Urși Zărnești -->
+      <article class="bg-white rounded-xl shadow-lg overflow-hidden card-hover fade-in stagger-5">
+        <img src="https://images.unsplash.com/photo-1548479206-4f5b0f34f5e6?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Rezervația de Urși Zărnești" class="w-full h-56 object-cover">
+        <div class="p-6">
+          <h3 class="text-2xl font-bold text-gray-900 mb-3">Rezervația de Urși Zărnești</h3>
+          <p class="text-gray-600 mb-4">
+            Un sanctuar pentru urși bruni salvați din condiții de captivitate. Aici poți vedea animalele într-un mediu natural, sigur și protejat. Ideal pentru copii și pentru învățarea despre conservarea biodiversității.
+          </p>
+          <a href="https://www.bearsrescue.org/" target="_blank" class="text-red-600 hover:underline text-sm">Suportă proiectul →</a>
+        </div>
+      </article>
+
+      <!-- 7. Plaiul Foii -->
+      <article class="bg-white rounded-xl shadow-lg overflow-hidden card-hover fade-in">
+        <img src="https://images.unsplash.com/photo-1598449439391-544f6d8d5437?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Plaiul Foii" class="w-full h-56 object-cover">
+        <div class="p-6">
+          <h3 class="text-2xl font-bold text-gray-900 mb-3">Plaiul Foii</h3>
+          <p class="text-gray-600 mb-4">
+            Punct de plecare pentru trasee în Bucegi, Plaiul Foii este o zonă verde, lină, ideală pentru relaxare, picnic sau drumeții ușoare. Are cabane, terase și vederi panoramică. Ideal și pentru camping sau petrecerea unui weekend în natură.
+          </p>
+          <a href="https://www.muntele.ro/plaiul-foii/" target="_blank" class="text-red-600 hover:underline text-sm">Trasee recomandate →</a>
+        </div>
+      </article>
+
+      <!-- 8. Satul Peștera -->
+      <article class="bg-white rounded-xl shadow-lg overflow-hidden card-hover fade-in stagger-1">
+        <img src="https://images.unsplash.com/photo-1551009235-4eb1898c9218?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Satul Peștera" class="w-full h-56 object-cover">
+        <div class="p-6">
+          <h3 class="text-2xl font-bold text-gray-900 mb-3">Satul Peștera</h3>
+          <p class="text-gray-600 mb-4">
+            Un sat tradițional românesc, păstrat în stil autentic, cu case de lemn, porți vopsite și o atmosferă de poveste. Ideal pentru fotografii, plimbări liniștite și întâlniri cu localnicii ospitalieri.
+          </p>
+          <a href="https://ro.wikipedia.org/wiki/Peștera_(Brașov)" target="_blank" class="text-red-600 hover:underline text-sm">Descoperă istoria →</a>
+        </div>
+      </article>
+
+      <!-- 9. Mănăstirea Bran -->
+      <article class="bg-white rounded-xl shadow-lg overflow-hidden card-hover fade-in stagger-2">
+        <img src="https://images.unsplash.com/photo-1605489171814-54f7174506c4?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Mănăstirea Bran" class="w-full h-56 object-cover">
+        <div class="p-6">
+          <h3 class="text-2xl font-bold text-gray-900 mb-3">Mănăstirea Bran</h3>
+          <p class="text-gray-600 mb-4">
+            O mănăstire ortodoxă modernă, situată în apropierea Castelului Bran. Loc de reculegere, oferă o atmosferă de pace și spiritualitate. Are o biserică frumoasă, un muzeu și grădini îngrijite.
+          </p>
+          <a href="https://www.protasie.ro/" target="_blank" class="text-red-600 hover:underline text-sm">Program vizite →</a>
+        </div>
+      </article>
+
+      <!-- 10. Valea Moieciului -->
+      <article class="bg-white rounded-xl shadow-lg overflow-hidden card-hover fade-in stagger-3">
+        <img src="https://images.unsplash.com/photo-1598449439391-544f6d8d5437?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Valea Moieciului" class="w-full h-56 object-cover">
+        <div class="p-6">
+          <h3 class="text-2xl font-bold text-gray-900 mb-3">Valea Moieciului</h3>
+          <p class="text-gray-600 mb-4">
+            O zonă liniștită, verde, ideală pentru relaxare, plimbări cu bicicleta sau pescuit. Aici găsești pensiuni tradiționale, ferme ecologice și o comunitate caldă. Ideal pentru o evadare de agitația orașului.
+          </p>
+          <a href="#contact" class="text-red-600 hover:underline text-sm">Rezervă la Pensiunea Codruț →</a>
+        </div>
+      </article>
+
+    </div>
+  </main>
+
+  <!-- Call to Action -->
+  <section id="recomandari" class="bg-gradient-to-r from-red-600 to-red-800 text-white py-20 text-center fade-in">
+    <h2 class="text-4xl font-bold mb-6">Recomandări Personalizate pentru Tine</h2>
+    <p class="max-w-2xl mx-auto text-xl opacity-90 mb-8">
+      La Pensiunea Codruț, nu doar te cazăm – îți planificăm vacanța perfectă. Primitorii noștri oferă informații detaliate despre fiecare atracție, trasee sigure și sfaturi locale.
+    </p>
+    <a href="tel:+40742599860" class="inline-block bg-white text-red-700 px-8 py-4 rounded-full font-semibold hover:bg-gray-100 transition transform hover:scale-105 shadow-lg">
+      📞 Rezervă acum: +40 742 599 860
+    </a>
+  </section>
+
+  <!-- Footer -->
+  <footer id="contact" class="bg-gray-900 text-gray-400 py-12">
+    <div class="container mx-auto px-6 text-center">
+      <h3 class="text-2xl font-bold text-white mb-4">Pensiunea Codruț</h3>
+      <p class="mb-2">📍 Moieciu, Județul Brașov, România</p>
+      <p class="mb-2">📞 <a href="tel:+40742599860" class="hover:text-white transition">+40 742 599 860</a></p>
+      <p class="mb-6">✉️ <a href="mailto:info@pensiuneacodrut.ro" class="hover:text-white transition">info@pensiuneacodrut.ro</a></p>
+      <div class="flex justify-center space-x-6 mb-6">
+        <a href="#" class="hover:text-white transition">Facebook</a>
+        <a href="#" class="hover:text-white transition">Instagram</a>
+        <a href="#" class="hover:text-white transition">Google Maps</a>
+      </div>
+      <p class="text-sm">© 2025 Pensiunea Codruț. Toate drepturile rezervate.</p>
+    </div>
+  </footer>
+
+  <!-- Back to Top Button -->
+  <a href="#" class="fixed bottom-6 right-6 bg-red-600 text-white w-12 h-12 rounded-full flex items-center justify-center shadow-lg hover:bg-red-700 transition opacity-80 hover:opacity-100">
+    ↑
+  </a>
+
+</body>
+</html>
