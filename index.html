@@ -987,10 +987,6 @@ prevBtn.addEventListener('click', () => {
                         loading="lazy"
                         referrerpolicy="no-referrer-when-downgrade"
                     ></iframe>
-                    <div id="mapFallback" class="absolute inset-0 flex flex-col items-center justify-center bg-gray-100 text-gray-600 text-sm gap-3" style="display:none;">
-                        <span>Harta nu s-a încărcat.</span>
-                        <a href="https://maps.google.com/?q=Pensiunea+Codrut" target="_blank" rel="noopener" class="px-4 py-2 bg-red-500 text-white rounded-full text-xs hover:bg-red-600">Deschide în Google Maps</a>
-                    </div>
                     <noscript>
                         <a href="https://maps.google.com/?q=Pensiunea+Codrut" target="_blank" rel="noopener" class="block w-full h-full bg-gray-200 flex items-center justify-center text-sm text-gray-600">Vezi locația pe Google Maps</a>
                     </noscript>
@@ -1166,16 +1162,6 @@ prevBtn.addEventListener('click', () => {
                 closeLightbox();
             }
         });
-                // Fallback pentru iframe hartă dacă Safari/blocare tracker o oprește
-                (function(){
-                    const iframe = document.getElementById('mapFrame');
-                    const fb = document.getElementById('mapFallback');
-                    if(!iframe || !fb) return;
-                    let loaded = false;
-                    iframe.addEventListener('load', () => { loaded = true; });
-                    // Unele blocări nu declanșează onerror pe iframe embed
-                    setTimeout(() => { if(!loaded) fb.style.display='flex'; }, 5000);
-                })();
         
 </script>
        
