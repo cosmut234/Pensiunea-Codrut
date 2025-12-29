@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Moieciu vs. Bran: Unde e mai bine să te cazezi? | Pensiunea Codruț</title>
-  <meta name="description" content="Comparativ detaliat între Moieciu și Bran: liniște vs. agitație, prețuri, accesibilitate și experiență autentică. Alege cea mai bună destinație pentru vacanța ta.">
+  <title>Weekend în Moieciu: Ghid complet de la A la Z | Pensiunea Codruț</title>
+  <meta name="description" content="Planifică weekend-ul perfect în Moieciu. Ce să vezi, unde să mănânci și cum să-ți organizezi timpul pentru o experiență memorabilă.">
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
@@ -24,7 +24,7 @@
       font-family: 'Playfair Display', serif;
     }
     .hero-bg {
-      background-image: linear-gradient(to bottom, rgba(0,0,0,0.3), rgba(0,0,0,0.7)), url('img/pensiune.webp');
+      background-image: linear-gradient(to bottom, rgba(0,0,0,0.3), rgba(0,0,0,0.7)), url('img/moieciu.webp');
       background-size: cover;
       background-position: center;
       background-attachment: fixed;
@@ -41,12 +41,42 @@
       margin-top: 2.5rem;
       margin-bottom: 1.25rem;
     }
-    .vs-card {
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    .prose h3 {
+      color: #1f2937;
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin-top: 2rem;
+      margin-bottom: 1rem;
     }
-    .vs-card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+    .prose ul {
+      list-style-type: disc;
+      padding-left: 1.5rem;
+      margin-bottom: 1.5rem;
+    }
+    .prose li {
+      margin-bottom: 0.5rem;
+      color: #374151;
+    }
+    .timeline-item {
+      position: relative;
+      padding-left: 2.5rem;
+      border-left: 2px solid #e5e7eb;
+      padding-bottom: 2.5rem;
+    }
+    .timeline-item:last-child {
+      border-left: 2px solid transparent;
+    }
+    .timeline-item::before {
+      content: '';
+      position: absolute;
+      left: -0.55rem;
+      top: 0.25rem;
+      width: 1.1rem;
+      height: 1.1rem;
+      background-color: #ef4444;
+      border-radius: 50%;
+      border: 3px solid white;
+      box-shadow: 0 0 0 2px #ef4444;
     }
   </style>
 </head>
@@ -97,14 +127,14 @@
   <header class="hero-bg h-[60vh] min-h-[500px] flex items-center justify-center text-center text-white relative mt-16">
     <div class="absolute inset-0 bg-black/40"></div>
     <div class="max-w-4xl px-6 relative z-10">
-      <span class="inline-block py-1 px-3 rounded-full bg-green-600/80 text-white text-sm font-semibold mb-4 backdrop-blur-sm">
-        Sfaturi de Călătorie
+      <span class="inline-block py-1 px-3 rounded-full bg-blue-600/80 text-white text-sm font-semibold mb-4 backdrop-blur-sm">
+        Ghid de Călătorie
       </span>
       <h1 class="text-4xl md:text-6xl font-bold mb-6 leading-tight drop-shadow-lg">
-        Moieciu vs. Bran: Unde e mai bine să te cazezi?
+        Weekend în Moieciu: Ghid complet de la A la Z
       </h1>
       <div class="flex items-center justify-center space-x-4 text-sm md:text-base opacity-90">
-        <span><i class="far fa-clock mr-2"></i> 5 min de citit</span>
+        <span><i class="far fa-calendar-alt mr-2"></i> 29 Dec 2025</span>
         <span>|</span>
         <span><i class="far fa-user mr-2"></i> Pensiunea Codruț</span>
       </div>
@@ -112,7 +142,7 @@
   </header>
 
   <!-- Content -->
-  <main class="container mx-auto px-4 py-16 max-w-5xl">
+  <main class="container mx-auto px-4 py-16 max-w-4xl">
     
     <!-- Breadcrumbs -->
     <nav class="flex mb-12 text-sm text-gray-500">
@@ -120,152 +150,107 @@
       <span class="mx-2">/</span>
       <a href="index.html#blog" class="hover:text-red-600 transition">Blog</a>
       <span class="mx-2">/</span>
-      <span class="text-gray-800 font-medium">Moieciu vs Bran</span>
+      <span class="text-gray-800 font-medium">Ghid de weekend</span>
     </nav>
 
-    <article class="prose lg:prose-xl mx-auto">
-      <p class="text-xl text-gray-600 leading-relaxed mb-10 font-light border-l-4 border-green-500 pl-6 italic">
-        Liniște autentică sau agitație turistică? Aceasta este întrebarea pe care și-o pun mulți turiști care ajung în zona Bran-Moieciu. Am pregătit un comparativ detaliat pentru a te ajuta să alegi.
+    <article class="prose lg:prose-xl mx-auto bg-white p-8 md:p-12 rounded-2xl shadow-sm border border-gray-100">
+      <p class="text-xl text-gray-600 leading-relaxed mb-10 font-light border-l-4 border-blue-500 pl-6 italic">
+        Moieciu de Jos este destinația perfectă pentru o evadare scurtă din oraș. Aer curat, peisaje de vis și mâncare bună. Dar cum să le faci pe toate într-un singur weekend?
       </p>
 
+      <p>
+        Nu știi cum să-ți organizezi cele 48 de ore la munte? Am pregătit itinerariul ideal pentru tine, testat și recomandat de oaspeții noștri.
+      </p>
+
+      <figure class="my-10">
+        <img src="img/buc.webp" alt="Bucătărie tradițională" class="w-full h-[500px] object-cover rounded-xl shadow-lg hover:shadow-xl transition duration-300">
+        <figcaption class="text-center text-gray-500 text-sm mt-3 italic">Gusturi autentice românești</figcaption>
+      </figure>
+
       <div class="my-16">
-        <h2 class="text-3xl font-bold text-gray-900 mb-8 text-center">1. Atmosferă: Liniște vs. Agitație</h2>
-        <div class="grid md:grid-cols-2 gap-8">
-            <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 vs-card">
-                <div class="text-green-600 text-4xl mb-4"><i class="fas fa-tree"></i></div>
-                <h3 class="text-2xl font-bold text-gray-900 mb-3 !mt-0">Moieciu</h3>
-                <p class="text-gray-600 mb-4">
-                    Un sat tradițional, ascuns în inima Carpaților. Aici auzi păsările, pârâul și vântul printre brazi. Ideal pentru familii, cupluri și iubitori de natură care caută relaxare.
-                </p>
-                <span class="inline-block bg-green-100 text-green-800 text-xs px-2 py-1 rounded-full font-semibold">Relaxare</span>
-                <span class="inline-block bg-green-100 text-green-800 text-xs px-2 py-1 rounded-full font-semibold">Natură</span>
-            </div>
-            <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 vs-card">
-                <div class="text-red-600 text-4xl mb-4"><i class="fas fa-users"></i></div>
-                <h3 class="text-2xl font-bold text-gray-900 mb-3 !mt-0">Bran</h3>
-                <p class="text-gray-600 mb-4">
-                    Destinație internațională, foarte aglomerată în sezon. Zona din jurul Castelului Bran este plină de suveniruri, restaurante și turiști din toate colțurile lumii.
-                </p>
-                <span class="inline-block bg-red-100 text-red-800 text-xs px-2 py-1 rounded-full font-semibold">Agitație</span>
-                <span class="inline-block bg-red-100 text-red-800 text-xs px-2 py-1 rounded-full font-semibold">Turism</span>
-            </div>
+        <h2 class="text-3xl font-bold text-gray-900 mb-10 border-b pb-4">Vineri: Sosirea și relaxarea</h2>
+        <div class="timeline-item">
+          <h3 class="text-xl font-bold text-gray-800 !mt-0">18:00 - Check-in la Pensiunea Codruț</h3>
+          <p class="text-gray-600">Instalează-te în cameră și bucură-te de priveliștea de la balcon. Lasă grijile orașului la intrare.</p>
+        </div>
+        <div class="timeline-item">
+          <h3 class="text-xl font-bold text-gray-800 !mt-0">19:30 - Cină tradițională</h3>
+          <p class="text-gray-600">Încearcă un bulz ciobănesc sau o pastramă de oaie la unul dintre restaurantele locale recomandate de noi.</p>
         </div>
       </div>
 
       <div class="my-16">
-        <h2 class="text-3xl font-bold text-gray-900 mb-8 text-center">2. Prețuri: Economie vs. Turism masiv</h2>
-        <div class="overflow-hidden rounded-xl shadow-sm border border-gray-200">
-            <table class="w-full text-left border-collapse">
-                <thead>
-                    <tr class="bg-gray-50 border-b border-gray-200">
-                        <th class="p-4 font-semibold text-gray-700">Criteriu</th>
-                        <th class="p-4 font-semibold text-green-700">Moieciu</th>
-                        <th class="p-4 font-semibold text-red-700">Bran</th>
-                    </tr>
-                </thead>
-                <tbody class="divide-y divide-gray-100 bg-white">
-                    <tr>
-                        <td class="p-4 text-gray-600 font-medium">Cazare (medie/noapte)</td>
-                        <td class="p-4 text-gray-800">250–500 lei</td>
-                        <td class="p-4 text-gray-800">400–900+ lei</td>
-                    </tr>
-                    <tr>
-                        <td class="p-4 text-gray-600 font-medium">Mâncare (meniu)</td>
-                        <td class="p-4 text-gray-800">30–60 lei</td>
-                        <td class="p-4 text-gray-800">50–90 lei</td>
-                    </tr>
-                    <tr>
-                        <td class="p-4 text-gray-600 font-medium">Parcare</td>
-                        <td class="p-4 text-gray-800">Gratuită (majoritatea)</td>
-                        <td class="p-4 text-gray-800">Cu plată / Aglomerată</td>
-                    </tr>
-                    <tr class="bg-gray-50">
-                        <td class="p-4 text-gray-900 font-bold">Total estimat (weekend)</td>
-                        <td class="p-4 text-green-700 font-bold">~1.800 lei</td>
-                        <td class="p-4 text-red-700 font-bold">~3.500 lei</td>
-                    </tr>
-                </tbody>
-            </table>
+        <h2 class="text-3xl font-bold text-gray-900 mb-10 border-b pb-4">Sâmbătă: Aventură și explorare</h2>
+        <div class="timeline-item">
+          <h3 class="text-xl font-bold text-gray-800 !mt-0">09:00 - Mic dejun copios</h3>
+          <p class="text-gray-600">Energie pentru o zi plină. Produse locale proaspete pentru un start excelent.</p>
         </div>
-        <p class="text-center mt-4 text-sm text-gray-500 italic">
-            *Prețurile sunt estimative pentru 2 persoane, 3 nopți.
-        </p>
+        <div class="timeline-item">
+          <h3 class="text-xl font-bold text-gray-800 !mt-0">10:30 - Vizită la Castelul Bran sau Cetatea Râșnov</h3>
+          <p class="text-gray-600">Dacă vrei istorie și legende, acestea sunt obiectivele de neratat din apropiere.</p>
+        </div>
+        <div class="timeline-item">
+          <h3 class="text-xl font-bold text-gray-800 !mt-0">14:00 - Drumeție ușoară</h3>
+          <p class="text-gray-600">Explorează Amfiteatrul Transilvania sau fă o plimbare prin Cheile Grădiștei pentru peisaje instagramabile.</p>
+        </div>
+        <div class="timeline-item">
+          <h3 class="text-xl font-bold text-gray-800 !mt-0">20:00 - Relaxare la ciubăr</h3>
+          <p class="text-gray-600">Încheie ziua perfect cu o baie fierbinte sub stele, chiar la pensiune.</p>
+        </div>
       </div>
 
       <div class="my-16">
-        <h2 class="text-3xl font-bold text-gray-900 mb-8 text-center">3. Accesibilitate și Distanțe</h2>
-        <div class="bg-gray-50 rounded-2xl p-8 border border-gray-100">
-            <div class="grid md:grid-cols-2 gap-8">
-                <div>
-                    <h4 class="font-bold text-lg mb-4 flex items-center"><i class="fas fa-car text-gray-400 mr-2"></i> Moieciu</h4>
-                    <ul class="space-y-3 text-gray-600">
-                        <li><span class="font-semibold text-gray-900">București:</span> ~130 km (2h 15min)</li>
-                        <li><span class="font-semibold text-gray-900">Brașov:</span> ~30 km (40 min)</li>
-                        <li><span class="font-semibold text-gray-900">Castelul Bran:</span> 5-10 min cu mașina</li>
-                    </ul>
-                </div>
-                <div>
-                    <h4 class="font-bold text-lg mb-4 flex items-center"><i class="fas fa-car text-gray-400 mr-2"></i> Bran</h4>
-                    <ul class="space-y-3 text-gray-600">
-                        <li><span class="font-semibold text-gray-900">București:</span> ~150 km (2h 30min)</li>
-                        <li><span class="font-semibold text-gray-900">Brașov:</span> ~25 km (35 min)</li>
-                        <li><span class="font-semibold text-gray-900">Trafic:</span> Foarte aglomerat în weekend</li>
-                    </ul>
-                </div>
-            </div>
+        <h2 class="text-3xl font-bold text-gray-900 mb-10 border-b pb-4">Duminică: Suveniruri și rămas bun</h2>
+        <div class="timeline-item">
+          <h3 class="text-xl font-bold text-gray-800 !mt-0">10:00 - Plimbare prin sat</h3>
+          <p class="text-gray-600">Descoperă arhitectura locală și cumpără brânzeturi și produse tradiționale de la localnici.</p>
         </div>
-      </div>
-
-      <div class="my-16 bg-gradient-to-br from-green-50 to-blue-50 p-10 rounded-2xl border border-green-100 text-center">
-        <h2 class="text-3xl font-bold text-gray-900 mb-6 !mt-0">Verdictul Nostru</h2>
-        <p class="text-lg text-gray-700 mb-6">
-            Dacă vrei să vizitezi Castelul Bran dar să te bucuri de liniște și natură seara, <strong>Moieciu este alegerea câștigătoare</strong>.
-        </p>
-        <p class="text-gray-600">
-            Te cazezi la prețuri mai bune, ai parcare asigurată și ești la doar 5 minute de agitația din Bran, dar departe de zgomotul ei.
-        </p>
+        <div class="timeline-item">
+          <h3 class="text-xl font-bold text-gray-800 !mt-0">12:00 - Check-out</h3>
+          <p class="text-gray-600">Promisiunea că te vei întoarce curând! Drum bun spre casă.</p>
+        </div>
       </div>
 
     </article>
 
     <!-- CTA Section -->
     <div class="mt-16 text-center bg-white p-10 rounded-2xl shadow-md border border-gray-100 max-w-3xl mx-auto">
-        <h3 class="text-2xl font-serif font-bold text-gray-900 mb-4">Ai ales Moieciu?</h3>
-        <p class="text-gray-600 mb-8">Te așteptăm la Pensiunea Codruț pentru o experiență autentică.</p>
+        <h3 class="text-2xl font-serif font-bold text-gray-900 mb-4">Sună bine planul?</h3>
+        <p class="text-gray-600 mb-8">Rezervă-ți weekend-ul acum și noi ne ocupăm de restul!</p>
         <div class="flex flex-col sm:flex-row justify-center gap-4">
             <a href="index.html#contact" class="inline-flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-full text-white bg-red-600 hover:bg-red-700 md:text-lg transition shadow-lg hover:shadow-xl transform hover:-translate-y-1">
-                <i class="fas fa-check-circle mr-2"></i> Rezervă cazare
+                <i class="fas fa-calendar-check mr-2"></i> Rezervă cazare
             </a>
         </div>
     </div>
 
     <!-- More Articles -->
     <div class="mt-20 border-t pt-12">
-        <h3 class="text-2xl font-bold text-gray-900 mb-8 text-center font-serif">Alte articole utile</h3>
+        <h3 class="text-2xl font-bold text-gray-900 mb-8 text-center font-serif">Alte articole care te-ar putea interesa</h3>
         <div class="grid md:grid-cols-3 gap-8">
-            <a href="weekend.html" class="group block">
-                <div class="relative h-48 overflow-hidden rounded-xl mb-4">
-                    <img src="img/moieciu.webp" alt="Weekend" class="w-full h-full object-cover transition duration-500 group-hover:scale-110">
-                    <div class="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition"></div>
-                </div>
-                <h4 class="font-bold text-lg text-gray-900 group-hover:text-red-600 transition">Ghid de weekend</h4>
-                <p class="text-sm text-gray-500 mt-2">Ce să faci 48 de ore în Moieciu.</p>
-            </a>
-            <a href="trasee.html" class="group block">
-                <div class="relative h-48 overflow-hidden rounded-xl mb-4">
-                    <img src="img/munti.webp" alt="Trasee" class="w-full h-full object-cover transition duration-500 group-hover:scale-110">
-                    <div class="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition"></div>
-                </div>
-                <h4 class="font-bold text-lg text-gray-900 group-hover:text-red-600 transition">Trasee montane</h4>
-                <p class="text-sm text-gray-500 mt-2">Pentru începători și avansați.</p>
-            </a>
             <a href="ciubar.html" class="group block">
                 <div class="relative h-48 overflow-hidden rounded-xl mb-4">
                     <img src="img/ciubar.webp" alt="Ciubar" class="w-full h-full object-cover transition duration-500 group-hover:scale-110">
                     <div class="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition"></div>
                 </div>
                 <h4 class="font-bold text-lg text-gray-900 group-hover:text-red-600 transition">Relaxare la ciubăr</h4>
-                <p class="text-sm text-gray-500 mt-2">De ce să alegi o pensiune cu ciubăr.</p>
+                <p class="text-sm text-gray-500 mt-2">Beneficiile băilor tradiționale.</p>
+            </a>
+            <a href="trasee.html" class="group block">
+                <div class="relative h-48 overflow-hidden rounded-xl mb-4">
+                    <img src="img/moieciu.webp" alt="Trasee montane" class="w-full h-full object-cover transition duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition"></div>
+                </div>
+                <h4 class="font-bold text-lg text-gray-900 group-hover:text-red-600 transition">Trasee montane ușoare</h4>
+                <p class="text-sm text-gray-500 mt-2">Descoperă potecile din jurul Moieciului.</p>
+            </a>
+            <a href="family.html" class="group block">
+                <div class="relative h-48 overflow-hidden rounded-xl mb-4">
+                    <img src="img/joaca.webp" alt="Family Friendly" class="w-full h-full object-cover transition duration-500 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition"></div>
+                </div>
+                <h4 class="font-bold text-lg text-gray-900 group-hover:text-red-600 transition">Vacanță cu familia</h4>
+                <p class="text-sm text-gray-500 mt-2">Facilități pentru cei mici și mari.</p>
             </a>
         </div>
     </div>
