@@ -93,6 +93,11 @@
   }
   </script>
 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+  <link rel="preload" as="image" href="img/joaca.webp" type="image/webp" fetchpriority="high">
+
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
   
@@ -152,18 +157,18 @@
   <!-- Navbar -->
   <nav class="bg-white/90 backdrop-blur-md shadow-sm fixed w-full top-0 z-50 transition-all duration-300">
     <div class="container mx-auto px-6 py-4 flex justify-between items-center">
-      <a href="index.html" class="text-2xl font-bold text-red-700 font-serif">Pensiunea Codruț</a>
+      <a href="/" class="text-2xl font-bold text-red-700 font-serif">Pensiunea Codruț</a>
       
       <!-- Desktop Menu -->
       <ul class="hidden md:flex space-x-8 text-gray-700 font-medium">
-        <li><a href="index.html" class="hover:text-red-600 transition">Acasă</a></li>
-        <li><a href="index.html#about" class="hover:text-red-600 transition">Despre noi</a></li>
-        <li><a href="index.html#rooms" class="hover:text-red-600 transition">Camere</a></li>
-        <li><a href="index.html#blog" class="text-red-600">Blog</a></li>
-        <li><a href="index.html#contact" class="hover:text-red-600 transition">Contact</a></li>
+        <li><a href="/" class="hover:text-red-600 transition">Acasă</a></li>
+        <li><a href="/#despre" class="hover:text-red-600 transition">Despre noi</a></li>
+        <li><a href="/#camere" class="hover:text-red-600 transition">Camere</a></li>
+        <li><a href="/#ghiduri" class="text-red-600">Blog</a></li>
+        <li><a href="/#contact" class="hover:text-red-600 transition">Contact</a></li>
       </ul>
 
-      <a href="index.html#contact" class="hidden md:inline-block bg-red-700 text-white px-6 py-2.5 rounded-full hover:bg-red-800 transition shadow-md hover:shadow-lg transform hover:-translate-y-0.5">
+      <a href="/#contact" class="hidden md:inline-block bg-red-700 text-white px-6 py-2.5 rounded-full hover:bg-red-800 transition shadow-md hover:shadow-lg transform hover:-translate-y-0.5">
         Rezervă acum
       </a>
 
@@ -176,13 +181,13 @@
     <!-- Mobile Menu -->
     <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
       <ul class="flex flex-col p-4 space-y-4 text-center">
-        <li><a href="index.html" class="block text-gray-700 hover:text-red-600">Acasă</a></li>
-        <li><a href="index.html#about" class="block text-gray-700 hover:text-red-600">Despre noi</a></li>
-        <li><a href="index.html#rooms" class="block text-gray-700 hover:text-red-600">Camere</a></li>
-        <li><a href="index.html#blog" class="block text-red-600 font-medium">Blog</a></li>
-        <li><a href="index.html#contact" class="block text-gray-700 hover:text-red-600">Contact</a></li>
+        <li><a href="/" class="block text-gray-700 hover:text-red-600">Acasă</a></li>
+        <li><a href="/#despre" class="block text-gray-700 hover:text-red-600">Despre noi</a></li>
+        <li><a href="/#camere" class="block text-gray-700 hover:text-red-600">Camere</a></li>
+        <li><a href="/#ghiduri" class="block text-red-600 font-medium">Blog</a></li>
+        <li><a href="/#contact" class="block text-gray-700 hover:text-red-600">Contact</a></li>
         <li>
-            <a href="index.html#contact" class="inline-block bg-red-700 text-white px-6 py-2 rounded-full hover:bg-red-800 transition w-full">
+            <a href="/#contact" class="inline-block bg-red-700 text-white px-6 py-2 rounded-full hover:bg-red-800 transition w-full">
                 Rezervă acum
             </a>
         </li>
@@ -213,9 +218,9 @@
     
     <!-- Breadcrumbs -->
     <nav class="flex mb-12 text-sm text-gray-500">
-      <a href="index.html" class="hover:text-red-600 transition">Acasă</a>
+      <a href="/" class="hover:text-red-600 transition">Acasă</a>
       <span class="mx-2">/</span>
-      <a href="index.html#blog" class="hover:text-red-600 transition">Blog</a>
+      <a href="/#ghiduri" class="hover:text-red-600 transition">Blog</a>
       <span class="mx-2">/</span>
       <span class="text-gray-800 font-medium">Family Friendly</span>
     </nav>
@@ -287,7 +292,7 @@
         <h3 class="text-2xl font-serif font-bold text-gray-900 mb-4">Vacanța perfectă începe aici</h3>
         <p class="text-gray-600 mb-8">Oferă-le copiilor tăi amintiri de neuitat la munte!</p>
         <div class="flex flex-col sm:flex-row justify-center gap-4">
-            <a href="index.html#contact" class="inline-flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-full text-white bg-red-600 hover:bg-red-700 md:text-lg transition shadow-lg hover:shadow-xl transform hover:-translate-y-1">
+            <a href="/#contact" class="inline-flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-full text-white bg-red-600 hover:bg-red-700 md:text-lg transition shadow-lg hover:shadow-xl transform hover:-translate-y-1">
                 <i class="fas fa-calendar-check mr-2"></i> Verifică disponibilitatea
             </a>
         </div>
@@ -297,7 +302,7 @@
     <div class="mt-20 border-t pt-12">
         <h3 class="text-2xl font-bold text-gray-900 mb-8 text-center font-serif">Alte articole care te-ar putea interesa</h3>
         <div class="grid md:grid-cols-3 gap-8">
-            <a href="ciubar.html" class="group block">
+            <a href="/ciubar" class="group block">
                 <div class="relative h-48 overflow-hidden rounded-xl mb-4">
                     <img src="img/ciubar.webp" alt="Ciubărul Pensiunii Codruț" width="1300" height="975" loading="lazy" decoding="async" class="w-full h-full object-cover transition duration-500 group-hover:scale-110">
                     <div class="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition"></div>
@@ -305,7 +310,7 @@
                 <h4 class="font-bold text-lg text-gray-900 group-hover:text-red-600 transition">Relaxare la ciubăr</h4>
                 <p class="text-sm text-gray-500 mt-2">Beneficiile băilor tradiționale.</p>
             </a>
-            <a href="trasee.html" class="group block">
+            <a href="/trasee" class="group block">
                 <div class="relative h-48 overflow-hidden rounded-xl mb-4">
                     <img src="img/moieciu.webp" alt="Peisaj montan din zona Moieciu" width="1200" height="753" loading="lazy" decoding="async" class="w-full h-full object-cover transition duration-500 group-hover:scale-110">
                     <div class="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition"></div>
@@ -313,7 +318,7 @@
                 <h4 class="font-bold text-lg text-gray-900 group-hover:text-red-600 transition">Trasee montane ușoare</h4>
                 <p class="text-sm text-gray-500 mt-2">Descoperă potecile din jurul Moieciului.</p>
             </a>
-            <a href="weekend.html" class="group block">
+            <a href="/weekend" class="group block">
                 <div class="relative h-48 overflow-hidden rounded-xl mb-4">
                     <img src="img/buc.webp" alt="Bucătăria comună a Pensiunii Codruț" width="1300" height="975" loading="lazy" decoding="async" class="w-full h-full object-cover transition duration-500 group-hover:scale-110">
                     <div class="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition"></div>
@@ -340,11 +345,11 @@
             <div>
                 <h4 class="font-semibold text-lg mb-6 border-b border-gray-700 pb-2 inline-block">Link-uri rapide</h4>
                 <ul class="space-y-3">
-                    <li><a href="index.html" class="text-gray-400 hover:text-white transition flex items-center"><i class="fas fa-chevron-right text-xs mr-2 text-red-500"></i> Acasă</a></li>
-                    <li><a href="index.html#about" class="text-gray-400 hover:text-white transition flex items-center"><i class="fas fa-chevron-right text-xs mr-2 text-red-500"></i> Despre noi</a></li>
-                    <li><a href="index.html#rooms" class="text-gray-400 hover:text-white transition flex items-center"><i class="fas fa-chevron-right text-xs mr-2 text-red-500"></i> Camere</a></li>
-                    <li><a href="index.html#blog" class="text-gray-400 hover:text-white transition flex items-center"><i class="fas fa-chevron-right text-xs mr-2 text-red-500"></i> Blog</a></li>
-                    <li><a href="index.html#contact" class="text-gray-400 hover:text-white transition flex items-center"><i class="fas fa-chevron-right text-xs mr-2 text-red-500"></i> Contact</a></li>
+                    <li><a href="/" class="text-gray-400 hover:text-white transition flex items-center"><i class="fas fa-chevron-right text-xs mr-2 text-red-500"></i> Acasă</a></li>
+                    <li><a href="/#despre" class="text-gray-400 hover:text-white transition flex items-center"><i class="fas fa-chevron-right text-xs mr-2 text-red-500"></i> Despre noi</a></li>
+                    <li><a href="/#camere" class="text-gray-400 hover:text-white transition flex items-center"><i class="fas fa-chevron-right text-xs mr-2 text-red-500"></i> Camere</a></li>
+                    <li><a href="/#ghiduri" class="text-gray-400 hover:text-white transition flex items-center"><i class="fas fa-chevron-right text-xs mr-2 text-red-500"></i> Blog</a></li>
+                    <li><a href="/#contact" class="text-gray-400 hover:text-white transition flex items-center"><i class="fas fa-chevron-right text-xs mr-2 text-red-500"></i> Contact</a></li>
                 </ul>
             </div>
             
@@ -395,7 +400,7 @@
                 &copy; 2025 Pensiunea Codruț. Toate drepturile rezervate.
             </p>
             <div class="mt-4 md:mt-0">
-                <a href="gdpr.html" class="text-gray-500 hover:text-white text-sm transition">Politica de confidențialitate</a>
+                <a href="/gdpr" class="text-gray-500 hover:text-white text-sm transition">Politica de confidențialitate</a>
             </div>
         </div>
     </div>
@@ -413,5 +418,6 @@
         menu.classList.toggle('hidden');
     });
   </script>
+  <script src="site.js?v=20260813-2" defer></script>
 </body>
 </html>
