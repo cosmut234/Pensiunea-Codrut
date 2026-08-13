@@ -6,6 +6,8 @@ document.documentElement.classList.add("js");
   const header = document.querySelector("[data-header]");
   const menuButton = document.querySelector("[data-menu-toggle]");
   const mobileMenu = document.querySelector("[data-mobile-menu]");
+  const legacyMenuButton = document.getElementById("mobile-menu-btn");
+  const legacyMobileMenu = document.getElementById("mobile-menu");
   const isEnglish = document.documentElement.lang.toLowerCase().startsWith("en");
   const menuLabels = isEnglish
     ? { open: "Open menu", close: "Close menu" }
@@ -70,6 +72,52 @@ document.documentElement.classList.add("js");
     }
   });
   updateHeader();
+
+  const setLegacyMenuOpen = (shouldOpen, restoreFocus = false) => {
+    if (!legacyMenuButton || !legacyMobileMenu) return;
+    legacyMenuButton.setAttribute("aria-expanded", String(shouldOpen));
+    legacyMenuButton.setAttribute("aria-label", shouldOpen ? "Închide meniul" : "Deschide meniul");
+    legacyMobileMenu.hidden = !shouldOpen;
+    legacyMobileMenu.classList.toggle("hidden", !shouldOpen);
+    if (shouldOpen) {
+      window.requestAnimationFrame(() => legacyMobileMenu.querySelector("a, button")?.focus());
+    } else if (restoreFocus) {
+      legacyMenuButton.focus();
+    }
+  };
+
+  if (legacyMenuButton && legacyMobileMenu) {
+    setLegacyMenuOpen(false);
+    legacyMenuButton.addEventListener("click", () => {
+      setLegacyMenuOpen(legacyMenuButton.getAttribute("aria-expanded") !== "true");
+    });
+    legacyMobileMenu.querySelectorAll("a").forEach((link) => {
+      link.addEventListener("click", () => setLegacyMenuOpen(false));
+    });
+    window.addEventListener("resize", () => {
+      if (window.innerWidth >= 768) setLegacyMenuOpen(false);
+    });
+    document.addEventListener("keydown", (event) => {
+      if (legacyMenuButton.getAttribute("aria-expanded") !== "true") return;
+      if (event.key === "Escape") {
+        event.preventDefault();
+        setLegacyMenuOpen(false, true);
+        return;
+      }
+      if (event.key !== "Tab") return;
+
+      const focusable = [legacyMenuButton, ...legacyMobileMenu.querySelectorAll("a[href], button:not([disabled])")];
+      const first = focusable[0];
+      const last = focusable[focusable.length - 1];
+      if (event.shiftKey && document.activeElement === first) {
+        event.preventDefault();
+        last.focus();
+      } else if (!event.shiftKey && document.activeElement === last) {
+        event.preventDefault();
+        first.focus();
+      }
+    });
+  }
 
   const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   const revealItems = document.querySelectorAll("[data-reveal]");
@@ -183,6 +231,8 @@ document.documentElement.classList.add("js");
         "Îmi puteți confirma disponibilitatea și tariful final?",
       ].join("\n");
 
+      const whatsappUrl = `https://wa.me/40742599860?text=${encodeURIComponent(message)}`;
+      window.open(whatsappUrl, "_blank", "noopener,noreferrer");
       sendAnalyticsEvent("submit_availability", {
         contact_method: "whatsapp",
         stay_type: String(data.get("stayType") || ""),
@@ -190,23 +240,26 @@ document.documentElement.classList.add("js");
         page_path: window.location.pathname,
         page_language: document.documentElement.lang || "ro",
       });
-      window.open(`https://wa.me/40742599860?text=${encodeURIComponent(message)}`, "_blank", "noopener,noreferrer");
     });
   }
 
   // Conversion events become active only when an analytics tag or Tag Manager
   // data layer is installed. This file alone does not send data or set cookies.
   const sendAnalyticsEvent = (eventName, parameters) => {
-    if (typeof window.gtag === "function") {
-      window.gtag("event", eventName, {
-        ...parameters,
-        transport_type: "beacon",
-      });
-      return;
-    }
+    try {
+      if (typeof window.gtag === "function") {
+        window.gtag("event", eventName, {
+          ...parameters,
+          transport_type: "beacon",
+        });
+        return;
+      }
 
-    if (Array.isArray(window.dataLayer)) {
-      window.dataLayer.push({ event: eventName, ...parameters });
+      if (Array.isArray(window.dataLayer)) {
+        window.dataLayer.push({ event: eventName, ...parameters });
+      }
+    } catch (error) {
+      console.warn("Analytics event could not be recorded.", error);
     }
   };
 

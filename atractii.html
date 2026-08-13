@@ -155,13 +155,13 @@
       </a>
 
       <!-- Mobile Menu Button -->
-      <button id="mobile-menu-btn" class="md:hidden text-gray-700 focus:outline-none">
+      <button id="mobile-menu-btn" class="md:hidden text-gray-700 focus:outline-none" type="button" aria-label="Deschide meniul" aria-expanded="false" aria-controls="mobile-menu">
         <i class="fas fa-bars text-2xl"></i>
       </button>
     </div>
 
     <!-- Mobile Menu -->
-    <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
+    <div id="mobile-menu" class="hidden md:hidden bg-white border-t" hidden>
       <ul class="flex flex-col p-4 space-y-4 text-center">
         <li><a href="/" class="block text-gray-700 hover:text-red-600">Acasă</a></li>
         <li><a href="/#despre" class="block text-gray-700 hover:text-red-600">Despre noi</a></li>
@@ -412,13 +412,6 @@
       <i class="fab fa-whatsapp text-3xl"></i>
   </a>
 
-  <script>
-    // Mobile menu toggle
-    document.getElementById('mobile-menu-btn').addEventListener('click', function() {
-        const menu = document.getElementById('mobile-menu');
-        menu.classList.toggle('hidden');
-    });
-  </script>
-  <script src="site.js?v=20260813-2" defer></script>
+  <script src="site.js?v=20260813-4" defer></script>
 </body>
 </html>
