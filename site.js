@@ -1,3 +1,5 @@
+document.documentElement.classList.add("js");
+
 (function () {
   "use strict";
 
