@@ -1,28 +1,33 @@
 <!DOCTYPE html>
-<html lang="ro" class="scroll-smooth">
+<html lang="ro">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Politica de Confidențialitate | Pensiunea Codruț</title>
-  <meta name="description" content="Politica de confidențialitate și prelucrarea datelor cu caracter personal (GDPR) pentru Pensiunea Codruț.">
+  <meta name="description" content="Politica de confidențialitate și prelucrarea datelor cu caracter personal pentru site-ul Pensiunii Codruț.">
+  <meta name="robots" content="noindex,follow">
+  <link rel="canonical" href="https://pensiuneacodrut.com/gdpr">
+  <link rel="icon" type="image/jpeg" href="img/logo.jpg">
 
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
-  
-  <!-- Font Awesome -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;family=Playfair+Display:wght@600;700&amp;display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="dist/output.css?v=20260813">
+  <link rel="stylesheet" href="site.css?v=20260813">
 
-  <!-- Tailwind CSS CDN -->
-  <script src="https://cdn.tailwindcss.com"></script>
-
-  <!-- Custom Styles -->
   <style>
     body {
-      font-family: 'Inter', sans-serif;
+      font-family: "Inter", sans-serif;
     }
-    h1, h2, h3, h4 {
-      font-family: 'Playfair Display', serif;
+
+    h1,
+    h2,
+    h3,
+    h4 {
+      font-family: "Playfair Display", serif;
     }
+
     .prose h2 {
       color: #111827;
       font-size: 1.5rem;
@@ -30,139 +35,153 @@
       margin-top: 2rem;
       margin-bottom: 1rem;
     }
+
     .prose ul {
       list-style-type: disc;
       padding-left: 1.5rem;
       margin-bottom: 1.5rem;
     }
+
     .prose li {
       margin-bottom: 0.5rem;
       color: #374151;
     }
+
     .prose p {
       margin-bottom: 1rem;
       color: #374151;
     }
+
+    .prose a {
+      text-decoration: underline;
+      text-underline-offset: 0.2em;
+    }
   </style>
 </head>
-<body class="bg-gray-50 text-gray-800 antialiased flex flex-col min-h-screen">
-
-  <!-- Navbar -->
-  <nav class="bg-white shadow-sm fixed w-full top-0 z-50 transition-all duration-300">
+<body class="article-page bg-gray-50 text-gray-800 antialiased flex flex-col min-h-screen">
+  <nav class="bg-white shadow-sm fixed w-full top-0 z-50 transition-all duration-300" aria-label="Navigație principală">
     <div class="container mx-auto px-6 py-4 flex justify-between items-center">
-      <a href="index.html" class="text-2xl font-bold text-red-700 font-serif">Pensiunea Codruț</a>
-      
-      <!-- Desktop Menu -->
+      <a href="/" class="text-2xl font-bold text-red-700 font-serif">Pensiunea Codruț</a>
+
       <ul class="hidden md:flex space-x-8 text-gray-700 font-medium">
-        <li><a href="index.html" class="hover:text-red-600 transition">Acasă</a></li>
-        <li><a href="index.html#about" class="hover:text-red-600 transition">Despre noi</a></li>
-        <li><a href="index.html#rooms" class="hover:text-red-600 transition">Camere</a></li>
-        <li><a href="index.html#blog" class="hover:text-red-600 transition">Blog</a></li>
-        <li><a href="index.html#contact" class="hover:text-red-600 transition">Contact</a></li>
+        <li><a href="/" class="hover:text-red-600 transition">Acasă</a></li>
+        <li><a href="/#despre" class="hover:text-red-600 transition">Despre noi</a></li>
+        <li><a href="/#camere" class="hover:text-red-600 transition">Camere</a></li>
+        <li><a href="/#ghiduri" class="hover:text-red-600 transition">Ghiduri</a></li>
+        <li><a href="/#contact" class="hover:text-red-600 transition">Contact</a></li>
       </ul>
 
-      <a href="index.html#contact" class="hidden md:inline-block bg-red-700 text-white px-6 py-2.5 rounded-full hover:bg-red-800 transition shadow-md hover:shadow-lg transform hover:-translate-y-0.5">
-        Rezervă acum
-      </a>
+      <a href="https://wa.me/40742599860?text=Buna%20ziua!%20As%20dori%20sa%20verific%20disponibilitatea%20la%20Pensiunea%20Codrut."
+         class="hidden md:inline-block bg-red-700 text-white px-6 py-2.5 rounded-full hover:bg-red-800 transition shadow-md"
+         target="_blank" rel="noopener noreferrer">Verifică disponibilitatea</a>
 
-      <!-- Mobile Menu Button -->
-      <button id="mobile-menu-btn" class="md:hidden text-gray-700 focus:outline-none">
-        <i class="fas fa-bars text-2xl"></i>
+      <button id="mobile-menu-btn" class="md:hidden text-gray-700 focus:outline-none" type="button"
+              aria-label="Deschide meniul" aria-expanded="false" aria-controls="mobile-menu">
+        <i class="fas fa-bars text-2xl" aria-hidden="true"></i>
       </button>
     </div>
 
-    <!-- Mobile Menu -->
     <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
       <ul class="flex flex-col p-4 space-y-4 text-center">
-        <li><a href="index.html" class="block text-gray-700 hover:text-red-600">Acasă</a></li>
-        <li><a href="index.html#about" class="block text-gray-700 hover:text-red-600">Despre noi</a></li>
-        <li><a href="index.html#rooms" class="block text-gray-700 hover:text-red-600">Camere</a></li>
-        <li><a href="index.html#blog" class="block text-gray-700 hover:text-red-600">Blog</a></li>
-        <li><a href="index.html#contact" class="block text-gray-700 hover:text-red-600">Contact</a></li>
+        <li><a href="/" class="block text-gray-700 hover:text-red-600">Acasă</a></li>
+        <li><a href="/#despre" class="block text-gray-700 hover:text-red-600">Despre noi</a></li>
+        <li><a href="/#camere" class="block text-gray-700 hover:text-red-600">Camere</a></li>
+        <li><a href="/#ghiduri" class="block text-gray-700 hover:text-red-600">Ghiduri</a></li>
+        <li><a href="/#contact" class="block text-gray-700 hover:text-red-600">Contact</a></li>
       </ul>
     </div>
   </nav>
 
-  <!-- Header -->
   <header class="bg-gray-900 text-white pt-32 pb-16 text-center">
     <div class="container mx-auto px-6">
       <h1 class="text-3xl md:text-4xl font-bold mb-4">Politica de Confidențialitate</h1>
-      <p class="text-gray-400">Ultima actualizare: 14 august 2025</p>
+      <p class="text-gray-400">Ultima actualizare: 13 august 2026</p>
     </div>
   </header>
 
-  <!-- Content -->
   <main class="container mx-auto px-4 py-16 max-w-3xl flex-grow">
-    
     <article class="prose lg:prose-lg mx-auto bg-white p-8 md:p-12 rounded-2xl shadow-sm border border-gray-100">
-      
-      <p>Această politică explică modul în care <strong>PFA ARZOIU ANDREA ELENA</strong>, cu sediul în <strong>Strada Principală 418B, Moieciu, Brașov</strong>, cod unic de înregistrare (CUI) <strong>22104717</strong>, colectează și utilizează datele cu caracter personal atunci când vizitați site-ul <strong>pensiuneacodrut.com</strong>.</p>
+      <p>Această politică explică modul în care <strong>PFA ARZOIU ANDREA ELENA</strong>, cu sediul în <strong>Strada Principală 418B, Moieciu, Brașov</strong>, cod unic de înregistrare (CUI) <strong>22104717</strong>, prelucrează datele cu caracter personal în legătură cu site-ul <strong>pensiuneacodrut.com</strong>.</p>
 
-      <h2>1. Date colectate</h2>
+      <h2>1. Cum funcționează site-ul și ce date pot fi prelucrate</h2>
+      <p>Site-ul este unul de prezentare. Nu are conturi de utilizator, formular de contact, motor propriu de rezervări sau plată online și nu colectează direct date introduse într-un formular.</p>
+      <p>Dacă alegi să ne contactezi prin telefon, email sau WhatsApp, vom primi numai datele pe care ni le comunici voluntar, care pot include:</p>
       <ul>
-          <li>Nume și prenume</li>
-          <li>Adresă de email</li>
-          <li>Număr de telefon</li>
-          <li>Adresa IP (înregistrată automat de server)</li>
+        <li>numele și prenumele;</li>
+        <li>adresa de email și/sau numărul de telefon;</li>
+        <li>mesajul și informațiile necesare solicitării sau rezervării.</li>
+      </ul>
+      <p>Furnizorul de găzduire poate prelucra automat date tehnice în jurnalele serverului, precum adresa IP, data și ora accesării, resursa solicitată și informații despre browser, pentru funcționare și securitate.</p>
+
+      <h2>2. Scopurile și temeiurile prelucrării</h2>
+      <p>Datele comunicate direct sunt folosite, după caz, pentru:</p>
+      <ul>
+        <li>a răspunde solicitărilor despre cazare și disponibilitate;</li>
+        <li>a face demersuri la cererea ta înainte de rezervare și a gestiona rezervarea;</li>
+        <li>a respecta obligațiile legale aplicabile;</li>
+        <li>a proteja funcționarea și securitatea site-ului.</li>
+      </ul>
+      <p>Nu folosim datele pentru publicitate comportamentală, profilare sau campanii de marketing nesolicitate și nu vindem date personale către terți.</p>
+
+      <h2>3. Canale de contact și servicii externe</h2>
+      <p>Site-ul te poate direcționa către servicii pe care alegi să le deschizi:</p>
+      <ul>
+        <li><a href="tel:+40742599860">telefon: 0742 599 860</a>;</li>
+        <li><a href="mailto:pensiuneacodrut@yahoo.com">email: pensiuneacodrut@yahoo.com</a>;</li>
+        <li><a href="https://wa.me/40742599860" target="_blank" rel="noopener noreferrer">WhatsApp</a>;</li>
+        <li><a href="https://www.google.com/maps/search/?api=1&amp;query=Pensiunea+Codrut+Moieciu" target="_blank" rel="noopener noreferrer">Google Maps</a>;</li>
+        <li><a href="https://www.facebook.com/p/Pensiunea-Codrut-Moieciu-100063481511416/" target="_blank" rel="noopener noreferrer">Facebook</a> și <a href="https://www.instagram.com/pensiunea_codrut_moieciudejos/" target="_blank" rel="noopener noreferrer">Instagram</a>.</li>
+      </ul>
+      <p>Când accesezi un serviciu extern, acel furnizor prelucrează datele conform propriei politici de confidențialitate și poate utiliza cookie-uri. Pensiunea Codruț nu controlează modul în care funcționează aceste platforme. Pentru afișarea paginii pot fi solicitate și resurse tehnice de la furnizori de fonturi sau rețele de distribuție, care pot primi date tehnice precum adresa IP și tipul browserului.</p>
+
+      <h2>4. Stocarea și securitatea datelor</h2>
+      <ul>
+        <li>corespondența și datele privind rezervarea sunt păstrate numai cât este necesar pentru soluționarea solicitării, derularea relației și îndeplinirea obligațiilor legale;</li>
+        <li>datele nu sunt transmise altor persoane sau firme, cu excepția furnizorilor implicați în canalul ales de tine și a situațiilor impuse de lege;</li>
+        <li>site-ul folosește conexiune securizată <strong>SSL (https)</strong>.</li>
       </ul>
 
-      <h2>2. Scopul colectării datelor</h2>
-      <p>Folosim aceste date <strong>exclusiv</strong> pentru:</p>
+      <h2>5. Drepturile tale conform GDPR</h2>
+      <p>În condițiile prevăzute de lege, ai următoarele drepturi:</p>
       <ul>
-          <li>A răspunde la solicitările trimise prin formular de contact sau email</li>
-          <li>A putea lua legătura pentru detalii despre rezervare</li>
-      </ul>
-      <p>Nu folosim datele în scopuri de marketing și nu le vindem către terți.</p>
-
-      <h2>3. Stocarea și securitatea datelor</h2>
-      <ul>
-          <li>Datele transmise prin formular sau email sunt stocate temporar pentru a răspunde solicitărilor</li>
-          <li>Datele nu sunt transmise altor persoane sau firme, cu excepția obligațiilor legale</li>
-          <li>Site-ul folosește conexiune securizată <strong>SSL (https)</strong></li>
-      </ul>
-
-      <h2>4. Drepturile tale conform GDPR</h2>
-      <p>Ai următoarele drepturi:</p>
-      <ul>
-          <li>Dreptul de acces la datele pe care le deținem despre tine</li>
-          <li>Dreptul de rectificare sau ștergere</li>
-          <li>Dreptul de a retrage consimțământul pentru prelucrare</li>
-          <li>Dreptul de a depune plângere la Autoritatea Națională de Supraveghere a Prelucrării Datelor cu Caracter Personal</li>
+        <li>dreptul de acces la datele pe care le deținem despre tine;</li>
+        <li>dreptul de rectificare sau ștergere;</li>
+        <li>dreptul de restricționare a prelucrării și, când este aplicabil, dreptul la portabilitate;</li>
+        <li>dreptul de opoziție și dreptul de a retrage consimțământul, fără a afecta legalitatea prelucrării anterioare;</li>
+        <li>dreptul de a depune plângere la Autoritatea Națională de Supraveghere a Prelucrării Datelor cu Caracter Personal.</li>
       </ul>
 
       <p>Pentru exercitarea acestor drepturi, ne poți contacta la:</p>
       <div class="bg-gray-50 p-4 rounded-lg border border-gray-200 mt-4">
-          <p class="mb-2"><i class="fas fa-envelope text-red-600 mr-2"></i> <strong>pensiuneacodrut@yahoo.com</strong></p>
-          <p class="mb-0"><i class="fas fa-phone text-red-600 mr-2"></i> <strong>0742 599 860</strong></p>
+        <p class="mb-2"><i class="fas fa-envelope text-red-600 mr-2" aria-hidden="true"></i> <a href="mailto:pensiuneacodrut@yahoo.com"><strong>pensiuneacodrut@yahoo.com</strong></a></p>
+        <p class="mb-0"><i class="fas fa-phone text-red-600 mr-2" aria-hidden="true"></i> <a href="tel:+40742599860"><strong>0742 599 860</strong></a></p>
       </div>
 
-      <h2>5. Cookie-uri</h2>
-      <p>Site-ul nostru poate folosi cookie-uri strict necesare pentru funcționarea sa. Nu folosim cookie-uri pentru publicitate sau tracking.</p>
+      <h2>6. Cookie-uri și analytics</h2>
+      <p>La data ultimei actualizări, site-ul nu folosește un instrument de analytics, cookie-uri de publicitate, remarketing sau profilare. Eventualele cookie-uri și tehnologii folosite după ce alegi să deschizi WhatsApp, Google Maps, Facebook, Instagram ori alt site extern sunt administrate de furnizorul respectiv, conform propriei politici.</p>
 
       <div class="mt-8 pt-8 border-t">
-          <a href="index.html" class="text-red-600 hover:text-red-800 font-medium flex items-center">
-              <i class="fas fa-arrow-left mr-2"></i> Înapoi la pagina principală
-          </a>
+        <a href="/" class="text-red-600 hover:text-red-800 font-medium flex items-center">
+          <i class="fas fa-arrow-left mr-2" aria-hidden="true"></i> Înapoi la pagina principală
+        </a>
       </div>
-
     </article>
-
   </main>
 
-  <!-- Footer -->
   <footer class="bg-gray-900 text-white py-12 mt-auto">
     <div class="container mx-auto px-6 text-center">
-        <p class="text-gray-500 text-sm">
-            &copy; 2025 Pensiunea Codruț. Toate drepturile rezervate.
-        </p>
+      <p class="text-gray-500 text-sm">&copy; 2026 Pensiunea Codruț. Toate drepturile rezervate.</p>
     </div>
   </footer>
 
   <script>
-    // Mobile menu toggle
-    document.getElementById('mobile-menu-btn').addEventListener('click', function() {
-        const menu = document.getElementById('mobile-menu');
-        menu.classList.toggle('hidden');
+    const menuButton = document.getElementById("mobile-menu-btn");
+    const mobileMenu = document.getElementById("mobile-menu");
+
+    menuButton.addEventListener("click", function () {
+      const willOpen = mobileMenu.classList.contains("hidden");
+      mobileMenu.classList.toggle("hidden");
+      menuButton.setAttribute("aria-expanded", String(willOpen));
     });
   </script>
 </body>
