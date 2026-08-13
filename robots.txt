@@ -1,13 +1,9 @@
 User-agent: *
 Allow: /
 
-# Nu indexa fișierele CSS/JS inutile din folderele de build
-Disallow: /dist/
+# Zone tehnice care nu trebuie accesate de crawlere.
 Disallow: /node_modules/
 Disallow: /vendor/
 
-# Poze și media ok de indexat
-Allow: /img/
-
-# Sitemap declarat
+# Pagina GDPR rămâne accesibilă crawlerelor pentru ca directiva noindex din pagină să poată fi citită.
 Sitemap: https://pensiuneacodrut.com/sitemap.xml

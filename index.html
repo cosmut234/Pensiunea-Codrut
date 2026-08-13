@@ -1,1167 +1,515 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ro">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#10231d">
+  <meta name="color-scheme" content="light">
 
-  <!-- Favicon -->
-  <link rel="icon" type="image/jpeg" href="img/logo.jpg" sizes="32x32">
-  <link rel="apple-touch-icon" href="img/logo.jpg">
-
-  <!-- Titlu SEO -->
-  <title>Pensiunea Codruț Moieciu – Site Oficial | Cazare lângă Bran</title>
-
-  <!-- Meta Description (SEO + CTR) -->
-  <meta name="description" content="Site-ul oficial al Pensiunii Codruț din Moieciu, la 15 minute de Castelul Bran. Camere spațioase, vedere la munți și rezervări directe, fără comision. Sună acum: 0742 599 860.">
-
-  <!-- Autor -->
+  <title>Cazare Moieciu de Jos | Pensiunea Codruț – Site Oficial</title>
+  <meta name="description" content="Cazare în Moieciu de Jos pentru cupluri, familii și grupuri. Camere cu baie proprie, curte, ciubăr și rezervare directă la Pensiunea Codruț.">
   <meta name="author" content="Pensiunea Codruț">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+  <link rel="canonical" href="https://pensiuneacodrut.com/">
 
-  <!-- Open Graph (Facebook, WhatsApp, Google) -->
-  <meta property="og:title" content="Pensiunea Codruț Moieciu – Site Oficial">
-  <meta property="og:description" content="Cazare aproape de Bran, camere spațioase și vedere superbă la munți. Rezervă direct, fără comision.">
-  <meta property="og:image" content="https://pensiuneacodrut.com/img/logo.jpg">
-  <meta property="og:url" content="https://pensiuneacodrut.com">
+  <meta property="og:locale" content="ro_RO">
   <meta property="og:type" content="website">
-
-  <!-- Twitter Card -->
+  <meta property="og:site_name" content="Pensiunea Codruț">
+  <meta property="og:title" content="Cazare în Moieciu de Jos | Pensiunea Codruț">
+  <meta property="og:description" content="Camere pentru cupluri și familii, curte mare, ciubăr și pensiunea întreagă pentru grupul tău.">
+  <meta property="og:url" content="https://pensiuneacodrut.com/">
+  <meta property="og:image" content="https://pensiuneacodrut.com/img/ext.webp">
+  <meta property="og:image:width" content="1300">
+  <meta property="og:image:height" content="975">
+  <meta property="og:image:alt" content="Curtea Pensiunii Codruț din Moieciu de Jos">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Pensiunea Codruț Moieciu – Site Oficial">
-  <meta name="twitter:description" content="Cazare lângă Bran cu camere spațioase și vedere la munți. Rezervă direct pe site.">
-  <meta name="twitter:image" content="https://pensiuneacodrut.com/img/logo.jpg">
+  <meta name="twitter:title" content="Cazare în Moieciu de Jos | Pensiunea Codruț">
+  <meta name="twitter:description" content="Un loc cald pentru cupluri, familii și grupuri, la poalele Bucegilor.">
+  <meta name="twitter:image" content="https://pensiuneacodrut.com/img/ext.webp">
 
-  <!-- CSS -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="icon" type="image/jpeg" href="img/logo.jpg">
+  <link rel="apple-touch-icon" href="img/logo.jpg">
+  <link rel="preload" as="image" href="img/hero.webp" type="image/webp" fetchpriority="high">
+  <link rel="stylesheet" href="site.css?v=20260813">
 
-  <!-- Preload imagine Hero -->
-  <link rel="preload" as="image" href="img/hero.webp" type="image/webp">
-  <link rel="preconnect" href="https://www.youtube.com">
-  <link rel="preconnect" href="https://i.ytimg.com">
-
-  <!-- Schema.org pentru Google -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "LodgingBusiness",
-    "name": "Pensiunea Codruț",
-    "alternateName": "Pensiunea Codrut Moieciu",
-    "image": "https://pensiuneacodrut.com/img/logo.jpg",
-    "photo": "https://pensiuneacodrut.com/img/logo.jpg",
-    "@id": "https://pensiuneacodrut.com",
-    "url": "https://pensiuneacodrut.com",
-    "telephone": "+40 742 599 860",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "Strada Principală nr. 418B",
-      "addressLocality": "Moieciu de Jos",
-      "addressRegion": "Brașov",
-      "postalCode": "507135",
-      "addressCountry": "RO"
-    },
-    "geo": {
-      "@type": "GeoCoordinates",
-      "latitude": 45.4877152,
-      "longitude": 25.3239914
-    },
-    "priceRange": "220 RON - 300 RON",
-    "amenityFeature": [
-      { "@type": "LocationFeatureSpecification", "name": "Wi-Fi gratuit", "value": true },
-      { "@type": "LocationFeatureSpecification", "name": "Parcare privată", "value": true },
-      { "@type": "LocationFeatureSpecification", "name": "Ciubăr", "value": true },
-      { "@type": "LocationFeatureSpecification", "name": "Loc de joacă", "value": true }
-    ],
-    "sameAs": [
-      "https://www.facebook.com/p/Pensiunea-Codrut-Moieciu-100063481511416/",
-      "https://www.instagram.com/pensiunea_codrut_moieciudejos/"
+    "@graph": [
+      {
+        "@type": "LodgingBusiness",
+        "@id": "https://pensiuneacodrut.com/#pensiune",
+        "name": "Pensiunea Codruț",
+        "alternateName": "Pensiunea Codrut Moieciu",
+        "url": "https://pensiuneacodrut.com/",
+        "image": [
+          "https://pensiuneacodrut.com/img/ext.webp",
+          "https://pensiuneacodrut.com/img/pensiune.webp",
+          "https://pensiuneacodrut.com/img/terasa.webp"
+        ],
+        "logo": "https://pensiuneacodrut.com/img/logo.jpg",
+        "telephone": "+40742599860",
+        "email": "pensiuneacodrut@yahoo.com",
+        "priceRange": "220–300 RON",
+        "numberOfRooms": 11,
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Strada Principală nr. 418B",
+          "addressLocality": "Moieciu de Jos",
+          "addressRegion": "Brașov",
+          "postalCode": "507135",
+          "addressCountry": "RO"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 45.4877152,
+          "longitude": 25.3239914
+        },
+        "hasMap": "https://www.google.com/maps/search/?api=1&query=Pensiunea+Codrut+Moieciu",
+        "openingHoursSpecification": {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+          "opens": "08:00",
+          "closes": "22:00"
+        },
+        "amenityFeature": [
+          {"@type": "LocationFeatureSpecification", "name": "Wi-Fi gratuit", "value": true},
+          {"@type": "LocationFeatureSpecification", "name": "Parcare privată", "value": true},
+          {"@type": "LocationFeatureSpecification", "name": "Ciubăr", "value": true},
+          {"@type": "LocationFeatureSpecification", "name": "Bucătărie utilată", "value": true},
+          {"@type": "LocationFeatureSpecification", "name": "Loc de joacă", "value": true}
+        ],
+        "sameAs": [
+          "https://www.facebook.com/p/Pensiunea-Codrut-Moieciu-100063481511416/",
+          "https://www.instagram.com/pensiunea_codrut_moieciudejos/"
+        ]
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://pensiuneacodrut.com/#website",
+        "url": "https://pensiuneacodrut.com/",
+        "name": "Pensiunea Codruț",
+        "inLanguage": "ro-RO",
+        "publisher": {"@id": "https://pensiuneacodrut.com/#pensiune"}
+      }
     ]
   }
   </script>
 </head>
+<body>
+  <a class="skip-link" href="#continut">Sari la conținut</a>
 
+  <header class="site-header" data-header>
+    <nav class="nav-shell" aria-label="Navigație principală">
+      <a class="brand" href="#acasa" aria-label="Pensiunea Codruț, pagina principală">
+        <svg class="brand-mark" viewBox="0 0 48 48" aria-hidden="true" fill="none">
+          <path d="M8 23.5 24 10l16 13.5V40H8V23.5Z" stroke="currentColor" stroke-width="1.7"/>
+          <path d="M19 40V29h10v11M14 16V8h5v4" stroke="currentColor" stroke-width="1.7"/>
+          <path d="M33 8c4.2.6 6.8 3.2 7 7-4.1-.3-6.6-2.7-7-7Z" fill="currentColor" opacity=".7"/>
+        </svg>
+        <span>Pensiunea Codruț</span>
+      </a>
 
-    <style>
-        /* Custom CSS for animations and effects */
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-        
-        @keyframes slideUp {
-            from { transform: translateY(50px); opacity: 0; }
-            to { transform: translateY(0); opacity: 1; }
-        }
-        
-        .fade-in {
-            animation: fadeIn 1s ease-in-out forwards;
-        }
-        
-        .slide-up {
-            animation: slideUp 0.8s ease-out forwards;
-        }
-        
-        .parallax {
-            background-attachment: fixed;
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: cover;
-        }
-        
-        .glow-on-hover {
-            transition: all 0.3s ease;
-        }
-        
-        .glow-on-hover:hover {
-            box-shadow: 0 0 15px rgba(239, 68, 68, 0.7);
-            transform: translateY(-2px);
-        }
-        
-        .icon-hover {
-            transition: all 0.3s ease;
-        }
-        
-        .icon-hover:hover {
-            transform: scale(1.1);
-            color: #e73939;
-        }
-        
-        .nav-transparent {
-            background-color: rgba(255, 255, 255, 0.9);
-            backdrop-filter: blur(10px);
-            transition: all 0.3s ease;
-        }
-        
-        .nav-scrolled {
-            background-color: rgba(255, 255, 255, 0.95);
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-        }
-        
-        .room-card {
-            transition: all 0.3s ease;
-        }
-        
-        .room-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-        }
-        
-        .testimonial-slide {
-            transition: opacity 0.5s ease, transform 0.5s ease;
-        }
-        
-        .gallery-item {
-            transition: all 0.3s ease;
-        }
-        
-        .gallery-item:hover {
-            transform: scale(1.02);
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-        }
-        
-        .lightbox {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.9);
-            z-index: 1000;
-            justify-content: center;
-            align-items: center;
-        }
-        
-        .lightbox-content {
-            max-width: 90%;
-            max-height: 90%;
-        }
-        
-        .lightbox-close {
-            position: absolute;
-            top: 20px;
-            right: 30px;
-            color: white;
-            font-size: 30px;
-            cursor: pointer;
-        }
-        
-        .input-field {
-            transition: all 0.3s ease;
-            border-bottom: 2px solid #e5e7eb;
-        }
-        
-        .input-field:focus {
-            border-bottom-color: #ef4444;
-        }
-        
-        .calendar-day {
-            transition: all 0.2s ease;
-        }
-        
-        .calendar-day:hover {
-            background-color: #fee2e2;
-        }
-        
-        .calendar-day.selected {
-            background-color: #ef4444;
-            color: white;
-        }
-        
-        /* Responsive adjustments */
-        @media (max-width: 768px) {
-            .parallax {
-                background-attachment: scroll;
-            }
-            
-            .hero-text {
-                font-size: 2.5rem !important;
-            }
-            
-            .section-title {
-                font-size: 1.8rem !important;
-            }
-        }
-    </style>
-</head>
-<body class="font-sans bg-white text-gray-900">
-    <!-- Navigation -->
-    <nav id="navbar" class="nav-transparent fixed w-full z-50 py-4 px-6 md:px-12">
-        <div class="container mx-auto flex justify-between items-center">
-            <a href="#home" class="text-2xl font-bold text-gray-900 flex items-center">
-                <span class="text-red-500">Pensiunea</span> Codruț
-            </a>
-            
-            <div class="hidden md:flex space-x-8">
-                <a href="#home" class="text-gray-900 hover:text-red-500 transition">Acasă</a>
-                <a href="#about" class="text-gray-900 hover:text-red-500 transition">Despre noi</a>
-                <a href="#rooms" class="text-gray-900 hover:text-red-500 transition">Camere</a>
-                <a href="#gallery" class="text-gray-900 hover:text-red-500 transition">Galerie</a>
-                <a href="#contact" class="text-gray-900 hover:text-red-500 transition">Contact</a>
-            </div>
-            
-            <div class="hidden md:block">
-                <a href="https://api.whatsapp.com/send/?phone=40742599860&text&type=phone_number&app_absent=0" class="bg-red-500 hover:bg-red-600 text-white px-6 py-2 rounded-full glow-on-hover transition">
-                    Rezervă acum
-                </a>
-            </div>
-            
-           <button id="mobile-menu-button" class="md:hidden text-gray-900" aria-label="Deschide meniul">
-  <i class="fas fa-bars text-2xl" aria-hidden="true"></i>
-</button>
-        </div>
-        
-        <!-- Mobile menu -->
-        <div id="mobile-menu" class="hidden md:hidden bg-white py-4 px-6 shadow-lg">
-            <div class="flex flex-col space-y-4">
-                <a href="#home" class="text-gray-900 hover:text-red-500 transition">Acasă</a>
-                <a href="#about" class="text-gray-900 hover:text-red-500 transition">Despre noi</a>
-                <a href="#rooms" class="text-gray-900 hover:text-red-500 transition">Camere</a>
-                <a href="#gallery" class="text-gray-900 hover:text-red-500 transition">Galerie</a>
-                <a href="#contact" class="text-gray-900 hover:text-red-500 transition">Contact</a>
-                <a href="https://api.whatsapp.com/send/?phone=40742599860&text&type=phone_number&app_absent=0" class="bg-red-500 hover:bg-red-600 text-white px-6 py-2 rounded-full glow-on-hover transition text-center">
-                    Rezervă acum
-                </a>
-            </div>
-        </div>
+      <div class="nav-links">
+        <a href="#despre">Pensiunea</a>
+        <a href="#camere">Camere</a>
+        <a href="#experiente">Facilități</a>
+        <a href="#galerie">Galerie</a>
+        <a href="#ghiduri">Ghid local</a>
+        <a href="#contact">Contact</a>
+      </div>
+
+      <div class="nav-actions">
+        <a class="nav-phone" href="tel:+40742599860">0742 599 860</a>
+        <a class="button nav-cta" href="https://wa.me/40742599860?text=Buna%20ziua!%20As%20dori%20sa%20verific%20disponibilitatea%20la%20Pensiunea%20Codrut." target="_blank" rel="noopener noreferrer">Verifică disponibilitatea</a>
+      </div>
+
+      <button class="menu-toggle" type="button" aria-label="Deschide meniul" aria-expanded="false" aria-controls="meniu-mobil" data-menu-toggle>
+        <span></span>
+        <span></span>
+      </button>
     </nav>
+  </header>
 
-    <!-- Hero Section -->
-    <section id="home" class="relative h-screen flex items-center justify-center overflow-hidden">
-        <div class="absolute inset-0 bg-black opacity-40"></div>
-        <div class="parallax bg-cover bg-center absolute inset-0" style="background-image: url(img/hero.webp);"></div>
-        
-        <div class="container mx-auto px-6 z-10 text-center slide-up">
-            <h1 class="hero-text text-5xl md:text-7xl font-bold text-white mb-6">
-                Pensiunea<span class="text-red-500">Codruț</span> Din Moieciu
-            </h1>
-            <p class="text-xl md:text-2xl text-white mb-8 max-w-2xl mx-auto">
-                Pensiunea Codruț Moieciu – locul unde te simți acasă, cu priveliști spre Bucegi și cazare lângă Bran.
-            </p>
-           <a href="https://wa.me/40742599860" 
-   class="bg-red-500 hover:bg-red-600 text-white px-8 py-3 rounded-full text-lg font-medium glow-on-hover inline-block transition">
-    Rezervă acum
-</a>
+  <div class="mobile-menu" id="meniu-mobil" data-mobile-menu hidden>
+    <a href="#despre">Pensiunea</a>
+    <a href="#camere">Camere</a>
+    <a href="#experiente">Facilități</a>
+    <a href="#galerie">Galerie</a>
+    <a href="#ghiduri">Ghid local</a>
+    <a href="#contact">Contact</a>
+    <a class="button button--primary" href="https://wa.me/40742599860?text=Buna%20ziua!%20As%20dori%20sa%20verific%20disponibilitatea%20la%20Pensiunea%20Codrut." target="_blank" rel="noopener noreferrer">Întreabă pe WhatsApp</a>
+  </div>
 
-<a href="https://www.google.com/search?tbm=lcl&sxsrf=AE3TifPwq_mY5RwEep0vrbyKbsnZzkUSSA:1755094105737&q=Pensiunea+Codrut+Recenzii&rflfq=1&num=20&stick=H4sIAAAAAAAAAONgkxK2MDU3NzY0MDMwNbQ0NzQzNjG03MDI-IpRMiA1rzizNC81UcE5P6WotEQhKDU5Na8qM3MRK245ADeQHatSAAAA&rldimm=8577310605197163419&hl=ro-RO#lkt=LocalPoiReviews" 
-   target="_blank" 
-   class="bg-red border border-white text-white px-8 py-3 rounded-full text-lg font-medium glow-on-hover inline-block transition mt-4">
-    Vezi recenziile pe Google
-</a>
+  <main id="continut">
+    <section class="hero" id="acasa" aria-labelledby="hero-title">
+      <picture class="hero-media">
+        <img src="img/hero.webp" alt="Peisaj montan din zona Moieciu" width="1920" height="1275" fetchpriority="high">
+      </picture>
+      <div class="hero-overlay" aria-hidden="true"></div>
 
-        </div>
-        
-        <div class="absolute bottom-10 left-0 right-0 text-center">
-            <a href="#about" class="text-white animate-bounce inline-block">
-                <i class="fas fa-chevron-down text-2xl"></i>
+      <div class="shell hero-grid">
+        <div class="hero-copy">
+          <span class="eyebrow">Moieciu de Jos · Brașov</span>
+          <h1 id="hero-title">Cazare în Moieciu, cu loc pentru <em>toți.</em></h1>
+          <p class="hero-lead">Camere pentru cupluri și familii, curte mare, ciubăr și pensiunea întreagă pentru grupul tău — într-un loc cald, la poalele Bucegilor.</p>
+          <div class="hero-actions">
+            <a class="button button--primary" href="https://wa.me/40742599860?text=Buna%20ziua!%20As%20dori%20sa%20verific%20disponibilitatea%20la%20Pensiunea%20Codrut." target="_blank" rel="noopener noreferrer">
+              <svg viewBox="0 0 24 24" aria-hidden="true" fill="none"><path d="M20.5 11.7a8.5 8.5 0 0 1-12.6 7.4L3 20.5l1.4-4.7a8.5 8.5 0 1 1 16.1-4.1Z" stroke="currentColor" stroke-width="1.8"/><path d="M9 8.4c.2 2.8 2.1 4.8 5 5.4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+              Întreabă pe WhatsApp
             </a>
+            <a class="button button--ghost" href="#camere">Vezi camerele</a>
+          </div>
         </div>
+
+        <aside class="hero-proof" aria-label="Recenzii ale oaspeților">
+          <div class="proof-stars" aria-label="5 stele din 5">★★★★★</div>
+          <strong>Oaspeți care se întorc</strong>
+          <p>Curățenia, curtea generoasă și gazdele primitoare sunt lucrurile amintite cel mai des.</p>
+          <a href="https://www.google.com/maps/search/?api=1&query=Pensiunea+Codrut+Moieciu" target="_blank" rel="noopener noreferrer">Vezi recenziile pe Google</a>
+        </aside>
+      </div>
+
+      <ul class="hero-facts" aria-label="Informații esențiale">
+        <li><strong>11 camere</strong><span>pentru cupluri, familii și grupuri</span></li>
+        <li><strong>Până la 22</strong><span>de oaspeți la închiriere integrală</span></li>
+        <li><strong>Curte &amp; ciubăr</strong><span>spațiu de relaxare în aer liber</span></li>
+        <li><strong>Rezervare directă</strong><span>telefonic sau pe WhatsApp</span></li>
+      </ul>
     </section>
 
-    <!-- About Section -->
-    <section id="about" class="py-20 bg-white">
-        <div class="container mx-auto px-6">
-            <div class="text-center mb-16 fade-in">
-                <h2 class="section-title text-3xl md:text-4xl font-bold mb-4">Despre <span class="text-red-500">Pensiunea Codruț</span></h2>
-                <div class="w-20 h-1 bg-red-500 mx-auto mb-6"></div>
-                <p class="text-gray-600 max-w-3xl mx-auto">
-                    O poveste de pasiune și dedicare transformată într-un sanctuar de relaxare și reconectare cu natura.
-                </p>
-            </div>
-            
-            <div class="flex flex-col md:flex-row items-center gap-12">
-                <div class="md:w-1/2 fade-in">
-                    <div class="relative overflow-hidden rounded-xl shadow-lg">
-                        <img src="img/moieciu.webp" alt="Pensiunea Codruț Din Moieciu" class="w-full h-auto" loading="lazy">
-                        <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent opacity-70"></div>
-                        <div class="absolute bottom-0 left-0 p-6 text-white">
-                            <h3 class="text-xl font-semibold">Moieciu, România</h3>
-                            <p>La poalele Munților Bucegi</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="md:w-1/2 slide-up">
-                    <h3 class="text-2xl font-semibold mb-4">Povestea noastră</h3>
-                    <p class="text-gray-600 mb-6">
-                        Pensiunea Codruț a luat naștere din dorința de a crea un spațiu autentic, unde tradiția se îmbină cu confortul modern. Înființată în 2004 de familia Arzoiu, pensiunea a evoluat constant, devenind un punct de referință în turismul din zona Bran-Moieciu.
-                    </p>
-                    
-                    <h3 class="text-2xl font-semibold mb-4">Valorile noastre</h3>
-                    <div class="space-y-4">
-                        <div class="flex items-start">
-                            <div class="bg-red-100 p-2 rounded-full mr-4">
-                                <i class="fas fa-heart text-red-500 icon-hover"></i>
-                            </div>
-                            <div>
-                                <h4 class="font-medium text-gray-900">Pasiune pentru ospitalitate</h4>
-                                <p class="text-gray-600 text-sm">Ne dedicăm cu drag fiecărui oaspete, creând experiențe personalizate.</p>
-                            </div>
-                        </div>
-                        
-                        <div class="flex items-start">
-                            <div class="bg-red-100 p-2 rounded-full mr-4">
-                                <i class="fas fa-leaf text-red-500 icon-hover"></i>
-                            </div>
-                            <div>
-                                <h4 class="font-medium text-gray-900">Respect pentru natură</h4>
-                                <p class="text-gray-600 text-sm">Folosim materiale eco și promovăm turismul sustenabil.</p>
-                            </div>
-                        </div>
-                        
-                        <div class="flex items-start">
-                            <div class="bg-red-100 p-2 rounded-full mr-4">
-                                <i class="fas fa-utensils text-red-500 icon-hover"></i>
-                            </div>
-                            <div>
-                                <h4 class="font-medium text-gray-900">Gastronomie autentică</h4>
-                                <p class="text-gray-600 text-sm">Încurajăm rețetele de acasă, cu ajutorul unei bucătării complet utilate.</p>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <a href="#contact" class="mt-8 inline-block border border-red-500 text-red-500 hover:bg-red-500 hover:text-white px-6 py-2 rounded-full transition">
-                        Află mai multe
-                    </a>
-                </div>
-            </div>
+    <section class="section section--cream" id="despre">
+      <span class="anchor-alias" id="about" aria-hidden="true"></span>
+      <div class="shell story-grid">
+        <div class="story-media" data-reveal="left">
+          <img class="story-image-main" src="img/ext.webp" alt="Curtea verde a Pensiunii Codruț din Moieciu de Jos" width="1300" height="975" loading="lazy" decoding="async">
+          <img class="story-image-small" src="img/terasa.webp" alt="Terasa acoperită a pensiunii" width="1024" height="768" loading="lazy" decoding="async">
+          <div class="story-year" aria-label="Pensiune de familie din anul 2004">
+            <strong>2004</strong>
+            <span>de când<br>vă primim</span>
+          </div>
         </div>
+
+        <div class="story-copy" data-reveal="right">
+          <span class="eyebrow">Pensiune de familie</span>
+          <h2>Un loc simplu de ales. Greu de uitat.</h2>
+          <p>Pensiunea Codruț este pentru cei care vor să stea aproape de munte, dar să aibă la îndemână tot ce face un sejur confortabil: camere cu baie proprie, bucătărie utilată, spațiu pentru copii și seri liniștite în curte.</p>
+          <ul class="story-points">
+            <li>
+              <svg viewBox="0 0 24 24" aria-hidden="true" fill="none"><path d="m5 12 4 4L19 6" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              <div><strong>Potrivită pentru familii</strong><span>Camere family, loc de joacă și o curte în care cei mici au spațiu.</span></div>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" aria-hidden="true" fill="none"><path d="m5 12 4 4L19 6" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              <div><strong>Bună pentru grupuri</strong><span>Pensiunea poate fi închiriată integral, pentru până la 22 de persoane.</span></div>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" aria-hidden="true" fill="none"><path d="m5 12 4 4L19 6" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              <div><strong>Relaxare fără program complicat</strong><span>Ciubăr, grătar, jocuri și bucătărie, toate în același loc.</span></div>
+            </li>
+          </ul>
+        </div>
+      </div>
     </section>
 
-    <!-- Rooms Section -->
-    <section id="rooms" class="py-20 bg-gray-50">
-        <div class="container mx-auto px-6">
-            <div class="text-center mb-16 fade-in">
-                <h2 class="section-title text-3xl md:text-4xl font-bold mb-4">Camere și <span class="text-red-500">Tarife</span></h2>
-                <div class="w-20 h-1 bg-red-500 mx-auto mb-6"></div>
-                <p class="text-gray-600 max-w-3xl mx-auto">
-                    Spații rafinate, proiectate pentru confort maxim și relaxare. Alege varianta perfectă pentru experiența ta.
-                </p>
+    <section class="section" id="camere" aria-labelledby="camere-title">
+      <span class="anchor-alias" id="rooms" aria-hidden="true"></span>
+      <div class="shell">
+        <header class="section-heading section-heading--center" data-reveal>
+          <span class="eyebrow">Camere &amp; tarife</span>
+          <h2 id="camere-title">Alege spațiul care vi se potrivește</h2>
+          <p>Două variante de cameră și opțiunea de a avea întreaga pensiune doar pentru grupul tău.</p>
+        </header>
+
+        <div class="rooms-grid">
+          <article class="room-card" data-reveal>
+            <div class="room-media">
+              <img src="img/cameras.webp" alt="Cameră dublă cu balcon la Pensiunea Codruț" width="1300" height="1733" loading="lazy" decoding="async">
+              <span class="room-badge">Pentru doi</span>
             </div>
-            
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Room 1 -->
-                <div class="room-card bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition">
-                    <div class="relative overflow-hidden h-64">
-                        <img src="img/cameras.webp" alt="Camera Dublă Standard la pensiunea codrut din moieciu langa bran" class="w-full h-full object-cover" loading="lazy">
-                        <div class="absolute top-4 right-4 bg-red-500 text-white px-3 py-1 rounded-full text-sm font-medium">
-                            Popular
-                        </div>
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-semibold mb-2">Camera Dublă Standard</h3>
-                        <p class="text-gray-600 text-sm mb-4">Perfectă pentru un cuplu, cu balcon si baie propie</p>
-                        
-                        <div class="flex items-center mb-4">
-                            <div class="flex mr-4">
-                                <i class="fas fa-user text-gray-400 mr-1"></i>
-                                <span class="text-sm text-gray-600">2 persoane</span>
-                            </div>
-                            <div class="flex">
-                                <i class="fas fa-expand text-gray-400 mr-1"></i>
-                                <span class="text-sm text-gray-600">16 mp</span>
-                            </div>
-                        </div>
-                        
-                        <div class="mb-4">
-                            <span class="text-2xl font-bold text-gray-900">220 RON</span>
-                            <span class="text-sm text-gray-500">/ noapte</span>
-                        </div>
-                        
-                        <a href="https://wa.me/40742599860" class="block w-full bg-red-500 hover:bg-red-600 text-white text-center py-2 rounded-full glow-on-hover transition">
-                            Rezervă acum
-                        </a>
-                    </div>
-                </div>
-                
-                <!-- Room 2 -->
-                <div class="room-card bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition">
-                    <div class="relative overflow-hidden h-64">
-                        <img src="img/camerad.webp" alt="Camera Family la pensiunea codrut din moieciu,balcon propiu cu vedere excelenta " class="w-full h-full object-cover" loading="lazy">
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-semibold mb-2">Camera Family</h3>
-                        <p class="text-gray-600 text-sm mb-4">Camera Family dispune de un pat dublu și o canapea extensibilă, oferind confort pentru o familie. Cu balcon si baie propie.</p>
-                        
-                        <div class="flex items-center mb-4">
-                            <div class="flex mr-4">
-                                <i class="fas fa-user text-gray-400 mr-1"></i>
-                                <span class="text-sm text-gray-600">2 Adulti si 2 Copii</span>
-                            </div>
-                            <div class="flex">
-                                <i class="fas fa-expand text-gray-400 mr-1"></i>
-                                <span class="text-sm text-gray-600">25 mp</span>
-                            </div>
-                        </div>
-                        
-                        <div class="mb-4">
-                            <span class="text-2xl font-bold text-gray-900">300 RON</span>
-                            <span class="text-sm text-gray-500">/ noapte</span>
-                        </div>
-                        
-                        <a href="https://wa.me/40742599860" class="block w-full bg-red-500 hover:bg-red-600 text-white text-center py-2 rounded-full glow-on-hover transition">
-                            Rezervă acum
-                        </a>
-                    </div>
-                </div>
-                
-                <!-- Room 3 -->
-                <div class="room-card bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition">
-                    <div class="relative overflow-hidden h-64">
-                        <img src="img/pensiune.webp" alt="Intreaga pensiune codrut,disponibila pentru inchiriere integrala" class="w-full h-full object-cover" loading="lazy">
-                        <div class="absolute top-4 right-4 bg-red-500 text-white px-3 py-1 rounded-full text-sm font-medium">
-                            Oferta!
-                        </div>
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-semibold mb-2">Inchiriere Integrala</h3>
-                        <p class="text-gray-600 text-sm mb-4">Casa ta, integral, pentru tine.</p>
-                        
-                        <div class="flex items-center mb-4">
-                            <div class="flex mr-4">
-                                <i class="fas fa-user text-gray-400 mr-1"></i>
-                                <span class="text-sm text-gray-600">22 persoane</span>
-                            </div>
-                            <div class="flex">
-                                <i class="fas fa-expand text-gray-400 mr-1"></i>
-                                <span class="text-sm text-gray-600">11 Camere</span>
-                            </div>
-                        </div>
-                        
-                        <div class="mb-4">
-                            <span class="text-2xl font-bold text-gray-900">Cere Oferta!</span>
-                            <span class="text-sm text-gray-500">/ minim 2 nopti</span>
-                        </div>
-                        
-                        <a href="https://wa.me/40742599860" class="block w-full bg-red-500 hover:bg-red-600 text-white text-center py-2 rounded-full glow-on-hover transition">
-                            Rezervă acum
-                        </a>
-                    </div>
-                </div>
+            <div class="room-content">
+              <h3>Camera dublă</h3>
+              <p>O cameră confortabilă pentru un cuplu, cu balcon și baie proprie.</p>
+              <ul class="room-meta"><li>2 persoane</li><li>16 m²</li><li>Baie proprie</li></ul>
+              <div class="room-bottom">
+                <div class="room-price"><small>de la</small><strong>220 lei</strong><small>/ noapte</small></div>
+                <a class="button button--outline" href="https://wa.me/40742599860?text=Buna%20ziua!%20As%20dori%20detalii%20despre%20camera%20dubla." target="_blank" rel="noopener noreferrer">Verifică datele</a>
+              </div>
             </div>
-            
-            <div class="text-center mt-12">
-                <a href="tel:+40742599860" class="inline-block border border-red-500 text-red-500 hover:bg-red-500 hover:text-white px-6 py-2 rounded-full transition">
-                    Rezervă-ți vacanța telefonic!
-                </a>
+          </article>
+
+          <article class="room-card" data-reveal>
+            <div class="room-media">
+              <img src="img/camerad.webp" alt="Cameră family cu pat dublu și canapea extensibilă" width="1300" height="1733" loading="lazy" decoding="async">
+              <span class="room-badge">Pentru familie</span>
             </div>
+            <div class="room-content">
+              <h3>Camera family</h3>
+              <p>Pat dublu și canapea extensibilă, balcon și baie proprie pentru un sejur în familie.</p>
+              <ul class="room-meta"><li>2 adulți + 2 copii</li><li>25 m²</li><li>Baie proprie</li></ul>
+              <div class="room-bottom">
+                <div class="room-price"><small>de la</small><strong>300 lei</strong><small>/ noapte</small></div>
+                <a class="button button--outline" href="https://wa.me/40742599860?text=Buna%20ziua!%20As%20dori%20detalii%20despre%20camera%20family." target="_blank" rel="noopener noreferrer">Verifică datele</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="room-card" data-reveal>
+            <div class="room-media">
+              <img src="img/pensiune.webp" alt="Clădirea Pensiunii Codruț din Moieciu de Jos" width="1024" height="768" loading="lazy" decoding="async">
+              <span class="room-badge">Doar grupul vostru</span>
+            </div>
+            <div class="room-content">
+              <h3>Închiriere integrală</h3>
+              <p>Toată pensiunea pentru familie extinsă, prieteni sau un weekend de grup.</p>
+              <ul class="room-meta"><li>22 persoane</li><li>11 camere</li><li>Minimum 2 nopți</li></ul>
+              <div class="room-bottom">
+                <div class="room-price"><small>tarif</small><strong>la cerere</strong><small>în funcție de perioadă</small></div>
+                <a class="button button--outline" href="https://wa.me/40742599860?text=Buna%20ziua!%20As%20dori%20o%20oferta%20pentru%20inchirierea%20integrala%20a%20pensiunii." target="_blank" rel="noopener noreferrer">Cere o ofertă</a>
+              </div>
+            </div>
+          </article>
         </div>
+        <p class="rooms-note">
+          <svg viewBox="0 0 24 24" aria-hidden="true" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.7"/><path d="M12 10v6m0-9v.2" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>
+          Tariful final și disponibilitatea se confirmă direct pentru perioada aleasă.
+        </p>
+      </div>
     </section>
 
-    <!-- Blog Section -->
-<section id="blog" class="py-20 bg-gray-50">
-    <div class="container mx-auto px-6">
-        <div class="text-center mb-16 fade-in">
-            <h2 class="section-title text-3xl md:text-4xl font-bold mb-4">Blog <span class="text-red-500">Pensiunea Codruț</span></h2>
-            <div class="w-20 h-1 bg-red-500 mx-auto mb-6"></div>
-            <p class="text-gray-600 max-w-3xl mx-auto">
-                Ghiduri, recomandări și sfaturi pentru o vacanță perfectă în inima Carpaților.
-            </p>
+    <section class="section section--forest" id="experiente" aria-labelledby="experiente-title">
+      <div class="shell experience-grid">
+        <div class="experience-copy" data-reveal="left">
+          <span class="eyebrow eyebrow--light">Totul în același loc</span>
+          <h2 id="experiente-title">Dimineți afară. Seri împreună.</h2>
+          <p>La Pensiunea Codruț, sejurul nu se termină la ușa camerei. Ai spațiu să gătești, să te joci, să stai la povești și să te relaxezi în ritmul tău.</p>
+          <ul class="facility-list">
+            <li><svg viewBox="0 0 24 24" aria-hidden="true" fill="none"><path d="m5 12 4 4L19 6" stroke="currentColor" stroke-width="2"/></svg>Wi-Fi gratuit</li>
+            <li><svg viewBox="0 0 24 24" aria-hidden="true" fill="none"><path d="m5 12 4 4L19 6" stroke="currentColor" stroke-width="2"/></svg>Parcare privată</li>
+            <li><svg viewBox="0 0 24 24" aria-hidden="true" fill="none"><path d="m5 12 4 4L19 6" stroke="currentColor" stroke-width="2"/></svg>Ciubăr</li>
+            <li><svg viewBox="0 0 24 24" aria-hidden="true" fill="none"><path d="m5 12 4 4L19 6" stroke="currentColor" stroke-width="2"/></svg>Bucătărie utilată</li>
+            <li><svg viewBox="0 0 24 24" aria-hidden="true" fill="none"><path d="m5 12 4 4L19 6" stroke="currentColor" stroke-width="2"/></svg>Biliard, air hockey &amp; ping-pong</li>
+            <li><svg viewBox="0 0 24 24" aria-hidden="true" fill="none"><path d="m5 12 4 4L19 6" stroke="currentColor" stroke-width="2"/></svg>Loc de joacă</li>
+            <li><svg viewBox="0 0 24 24" aria-hidden="true" fill="none"><path d="m5 12 4 4L19 6" stroke="currentColor" stroke-width="2"/></svg>Zonă de grătar</li>
+            <li><svg viewBox="0 0 24 24" aria-hidden="true" fill="none"><path d="m5 12 4 4L19 6" stroke="currentColor" stroke-width="2"/></svg>Terasă acoperită</li>
+          </ul>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <!-- Blog Post 1 -->
-            <article class="relative bg-cover bg-center rounded-xl shadow-md hover:shadow-xl transition room-card h-80 flex items-end text-white" style="background-image: linear-gradient(to top, rgba(0,0,0,0.6), rgba(0,0,0,0.1)), url('img/moieciu.webp');">
-                <div class="p-6 z-10">
-                    <h3 class="text-xl font-semibold mb-2">Top 10 atracții turistice de vizitat lângă Moieciu și Bran</h3>
-                    <p class="text-sm mb-4">
-                        De la Castelul Bran la Cheile Grădiștei și traseele din Bucegi – cele mai frumoase locuri de explorat în zonă.
-                    </p>
-                    <a href="atractii.html" class="inline-flex items-center text-red-400 font-medium hover:text-red-300 transition">
-                        Citește mai mult
-                        <i class="fas fa-arrow-right ml-1 text-sm"></i>
-                    </a>
-                </div>
-            </article>
-
-            <!-- Blog Post 2 -->
-            <article class="relative bg-cover bg-center rounded-xl shadow-md hover:shadow-xl transition room-card h-80 flex items-end text-white" style="background-image: linear-gradient(to top, rgba(0,0,0,0.6), rgba(0,0,0,0.1)), url('img/moieciu.webp');">
-                <div class="p-6 z-10">
-                    <h3 class="text-xl font-semibold mb-2">Moieciu vs. Bran: Unde e mai bine să te cazeezi?</h3>
-                    <p class="text-sm mb-4">
-                        Comparativ între cele două destinații: liniște vs. agitație, prețuri, accesibilitate și experiență autentică.
-                    </p>
-                    <a href="moieciuvsbran.html" class="inline-flex items-center text-red-400 font-medium hover:text-red-300 transition">
-                        Citește mai mult
-                        <i class="fas fa-arrow-right ml-1 text-sm"></i>
-                    </a>
-                </div>
-            </article>
-
-            <!-- Blog Post 3 -->
-            <article class="relative bg-cover bg-center rounded-xl shadow-md hover:shadow-xl transition room-card h-80 flex items-end text-white" style="background-image: linear-gradient(to top, rgba(0,0,0,0.6), rgba(0,0,0,0.1)), url('img/ciubar.webp');">
-                <div class="p-6 z-10">
-                    <h3 class="text-xl font-semibold mb-2">Ciubăr la munte: Relaxare autentică în Moieciu</h3>
-                    <p class="text-sm mb-4">
-                        De ce un ciubăr tradițional face diferența? Recomandări pentru pensiuni cu ciubăr în Moieciu.
-                    </p>
-                    <a href="ciubar.html" class="inline-flex items-center text-red-400 font-medium hover:text-red-300 transition">
-                        Citește mai mult
-                        <i class="fas fa-arrow-right ml-1 text-sm"></i>
-                    </a>
-                </div>
-            </article>
-
-            <!-- Blog Post 4 -->
-            <article class="relative bg-cover bg-center rounded-xl shadow-md hover:shadow-xl transition room-card h-80 flex items-end text-white" style="background-image: linear-gradient(to top, rgba(0,0,0,0.6), rgba(0,0,0,0.1)), url('img/zona.webp');">
-                <div class="p-6 z-10">
-                    <h3 class="text-xl font-semibold mb-2">Top trasee montane ușoare pentru toată familia</h3>
-                    <p class="text-sm mb-4">
-                        Drumeții accesibile pentru copii și adulți: Dâmbovicioara, Valea Zărneștiului și alte trasee spectaculoase.
-                    </p>
-                    <a href="trasee.html" class="inline-flex items-center text-red-400 font-medium hover:text-red-300 transition">
-                        Citește mai mult
-                        <i class="fas fa-arrow-right ml-1 text-sm"></i>
-                    </a>
-                </div>
-            </article>
-
-            <!-- Blog Post 5 -->
-            <article class="relative bg-cover bg-center rounded-xl shadow-md hover:shadow-xl transition room-card h-80 flex items-end text-white" style="background-image: linear-gradient(to top, rgba(0,0,0,0.6), rgba(0,0,0,0.1)), url('img/joaca.webp');">
-                <div class="p-6 z-10">
-                    <h3 class="text-xl font-semibold mb-2">Cazare family-friendly în Moieciu: Ce să cauți</h3>
-                    <p class="text-sm mb-4">
-                        Camere spațioase, loc de joacă, bucătărie comună și siguranță – ce înseamnă o pensiune prietenoasă cu copiii.
-                    </p>
-                    <a href="family.html" class="inline-flex items-center text-red-400 font-medium hover:text-red-300 transition">
-                        Citește mai mult
-                        <i class="fas fa-arrow-right ml-1 text-sm"></i>
-                    </a>
-                </div>
-            </article>
-
-            <!-- Blog Post 6 -->
-            <article class="relative bg-cover bg-center rounded-xl shadow-md hover:shadow-xl transition room-card h-80 flex items-end text-white" style="background-image: linear-gradient(to top, rgba(0,0,0,0.6), rgba(0,0,0,0.1)), url('img/buc.webp');">
-                <div class="p-6 z-10">
-                    <h3 class="text-xl font-semibold mb-2">Weekend în Moieciu: Ghid complet de la A la Z</h3>
-                    <p class="text-sm mb-4">
-                        Ce să vezi, unde să mănânci și cum să-ți organizezi un weekend memorabil în inima muntelui.
-                    </p>
-                    <a href="weekend.html" class="inline-flex items-center text-red-400 font-medium hover:text-red-300 transition">
-                        Citește mai mult
-                        <i class="fas fa-arrow-right ml-1 text-sm"></i>
-                    </a>
-                </div>
-            </article>
+        <div class="experience-media" data-reveal="right">
+          <img class="experience-image-main" src="img/biliard.webp" alt="Sala de jocuri cu biliard, ping-pong și air hockey" width="1300" height="975" loading="lazy" decoding="async">
+          <img class="experience-image-small" src="img/ciubar.webp" alt="Ciubărul din curtea pensiunii" width="1300" height="975" loading="lazy" decoding="async">
+          <div class="experience-caption">Un loc în care și copiii, și adulții găsesc ceva de făcut.</div>
         </div>
-
-        <div class="text-center mt-12">
-            <a href="tel:+40742599860" class="inline-block border border-red-500 text-red-500 hover:bg-red-500 hover:text-white px-6 py-2 rounded-full transition">
-                Rezervă acum și primești recomandări personalizate!
-            </a>
-        </div>
-    </div>
-</section>
-
-
-    <!-- Facilities Section -->
-    <section class="py-20 bg-white">
-        <div class="container mx-auto px-6">
-            <div class="text-center mb-16 fade-in">
-                <h2 class="section-title text-3xl md:text-4xl font-bold mb-4">Facilități</h2>
-                <div class="w-20 h-1 bg-red-500 mx-auto mb-6"></div>
-                <p class="text-gray-600 max-w-3xl mx-auto">
-                    Tot ce ai nevoie pentru o vacanță perfectă într-un singur loc.
-                </p>
-            </div>
-            
-            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8">
-                <div class="text-center">
-                    <div class="bg-red-100 w-16 h-16 mx-auto rounded-full flex items-center justify-center mb-4 icon-hover">
-                        <i class="fas fa-wifi text-red-500 text-2xl"></i>
-                    </div>
-                    <h4 class="font-medium">Wi-Fi gratuit</h4>
-                </div>
-                
-                <div class="text-center">
-                    <div class="bg-red-100 w-16 h-16 mx-auto rounded-full flex items-center justify-center mb-4 icon-hover">
-                        <i class="fas fa-parking text-red-500 text-2xl"></i>
-                    </div>
-                    <h4 class="font-medium">Parcare privată</h4>
-                </div>
-                
-                <div class="text-center">
-                    <div class="bg-red-100 w-16 h-16 mx-auto rounded-full flex items-center justify-center mb-4 icon-hover">
-                        <i class="fas fa-bowling-ball text-red-500 text-2xl"></i>
-                    </div>
-                    <h4 class="font-medium">Biliard,Air-Hockey,Pinpong</h4>
-                </div>
-                
-                <div class="text-center">
-                    <div class="bg-red-100 w-16 h-16 mx-auto rounded-full flex items-center justify-center mb-4 icon-hover">
-                        <i class="fas fa-hot-tub text-red-500 text-2xl"></i>
-                    </div>
-                    <h4 class="font-medium">Ciubăr</h4>
-                </div>
-                
-                <div class="text-center">
-                    <div class="bg-red-100 w-16 h-16 mx-auto rounded-full flex items-center justify-center mb-4 icon-hover">
-                        <i class="fas fa-fire text-red-500 text-2xl"></i>
-                    </div>
-                    <h4 class="font-medium">Zonă grătar</h4>
-                </div>
-                
-                <div class="text-center">
-                    <div class="bg-red-100 w-16 h-16 mx-auto rounded-full flex items-center justify-center mb-4 icon-hover">
-                        <i class="fas fa-child text-red-500 text-2xl"></i>
-                    </div>
-                    <h4 class="font-medium">Loc de joacă pentru cei mici</h4>
-                </div>
-            </div>
-        </div>
+      </div>
     </section>
 
-    <!-- Testimonials Section -->
-    <section class="py-20 bg-gray-50">
-        <div class="container mx-auto px-6">
-            <div class="text-center mb-16 fade-in">
-                <h2 class="section-title text-3xl md:text-4xl font-bold mb-4">Părerea <span class="text-red-500">Oaspeților</span></h2>
-                <div class="w-20 h-1 bg-red-500 mx-auto mb-6"></div>
-                <p class="text-gray-600 max-w-3xl mx-auto">
-                    Descoperă experiențele celor care au ales să se relaxeze la Pensiunea Codruț.
-                </p>
-            </div>
-            
-            <div class="max-w-4xl mx-auto relative">
-                <div id="testimonial-slider" class="overflow-hidden">
-                    <div class="flex transition-transform duration-300 ease-in-out">
-                        <!-- Testimonial 1 -->
-                        <div class="testimonial-slide min-w-full px-4">
-                            <div class="bg-white p-8 rounded-xl shadow-md">
-                                <div class="flex items-center mb-6">
-                                    <div class="flex-shrink-0">
-                                        <img src="img/madalina.webp" alt="Review-ul madalinei legat de pensiunea codrut legat de experienta extraordinara pe care a avut-o" class="w-12 h-12 rounded-full" loading="lazy">
-                                    </div>
-                                    <div class="ml-4">
-                                        <h4 class="font-semibold">Madalina B</h4>
-                                        <div class="flex text-yellow-400 text-sm">
-                                            <i class="fas fa-star"></i>
-                                            <i class="fas fa-star"></i>
-                                            <i class="fas fa-star"></i>
-                                            <i class="fas fa-star"></i>
-                                            <i class="fas fa-star"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                                <p class="text-gray-600 italic">
-                                    "Cea mai frumoasă cabană! ❤️ Totul la superlativ, camerele foarte curate, curtea destul de mare, un loc minunat pentru relaxare alături de cei dragi! Iar gazdele au fost de nota 10+ foarte amabili și simpatici!"
-                                </p>
-                            </div>
-                        </div>
-                        
-                        <!-- Testimonial 2 -->
-                        <div class="testimonial-slide min-w-full px-4">
-                            <div class="bg-white p-8 rounded-xl shadow-md">
-                                <div class="flex items-center mb-6">
-                                    <div class="flex-shrink-0">
-                                        <img src="img/miaela.png" alt="Review-ul Mihaelei legat de relaxare in bran la pensiunea codrut din moieciu bran" class="w-12 h-12 rounded-full" loading="lazy">
-                                    </div>
-                                    <div class="ml-4">
-                                        <h4 class="font-semibold">Mihaela Claudia
-</h4>
-                                        <div class="flex text-yellow-400 text-sm">
-                                            <i class="fas fa-star"></i>
-                                            <i class="fas fa-star"></i>
-                                            <i class="fas fa-star"></i>
-                                            <i class="fas fa-star"></i>
-                                            <i class="fas fa-star"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                                <p class="text-gray-600 italic">
-                                   Experiența a fost una deosebită, gazde primitoare şi foarte discrete, curățenie, loc de joacă pentru adulți şi copii. Cam tot ceea ce ai putea cere de la o pensiune pentru a sta fără griji cu trei copii mici si mari. Recomandăm cu căldură!!
-                                </p>
-                            </div>
-                        </div>
-                        
-                        <!-- Testimonial 3 -->
-                        <div class="testimonial-slide min-w-full px-4">
-                            <div class="bg-white p-8 rounded-xl shadow-md">
-                                <div class="flex items-center mb-6">
-                                    <div class="flex-shrink-0">
-                                        <img src="img/liana.png" alt="Experienta lilianei la pensiunea codrut din moieciu" class="w-12 h-12 rounded-full" loading="lazy">
-                                    </div>
-                                    <div class="ml-4">
-                                        <h4 class="font-semibold">Liana Tofan
-</h4>
-                                        <div class="flex text-yellow-400 text-sm">
-                                            <i class="fas fa-star"></i>
-                                            <i class="fas fa-star"></i>
-                                            <i class="fas fa-star"></i>
-                                            <i class="fas fa-star"></i>
-                                            <i class="fas fa-star-half-alt"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                                <p class="text-gray-600 italic">
-                                    O locatie de vis, peisaje superbe.Gazda foarte primitoare, saritoare, dornica sa ajute, oameni deosebiti! Camere frumos amenajate, loc de joaca pentru copiii, bucatarie complet utilata, curatenie ( gasesti la intrare dezinfectant, servetele, masti, inclusiv la fiecare etaj).Pret la cazare de bun simt! Va multumim pentru tot!
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Navigation buttons -->
-                <div class="flex justify-center mt-8 space-x-2">
-                    <button id="testimonial-prev" class="w-10 h-10 rounded-full bg-white shadow-md flex items-center justify-center hover:bg-red-500 hover:text-white transition">
-                        <i class="fas fa-chevron-left"></i>
-                    </button>
-                    <button id="testimonial-next" class="w-10 h-10 rounded-full bg-white shadow-md flex items-center justify-center hover:bg-red-500 hover:text-white transition">
-                        <i class="fas fa-chevron-right"></i>
-                    </button>
-                </div>
-            </div>
-       </div>
-</section>
+    <section class="section" id="galerie" aria-labelledby="galerie-title">
+      <div class="shell">
+        <header class="section-heading section-heading--compact" data-reveal>
+          <span class="eyebrow">Galerie foto</span>
+          <h2 id="galerie-title">Vezi locul înainte să ajungi</h2>
+          <p>Fotografii reale din camere și din spațiile în care oaspeții își petrec timpul.</p>
+        </header>
 
-<!-- JavaScript for slider -->
-<script>
-const prevBtn = document.getElementById('testimonial-prev');
-const nextBtn = document.getElementById('testimonial-next');
-const slider = document.querySelector('#testimonial-slider .flex');
-const slides = document.querySelectorAll('.testimonial-slide');
-
-let currentIndex = 0;
-
-function updateSlider() {
-  slider.style.transform = `translateX(-${currentIndex * 100}%)`;
-}
-
-nextBtn.addEventListener('click', () => {
-  currentIndex = (currentIndex + 1) % slides.length;
-  updateSlider();
-});
-
-prevBtn.addEventListener('click', () => {
-  currentIndex = (currentIndex - 1 + slides.length) % slides.length;
-  updateSlider();
-});
-</script>
-              
-            </div>
+        <div class="gallery-grid" data-reveal>
+          <button class="gallery-item" type="button" data-gallery-item data-caption="Camera dublă, cu balcon și baie proprie">
+            <img src="img/camsim.webp" alt="Cameră dublă luminoasă la Pensiunea Codruț" width="1300" height="1733" loading="lazy" decoding="async">
+            <span class="gallery-label">Camera dublă <span aria-hidden="true">＋</span></span>
+          </button>
+          <button class="gallery-item" type="button" data-gallery-item data-caption="Bucătăria comună, complet utilată">
+            <img src="img/buc.webp" alt="Bucătăria comună a pensiunii" width="1300" height="975" loading="lazy" decoding="async">
+            <span class="gallery-label">Bucătăria <span aria-hidden="true">＋</span></span>
+          </button>
+          <button class="gallery-item" type="button" data-gallery-item data-caption="Curtea și locul de joacă în aer liber">
+            <img src="img/ext.webp" alt="Curtea cu gazon și loc de joacă" width="1300" height="975" loading="lazy" decoding="async">
+            <span class="gallery-label">Curtea <span aria-hidden="true">＋</span></span>
+          </button>
+          <button class="gallery-item" type="button" data-gallery-item data-caption="Terasa acoperită, pentru timp petrecut împreună">
+            <img src="img/terasa.webp" alt="Terasa acoperită a Pensiunii Codruț" width="1024" height="768" loading="lazy" decoding="async">
+            <span class="gallery-label">Terasa <span aria-hidden="true">＋</span></span>
+          </button>
         </div>
+      </div>
     </section>
 
-    <!-- Gallery Section -->
-    <section id="gallery" class="py-20 bg-white">
-        <div class="container mx-auto px-6">
-            <div class="text-center mb-16 fade-in">
-                <h2 class="section-title text-3xl md:text-4xl font-bold mb-4">Galerie <span class="text-red-500">Foto</span></h2>
-                <div class="w-20 h-1 bg-red-500 mx-auto mb-6"></div>
-                <p class="text-gray-600 max-w-3xl mx-auto">
-                    Explorează atmosfera Pensiunii Codruț și frumusețea zonei Bran-Moieciu.
-                </p>
-            </div>
-            
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                <!-- Gallery Item 1 -->
-                <div class="gallery-item rounded-xl overflow-hidden shadow-md cursor-pointer" >
-                    <img src="img/biliard.webp" alt="Biliard, ping-pong si sala de fitness la pensiunea codrut" class="w-full h-64 object-cover" loading="lazy">
-                    <div class="p-4 bg-white">
-                        <h4 class="font-medium">Biliard</h4>
-                    </div>
-                </div>
-                
-                <!-- Gallery Item 2 -->
-                <div class="gallery-item rounded-xl overflow-hidden shadow-md cursor-pointer">
-                    <img src="img/camsim.webp" alt="Camera dublă la pensiunea codrut" class="w-full h-64 object-cover" loading="lazy">
-                    <div class="p-4 bg-white">
-                        <h4 class="font-medium">Camera dublă</h4>
-                    </div>
-                </div>
-                
-                <!-- Gallery Item 3 -->
-                <div class="gallery-item rounded-xl overflow-hidden shadow-md cursor-pointer" >
-                    <img src="img/camerad.webp" alt="Camera family pentru o familie,satioasa cu balcon propiu la pensiunea codrut din bran" class="w-full h-64 object-cover" loading="lazy">
-                    <div class="p-4 bg-white">
-                        <h4 class="font-medium">Camera Family</h4>
-                    </div>
-                </div>
-                
-                <!-- Gallery Item 4 -->
-                <div class="gallery-item rounded-xl overflow-hidden shadow-md cursor-pointer" >
-                    <img src="img/buc.webp" alt="bucataria pentru clientii cazatii la pensiunea codrut" class="w-full h-64 object-cover" loading="lazy">
-                    <div class="p-4 bg-white">
-                        <h4 class="font-medium">Bucatarie</h4>
-                    </div>
-                </div>
-                
-                <!-- Gallery Item 5 -->
-                <div class="gallery-item rounded-xl overflow-hidden shadow-md cursor-pointer" >
-                    <img src="img/zona.webp" alt="Zona Bran-Moieciu perfecta de vizitat pentru clientii pensiunea codrut" class="w-full h-64 object-cover" loading="lazy">
-                    <div class="p-4 bg-white">
-                        <h4 class="font-medium">Zona Bran-Moieciu</h4>
-                    </div>
-                </div>
-                
-                <!-- Gallery Item 6 -->
-                <div class="gallery-item rounded-xl overflow-hidden shadow-md cursor-pointer">
-                    <img src="img/terasa.webp" alt="Terasa unde poti admira privelistea la pensiunea codrut" class="w-full h-64 object-cover" loading="lazy">
-                    <div class="p-4 bg-white">
-                        <h4 class="font-medium">Terasa</h4>
-                    </div>
-                </div>
+    <dialog class="gallery-dialog" data-gallery-dialog aria-label="Fotografie mărită">
+      <img class="dialog-image" src="img/camsim.webp" alt="" width="1300" height="1733" data-dialog-image>
+      <div class="dialog-bar">
+        <p class="dialog-caption" data-dialog-caption></p>
+        <button class="dialog-close" type="button" aria-label="Închide fotografia" data-dialog-close>×</button>
+      </div>
+    </dialog>
 
-                <!-- Gallery Item 7 -->
-<div class="gallery-item rounded-xl overflow-hidden shadow-md cursor-pointer" >
-    <img src="img/ciubar.webp" alt="Ciubăr" class="w-full h-64 object-cover" loading="lazy">
-    <div class="p-4 bg-white">
-        <h4 class="font-medium">Ciubăr</h4>
-    </div>
-</div>
-
-<!-- Gallery Item 8 -->
-<div class="gallery-item rounded-xl overflow-hidden shadow-md cursor-pointer" >
-    <img src="img/gratar.webp" alt="zona de gratar unde te poti relaxa si admira raul turcu" class="w-full h-64 object-cover" loading="lazy">
-    <div class="p-4 bg-white">
-        <h4 class="font-medium">Zona Gratar</h4>
-    </div>
-</div>
-
-<!-- Gallery Item 9 -->
-<div class="gallery-item rounded-xl overflow-hidden shadow-md cursor-pointer" >
-    <img src="img/joaca.webp" alt="Loc de joacă" class="w-full h-64 object-cover" loading="lazy">
-    <div class="p-4 bg-white">
-        <h4 class="font-medium">Loc de joacă</h4>
-    </div>
-</div>
-<!-- Gallery Item 10 -->
-<div class="gallery-item rounded-xl overflow-hidden shadow-md cursor-pointer">
-    <img src="img/baie.webp" alt="Baia Propie la pensiunea codrut" class="w-full h-64 object-cover" loading="lazy">
-    <div class="p-4 bg-white">
-        <h4 class="font-medium">Grup Sanitar</h4>
-    </div>
-</div>
-
-<!-- Gallery Item 11 -->
-<div class="gallery-item rounded-xl overflow-hidden shadow-md cursor-pointer">
-    <img src="img/ext.webp" alt="Privelistea cu Muntii Bucegi la Pensiunea codrut" class="w-full h-64 object-cover" loading="lazy">
-    <div class="p-4 bg-white">
-        <h4 class="font-medium">Vedere Exterior</h4>
-    </div>
-</div>
-
-<!-- Gallery Item 12 -->
-<div class="gallery-item rounded-xl overflow-hidden shadow-md cursor-pointer" >
-    <img src="img/knock-on-the-door-of.jpg" alt="Castelul Bran langa pensiunea codrut din moieciu" class="w-full h-64 object-cover" loading="lazy">
-    <div class="p-4 bg-white">
-        <h4 class="font-medium">Castelul Bran</h4>
-    </div>
-</div>
-
-            </div>
-            
-          <!-- Lightbox -->
-            <!-- Lightbox -->
-              <!-- Lightbox -->   
-        
-        <!-- Lightbox -->
-        <div id="lightbox" class="lightbox">
-            <span class="lightbox-close" onclick="closeLightbox()">&times;</span>
-            <img id="lightbox-img" src="" alt="cazare" class="lightbox-content">
+    <section class="section section--cream" aria-labelledby="recenzii-title">
+      <div class="shell reviews-layout">
+        <div class="reviews-intro" data-reveal="left">
+          <span class="eyebrow">Spus de oaspeți</span>
+          <h2 id="recenzii-title">Atmosfera se vede cel mai bine prin ochii lor</h2>
+          <p>Recenziile apreciază în special curățenia, spațiul pentru copii și felul în care sunt primiți oaspeții.</p>
+          <a class="button button--outline" href="https://www.google.com/maps/search/?api=1&query=Pensiunea+Codrut+Moieciu" target="_blank" rel="noopener noreferrer">Vezi recenziile pe Google</a>
         </div>
+
+        <div class="review-list">
+          <article class="review-card" data-reveal>
+            <blockquote>„Cea mai frumoasă cabană! Totul la superlativ, camerele foarte curate, curtea destul de mare, un loc minunat pentru relaxare alături de cei dragi.”</blockquote>
+            <div class="review-author">
+              <img src="img/madalina.webp" alt="" width="108" height="108" loading="lazy">
+              <div><strong>Mădălina B.</strong><span aria-label="5 stele din 5">★★★★★</span></div>
+            </div>
+          </article>
+          <article class="review-card" data-reveal>
+            <blockquote>„Gazde primitoare și foarte discrete, curățenie, loc de joacă pentru adulți și copii. Cam tot ceea ce ai putea cere de la o pensiune pentru a sta fără griji.”</blockquote>
+            <div class="review-author">
+              <img src="img/miaela.png" alt="" width="108" height="108" loading="lazy">
+              <div><strong>Mihaela Claudia</strong><span aria-label="5 stele din 5">★★★★★</span></div>
+            </div>
+          </article>
+          <article class="review-card" data-reveal>
+            <blockquote>„O locație de vis, peisaje superbe. Gazda foarte primitoare, săritoare, dornică să ajute. Camere frumos amenajate și bucătărie complet utilată.”</blockquote>
+            <div class="review-author">
+              <img src="img/liana.png" alt="" width="108" height="108" loading="lazy">
+              <div><strong>Liana Tofan</strong><span aria-label="5 stele din 5">★★★★★</span></div>
+            </div>
+          </article>
+        </div>
+      </div>
     </section>
 
-    <!-- Booking Section -->
-   
-<div class="flex flex-col items-center gap-6 my-8">
-    <!-- Buton Telefon -->
-    <a href="tel:0742599860" 
-       class="bg-red-500 border-4 border-black text-white font-semibold px-6 py-3 rounded-full hover:bg-red-600 transition">
-         Sună acum - 0742 599 860
-    </a>
-
-    <!-- Buton WhatsApp -->
-    <a href="https://wa.me/40742599860" target="_blank"
-       class="bg-red-500 border-4 border-white text-white font-semibold px-6 py-3 rounded-full hover:bg-red-600 transition">
-         WhatsApp - 0742 599 860
-    </a>
-</div>
-
-
-    <!-- Contact Section -->
-    <section id="contact" class="py-20 bg-white">
-        <div class="container mx-auto px-6">
-            <div class="text-center mb-16 fade-in">
-                <h2 class="section-title text-3xl md:text-4xl font-bold mb-4">Contact <span class="text-red-500">Informații</span></h2>
-                <div class="w-20 h-1 bg-red-500 mx-auto mb-6"></div>
-                <p class="text-gray-600 max-w-3xl mx-auto">
-                    Suntem mereu bucuroși să răspundem la întrebările și solicitările dumneavoastră.
-                </p>
-            </div>
-            <!-- Date de contact pe lățime completă -->
-            <div class="slide-up mb-28">
-                <div class="bg-gray-50 p-8 rounded-xl shadow-sm">
-                    <h3 class="text-xl font-semibold mb-6">Date de contact</h3>
-                    <div class="grid md:grid-cols-2 gap-10">
-                        <div class="space-y-6">
-                            <div class="flex items-start">
-                                <div class="bg-red-100 p-3 rounded-full mr-4"><i class="fas fa-map-marker-alt text-red-500"></i></div>
-                                <div>
-                                    <h4 class="font-medium text-gray-900">Adresă</h4>
-                                    <p class="text-gray-600">Strada Principala nr. 418b, Moieciu De Jos, Județul Brașov, România</p>
-                                </div>
-                            </div>
-                            <div class="flex items-start">
-                                <div class="bg-red-100 p-3 rounded-full mr-4"><i class="fas fa-phone-alt text-red-500"></i></div>
-                                <div>
-                                    <h4 class="font-medium text-gray-900">Telefon</h4>
-                                    <p class="text-gray-600">+40 742 599 860</p>
-                                </div>
-                            </div>
-                            <div class="flex items-start">
-                                <div class="bg-red-100 p-3 rounded-full mr-4"><i class="fas fa-envelope text-red-500"></i></div>
-                                <div>
-                                    <h4 class="font-medium text-gray-900">Email</h4>
-                                    <p class="text-gray-600">pensiuneacodrut@yahoo.com</p>
-                                </div>
-                            </div>
-                            <div class="flex items-start">
-                                <div class="bg-red-100 p-3 rounded-full mr-4"><i class="fas fa-clock text-red-500"></i></div>
-                                <div>
-                                    <h4 class="font-medium text-gray-900">Program recepție</h4>
-                                    <p class="text-gray-600">Luni - Duminică: 08:00 - 22:00</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="space-y-6">
-                            <div>
-                                <h4 class="font-medium mb-4">Urmărește-ne pe social media</h4>
-                                <div class="flex space-x-4">
-                                    <a href="https://www.facebook.com/p/Pensiunea-Codrut-Moieciu-100063481511416/" class="bg-gray-200 hover:bg-red-500 hover:text-white w-10 h-10 rounded-full flex items-center justify-center transition"><i class="fab fa-facebook-f"></i></a>
-                                    <a href="https://www.instagram.com/pensiunea_codrut_moieciudejos/?hl=en" class="bg-gray-200 hover:bg-red-500 hover:text-white w-10 h-10 rounded-full flex items-center justify-center transition"><i class="fab fa-instagram"></i></a>
-                                    <a href="#" class="bg-gray-200 hover:bg-red-500 hover:text-white w-10 h-10 rounded-full flex items-center justify-center transition"><i class="fab fa-tripadvisor"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- Hartă pe lățime completă -->
-            <div class="rounded-xl overflow-hidden shadow-lg fade-in mt-4">
-                <div class="relative w-full" style="height:450px;">
-                    <iframe
-                        id="mapFrame"
-                        title="Hartă Pensiunea Codruț"
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2722.264751171304!2d25.3239914!3d45.4877152!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40b3378bd2f43bc1%3A0x7708ba8d06f7bb9b!2sPensiunea+Codrut!5e0!3m2!1sro!2sro!4v1691940000000!5m2!1sro!2sro"
-                        class="absolute inset-0 w-full h-full"
-                        style="border:0;"
-                        loading="lazy"
-                        referrerpolicy="no-referrer-when-downgrade"
-                    ></iframe>
-                    <noscript>
-                        <a href="https://maps.google.com/?q=Pensiunea+Codrut" target="_blank" rel="noopener" class="block w-full h-full bg-gray-200 flex items-center justify-center text-sm text-gray-600">Vezi locația pe Google Maps</a>
-                    </noscript>
-                </div>
-            </div>
+    <section class="section" aria-labelledby="local-title">
+      <div class="shell local-grid">
+        <div class="local-copy" data-reveal="left">
+          <span class="eyebrow eyebrow--light">Cazare în Moieciu de Jos</span>
+          <h2 id="local-title">Aproape de locurile pe care ai venit să le vezi</h2>
+          <p>Moieciu de Jos este o bază bună pentru zile petrecute în zona Bran–Moieciu și pentru ieșiri spre Bucegi sau Piatra Craiului. Te întorci apoi într-un loc mai liniștit, cu tot ce ai nevoie pentru seară.</p>
+          <ul class="local-highlights">
+            <li><strong>Bran–Moieciu</strong><span>zonă turistică</span></li>
+            <li><strong>Bucegi</strong><span>peisaje și trasee</span></li>
+            <li><strong>Piatra Craiului</strong><span>natură și drumeții</span></li>
+          </ul>
         </div>
+        <div class="local-card" data-reveal="right">
+          <img src="img/zona.webp" alt="Peisaj din zona Bran–Moieciu" width="1024" height="683" loading="lazy" decoding="async">
+          <div class="local-card-content">
+            <span>Ne găsești aici</span>
+            <h3>Pensiunea Codruț</h3>
+            <address>Strada Principală nr. 418B<br>507135, Moieciu de Jos, Brașov</address>
+            <a class="button button--light" href="https://www.google.com/maps/search/?api=1&query=Pensiunea+Codrut+Moieciu" target="_blank" rel="noopener noreferrer">Deschide în Google Maps</a>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="bg-gray-900 text-white py-12">
-        <div class="container mx-auto px-6">
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
-                <div>
-                    <h3 class="text-xl font-bold mb-4">Pensiunea Codruț</h3>
-                    <p class="text-gray-400">
-                        Oaza de relaxare la poalele Munților Bucegi. Experiențe memorabile într-un cadru natural spectaculos.
-                    </p>
-                </div>
-                
-                <div>
-                    <h4 class="font-semibold mb-4">Link-uri rapide</h4>
-                    <ul class="space-y-2">
-                        <li><a href="#home" class="text-gray-400 hover:text-white transition">Acasă</a></li>
-                        <li><a href="#about" class="text-gray-400 hover:text-white transition">Despre noi</a></li>
-                        <li><a href="#rooms" class="text-gray-400 hover:text-white transition">Camere</a></li>
-                        <li><a href="#gallery" class="text-gray-400 hover:text-white transition">Galerie</a></li>
-                        <li><a href="#contact" class="text-gray-400 hover:text-white transition">Contact</a></li>
-                    </ul>
-                </div>
-                
-                <div>
-                    <h4 class="font-semibold mb-4">Contact</h4>
-                    <ul class="space-y-2 text-gray-400">
-                        <li class="flex items-start">
-                            <i class="fas fa-map-marker-alt mt-1 mr-2 text-sm"></i>
-                            <span>Strada Principala nr. 418b, Moieciu, Brașov</span>
-                        </li>
-                        <li class="flex items-center">
-                            <i class="fas fa-phone-alt mr-2 text-sm"></i>
-                            <span>+40742599860</span>
-                        </li>
-                        <li class="flex items-center">
-                            <i class="fas fa-envelope mr-2 text-sm"></i>
-                            <span>pensiuneacodrut@yahoo.com</span>
-                        </li>
-                    </ul>
-                </div>
-                
-          
-            <div class="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
-                <p class="text-gray-400 text-sm">
-                    &copy; 2007 Arzoiu Andrea Elena PFA Pensiunea Codruț. Toate drepturile rezervate.
-                     CUI 22104717
-                </p>
-                <a href="gdpr.html" 
-   style="
-       display: inline-block;
-       padding: 12px 24px;
-       background-color: black;
-       color: white;
-       border-radius: 30px;
-       text-decoration: none;
-       font-weight: bold;
-       transition: all 0.3s ease;
-        margin-top: 20px;
-       margin-bottom: 20px;
-       
-   "
-   onmouseover="this.style.backgroundColor='#333'; this.style.transform='scale(1.05)';"
-   onmouseout="this.style.backgroundColor='black'; this.style.transform='scale(1)';">
-   Politica de confidențialitate
-</a>
+    <section class="section section--cream" id="ghiduri" aria-labelledby="ghiduri-title">
+      <span class="anchor-alias" id="blog" aria-hidden="true"></span>
+      <div class="shell">
+        <header class="section-heading section-heading--center section-heading--compact" data-reveal>
+          <span class="eyebrow">Ghid local</span>
+          <h2 id="ghiduri-title">Idei pentru zilele petrecute în Moieciu</h2>
+          <p>Informații utile pentru alegerea zonei, trasee și un weekend fără alergătură.</p>
+        </header>
 
-                
-                <div class="flex space-x-6 mt-4 md:mt-0">
-                    <a href="https://www.facebook.com/p/Pensiunea-Codrut-Moieciu-100063481511416/" class="text-gray-400 hover:text-white transition">
-                        <i class="fab fa-facebook-f"></i>
-                    </a>
-                    <a href="https://www.instagram.com/pensiunea_codrut_moieciudejos/?hl=en" class="text-gray-400 hover:text-white transition">
-                        <i class="fab fa-instagram"></i>
-                    </a>
-                    <a href="#" class="text-gray-400 hover:text-white transition">
-                        <i class="fab fa-tripadvisor"></i>
-                    </a>
-                </div>
-            </div>
+        <div class="guide-grid">
+          <article class="guide-card" data-reveal>
+            <a href="atractii.html" tabindex="-1" aria-hidden="true"><img src="img/zona.webp" alt="" width="1024" height="683" loading="lazy" decoding="async"></a>
+            <div class="guide-content"><small>De vizitat</small><h3>6 atracții din zona Moieciu–Bran</h3><p>Locuri cunoscute și idei pentru o zi în împrejurimi.</p><a class="text-link" href="atractii.html">Citește ghidul</a></div>
+          </article>
+          <article class="guide-card" data-reveal>
+            <a href="moieciuvsbran.html" tabindex="-1" aria-hidden="true"><img src="img/hero.webp" alt="" width="1920" height="1275" loading="lazy" decoding="async"></a>
+            <div class="guide-content"><small>Alegerea zonei</small><h3>Moieciu sau Bran?</h3><p>Liniște, acces și atmosfera celor două destinații.</p><a class="text-link" href="moieciuvsbran.html">Vezi comparația</a></div>
+          </article>
+          <article class="guide-card" data-reveal>
+            <a href="ciubar.html" tabindex="-1" aria-hidden="true"><img src="img/ciubar.webp" alt="" width="1300" height="975" loading="lazy" decoding="async"></a>
+            <div class="guide-content"><small>Relaxare</small><h3>Ciubăr la munte</h3><p>Cum să incluzi o seară de relaxare în planul sejurului.</p><a class="text-link" href="ciubar.html">Citește articolul</a></div>
+          </article>
+          <article class="guide-card" data-reveal>
+            <a href="trasee.html" tabindex="-1" aria-hidden="true"><img src="img/moieciu.webp" alt="" width="1200" height="753" loading="lazy" decoding="async"></a>
+            <div class="guide-content"><small>Natură</small><h3>Trasee ușoare pentru familie</h3><p>Idei de plimbări și drumeții pentru ritmuri diferite.</p><a class="text-link" href="trasee.html">Descoperă traseele</a></div>
+          </article>
+          <article class="guide-card" data-reveal>
+            <a href="family.html" tabindex="-1" aria-hidden="true"><img src="img/joaca.webp" alt="" width="1300" height="975" loading="lazy" decoding="async"></a>
+            <div class="guide-content"><small>Cu cei mici</small><h3>Cazare family-friendly</h3><p>Ce merită verificat când călătorești cu copiii.</p><a class="text-link" href="family.html">Citește ghidul</a></div>
+          </article>
+          <article class="guide-card" data-reveal>
+            <a href="weekend.html" tabindex="-1" aria-hidden="true"><img src="img/terasa.webp" alt="" width="1024" height="768" loading="lazy" decoding="async"></a>
+            <div class="guide-content"><small>Plan de weekend</small><h3>48 de ore în Moieciu</h3><p>Un plan simplu pentru două zile bine așezate.</p><a class="text-link" href="weekend.html">Planifică weekendul</a></div>
+          </article>
         </div>
-    </footer>
+      </div>
+    </section>
 
-    <!-- Centered clickable ANPC logo -->
-<div class="flex justify-center my-8">
-  <a href="https://anpc.ro/ce-este-sal/" target="_blank" rel="noopener noreferrer">
-    <img
-      src="img/anpc.png"
-      alt="Sigla ANPC"
-      class="h-20 w-auto transition-transform duration-300 hover:scale-110"
-    >
-  </a>
-</div>
+    <section class="section section--forest" id="contact" aria-labelledby="contact-title">
+      <div class="shell contact-wrap">
+        <div class="contact-copy" data-reveal="left">
+          <span class="eyebrow eyebrow--light">Rezervare directă</span>
+          <h2 id="contact-title">Spune-ne când vreți să veniți.</h2>
+          <p>Îți răspundem cu disponibilitatea și tariful pentru datele tale. Fără formular lung și fără pași inutili.</p>
+          <div class="contact-actions">
+            <a class="button button--primary" href="https://wa.me/40742599860?text=Buna%20ziua!%20As%20dori%20sa%20verific%20disponibilitatea%20la%20Pensiunea%20Codrut." target="_blank" rel="noopener noreferrer">Scrie pe WhatsApp</a>
+            <a class="button button--ghost" href="tel:+40742599860">Sună la 0742 599 860</a>
+          </div>
+        </div>
 
+        <aside class="contact-card" data-reveal="right">
+          <h3>Date de contact</h3>
+          <ul class="contact-list">
+            <li>
+              <svg viewBox="0 0 24 24" aria-hidden="true" fill="none"><path d="M20 10c0 5-8 11-8 11S4 15 4 10a8 8 0 1 1 16 0Z" stroke="currentColor" stroke-width="1.7"/><circle cx="12" cy="10" r="2.5" stroke="currentColor" stroke-width="1.7"/></svg>
+              <div><small>Adresă</small><address>Strada Principală nr. 418B, Moieciu de Jos, Brașov</address></div>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" aria-hidden="true" fill="none"><path d="M7.2 3.5 10 8l-2.2 2c1.2 2.7 3.4 4.9 6.1 6.1l2-2.2 4.6 2.8-.7 3c-.2.8-.9 1.3-1.7 1.3C10 20.5 3.5 14 3 5.9c0-.8.5-1.5 1.3-1.7l2.9-.7Z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg>
+              <div><small>Telefon &amp; WhatsApp</small><a href="tel:+40742599860">+40 742 599 860</a></div>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" aria-hidden="true" fill="none"><rect x="3" y="5" width="18" height="14" rx="2" stroke="currentColor" stroke-width="1.7"/><path d="m4 7 8 6 8-6" stroke="currentColor" stroke-width="1.7"/></svg>
+              <div><small>Email</small><a href="mailto:pensiuneacodrut@yahoo.com">pensiuneacodrut@yahoo.com</a></div>
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" aria-hidden="true" fill="none"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.7"/><path d="M12 7v5l3 2" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>
+              <div><small>Program recepție</small><span>Luni–Duminică, 08:00–22:00</span></div>
+            </li>
+          </ul>
+        </aside>
+      </div>
+    </section>
+  </main>
 
-    <!-- WhatsApp Floating Button -->
-    <a href="https://wa.me/40742599860" class="fixed bottom-6 right-6 bg-green-500 hover:bg-green-600 text-white w-14 h-14 rounded-full flex items-center justify-center shadow-lg z-40 transition-transform hover:scale-110">
-        <i class="fab fa-whatsapp text-2xl"></i>
-    </a>
+  <footer class="site-footer">
+    <div class="shell">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a class="brand" href="#acasa">
+            <svg class="brand-mark" viewBox="0 0 48 48" aria-hidden="true" fill="none"><path d="M8 23.5 24 10l16 13.5V40H8V23.5Z" stroke="currentColor" stroke-width="1.7"/><path d="M19 40V29h10v11M14 16V8h5v4" stroke="currentColor" stroke-width="1.7"/><path d="M33 8c4.2.6 6.8 3.2 7 7-4.1-.3-6.6-2.7-7-7Z" fill="currentColor" opacity=".7"/></svg>
+            <span>Pensiunea Codruț</span>
+          </a>
+          <p>Cazare în Moieciu de Jos pentru cupluri, familii și grupuri, cu rezervare directă.</p>
+        </div>
+        <div class="footer-column">
+          <h3>Descoperă</h3>
+          <ul><li><a href="#camere">Camere</a></li><li><a href="#experiente">Facilități</a></li><li><a href="#galerie">Galerie</a></li><li><a href="#ghiduri">Ghid local</a></li></ul>
+        </div>
+        <div class="footer-column">
+          <h3>Contact</h3>
+          <ul><li><a href="tel:+40742599860">0742 599 860</a></li><li><a href="mailto:pensiuneacodrut@yahoo.com">Email</a></li><li><a href="https://www.google.com/maps/search/?api=1&query=Pensiunea+Codrut+Moieciu" target="_blank" rel="noopener noreferrer">Google Maps</a></li><li><a href="gdpr.html">Confidențialitate</a></li></ul>
+        </div>
+        <div class="footer-column">
+          <h3>Protecția consumatorului</h3>
+          <a class="anpc-link" href="https://anpc.ro/ce-este-sal/" target="_blank" rel="noopener noreferrer" aria-label="Soluționarea alternativă a litigiilor, ANPC"><img src="img/anpc.png" alt="ANPC – Soluționarea alternativă a litigiilor" width="880" height="320" loading="lazy"></a>
+        </div>
+      </div>
 
-   
+      <div class="footer-bottom">
+        <span>© 2007–<span data-current-year>2026</span> Arzoiu Andrea Elena PFA · CUI 22104717</span>
+        <div class="social-links"><a href="https://www.facebook.com/p/Pensiunea-Codrut-Moieciu-100063481511416/" target="_blank" rel="noopener noreferrer">Facebook</a><a href="https://www.instagram.com/pensiunea_codrut_moieciudejos/" target="_blank" rel="noopener noreferrer">Instagram</a></div>
+      </div>
+    </div>
+  </footer>
 
-   
-    <script>
-        // Mobile menu toggle
-        document.getElementById('mobile-menu-button').addEventListener('click', function() {
-            const menu = document.getElementById('mobile-menu');
-            menu.classList.toggle('hidden');
-        });
+  <div class="mobile-actions" aria-label="Acțiuni rapide">
+    <a class="button button--outline" href="tel:+40742599860">Sună</a>
+    <a class="button button--primary" href="https://wa.me/40742599860?text=Buna%20ziua!%20As%20dori%20sa%20verific%20disponibilitatea%20la%20Pensiunea%20Codrut." target="_blank" rel="noopener noreferrer">WhatsApp</a>
+  </div>
 
-        // Navbar scroll effect
-        window.addEventListener('scroll', function() {
-            const navbar = document.getElementById('navbar');
-            if (window.scrollY > 100) {
-                navbar.classList.add('nav-scrolled');
-            } else {
-                navbar.classList.remove('nav-scrolled');
-            }
-        });
-
-        // Smooth scrolling for anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                e.preventDefault();
-                
-                const targetId = this.getAttribute('href');
-                const targetElement = document.querySelector(targetId);
-                
-                if (targetElement) {
-                    window.scrollTo({
-                        top: targetElement.offsetTop - 80,
-                        behavior: 'smooth'
-                    });
-                    
-                    // Close mobile menu if open
-                    const mobileMenu = document.getElementById('mobile-menu');
-                    if (!mobileMenu.classList.contains('hidden')) {
-                        mobileMenu.classList.add('hidden');
-                    }
-                }
-            });
-        });
-
-     
-        
-      
-        
-        // Lightbox functionality
-        function openLightbox(imageSrc) {
-            const lightbox = document.getElementById('lightbox');
-            const lightboxImg = document.getElementById('lightbox-img');
-            
-            lightboxImg.src = imageSrc;
-            lightbox.style.display = 'flex';
-            document.body.style.overflow = 'hidden';
-        }
-        
-        function closeLightbox() {
-            const lightbox = document.getElementById('lightbox');
-            lightbox.style.display = 'none';
-            document.body.style.overflow = 'auto';
-        }
-        
-        // Close lightbox when clicking outside the image
-        document.getElementById('lightbox').addEventListener('click', function(e) {
-            if (e.target === this) {
-                closeLightbox();
-            }
-        });
-        
-</script>
-       
+  <script src="site.js?v=20260813" defer></script>
+</body>
+</html>
