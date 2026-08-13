@@ -16,12 +16,15 @@
   <meta property="og:description" content="Descoperă 6 locuri de vizitat în zona Moieciu-Bran, de la Castelul Bran la peisajele din Bucegi.">
   <meta property="og:url" content="https://pensiuneacodrut.com/atractii">
   <meta property="og:image" content="https://pensiuneacodrut.com/img/zona.webp">
+  <meta property="og:image:width" content="1024">
+  <meta property="og:image:height" content="683">
   <meta property="og:image:alt" content="Peisaj din zona Moieciu-Bran">
 
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="6 Atracții Turistice lângă Moieciu și Bran">
   <meta name="twitter:description" content="Descoperă 6 locuri de vizitat în zona Moieciu-Bran, de la Castelul Bran la peisajele din Bucegi.">
   <meta name="twitter:image" content="https://pensiuneacodrut.com/img/zona.webp">
+  <meta name="twitter:image:alt" content="Peisaj din zona Moieciu-Bran">
 
   <script type="application/ld+json">
   {
@@ -82,6 +85,11 @@
   }
   </script>
 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+  <link rel="preload" as="image" href="img/zona.webp" type="image/webp" fetchpriority="high">
+
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
   
@@ -131,18 +139,18 @@
   <!-- Navbar -->
   <nav class="bg-white/90 backdrop-blur-md shadow-sm fixed w-full top-0 z-50 transition-all duration-300">
     <div class="container mx-auto px-6 py-4 flex justify-between items-center">
-      <a href="index.html" class="text-2xl font-bold text-red-700 font-serif">Pensiunea Codruț</a>
+      <a href="/" class="text-2xl font-bold text-red-700 font-serif">Pensiunea Codruț</a>
       
       <!-- Desktop Menu -->
       <ul class="hidden md:flex space-x-8 text-gray-700 font-medium">
-        <li><a href="index.html" class="hover:text-red-600 transition">Acasă</a></li>
-        <li><a href="index.html#about" class="hover:text-red-600 transition">Despre noi</a></li>
-        <li><a href="index.html#rooms" class="hover:text-red-600 transition">Camere</a></li>
-        <li><a href="index.html#blog" class="text-red-600">Blog</a></li>
-        <li><a href="index.html#contact" class="hover:text-red-600 transition">Contact</a></li>
+        <li><a href="/" class="hover:text-red-600 transition">Acasă</a></li>
+        <li><a href="/#despre" class="hover:text-red-600 transition">Despre noi</a></li>
+        <li><a href="/#camere" class="hover:text-red-600 transition">Camere</a></li>
+        <li><a href="/#ghiduri" class="text-red-600">Blog</a></li>
+        <li><a href="/#contact" class="hover:text-red-600 transition">Contact</a></li>
       </ul>
 
-      <a href="index.html#contact" class="hidden md:inline-block bg-red-700 text-white px-6 py-2.5 rounded-full hover:bg-red-800 transition shadow-md hover:shadow-lg transform hover:-translate-y-0.5">
+      <a href="/#contact" class="hidden md:inline-block bg-red-700 text-white px-6 py-2.5 rounded-full hover:bg-red-800 transition shadow-md hover:shadow-lg transform hover:-translate-y-0.5">
         Rezervă acum
       </a>
 
@@ -155,13 +163,13 @@
     <!-- Mobile Menu -->
     <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
       <ul class="flex flex-col p-4 space-y-4 text-center">
-        <li><a href="index.html" class="block text-gray-700 hover:text-red-600">Acasă</a></li>
-        <li><a href="index.html#about" class="block text-gray-700 hover:text-red-600">Despre noi</a></li>
-        <li><a href="index.html#rooms" class="block text-gray-700 hover:text-red-600">Camere</a></li>
-        <li><a href="index.html#blog" class="block text-red-600 font-medium">Blog</a></li>
-        <li><a href="index.html#contact" class="block text-gray-700 hover:text-red-600">Contact</a></li>
+        <li><a href="/" class="block text-gray-700 hover:text-red-600">Acasă</a></li>
+        <li><a href="/#despre" class="block text-gray-700 hover:text-red-600">Despre noi</a></li>
+        <li><a href="/#camere" class="block text-gray-700 hover:text-red-600">Camere</a></li>
+        <li><a href="/#ghiduri" class="block text-red-600 font-medium">Blog</a></li>
+        <li><a href="/#contact" class="block text-gray-700 hover:text-red-600">Contact</a></li>
         <li>
-            <a href="index.html#contact" class="inline-block bg-red-700 text-white px-6 py-2 rounded-full hover:bg-red-800 transition w-full">
+            <a href="/#contact" class="inline-block bg-red-700 text-white px-6 py-2 rounded-full hover:bg-red-800 transition w-full">
                 Rezervă acum
             </a>
         </li>
@@ -192,9 +200,9 @@
     
     <!-- Breadcrumbs -->
     <nav class="flex mb-12 text-sm text-gray-500 justify-center">
-      <a href="index.html" class="hover:text-red-600 transition">Acasă</a>
+      <a href="/" class="hover:text-red-600 transition">Acasă</a>
       <span class="mx-2">/</span>
-      <a href="index.html#blog" class="hover:text-red-600 transition">Blog</a>
+      <a href="/#ghiduri" class="hover:text-red-600 transition">Blog</a>
       <span class="mx-2">/</span>
       <span class="text-gray-800 font-medium">Atracții Turistice</span>
     </nav>
@@ -316,7 +324,7 @@
             Pensiunea Codruț este punctul ideal de plecare. Suntem aproape de toate aceste atracții, dar suficient de departe pentru a-ți oferi liniștea de care ai nevoie seara.
         </p>
         <div class="flex flex-col sm:flex-row justify-center gap-4">
-            <a href="index.html#contact" class="inline-flex items-center justify-center px-8 py-4 border border-transparent text-lg font-medium rounded-full text-white bg-red-600 hover:bg-red-700 transition shadow-lg hover:shadow-xl transform hover:-translate-y-1">
+            <a href="/#contact" class="inline-flex items-center justify-center px-8 py-4 border border-transparent text-lg font-medium rounded-full text-white bg-red-600 hover:bg-red-700 transition shadow-lg hover:shadow-xl transform hover:-translate-y-1">
                 <i class="fas fa-suitcase mr-2"></i> Rezervă-ți sejurul
             </a>
         </div>
@@ -338,11 +346,11 @@
             <div>
                 <h4 class="font-semibold text-lg mb-6 border-b border-gray-700 pb-2 inline-block">Link-uri rapide</h4>
                 <ul class="space-y-3">
-                    <li><a href="index.html" class="text-gray-400 hover:text-white transition flex items-center"><i class="fas fa-chevron-right text-xs mr-2 text-red-500"></i> Acasă</a></li>
-                    <li><a href="index.html#about" class="text-gray-400 hover:text-white transition flex items-center"><i class="fas fa-chevron-right text-xs mr-2 text-red-500"></i> Despre noi</a></li>
-                    <li><a href="index.html#rooms" class="text-gray-400 hover:text-white transition flex items-center"><i class="fas fa-chevron-right text-xs mr-2 text-red-500"></i> Camere</a></li>
-                    <li><a href="index.html#blog" class="text-gray-400 hover:text-white transition flex items-center"><i class="fas fa-chevron-right text-xs mr-2 text-red-500"></i> Blog</a></li>
-                    <li><a href="index.html#contact" class="text-gray-400 hover:text-white transition flex items-center"><i class="fas fa-chevron-right text-xs mr-2 text-red-500"></i> Contact</a></li>
+                    <li><a href="/" class="text-gray-400 hover:text-white transition flex items-center"><i class="fas fa-chevron-right text-xs mr-2 text-red-500"></i> Acasă</a></li>
+                    <li><a href="/#despre" class="text-gray-400 hover:text-white transition flex items-center"><i class="fas fa-chevron-right text-xs mr-2 text-red-500"></i> Despre noi</a></li>
+                    <li><a href="/#camere" class="text-gray-400 hover:text-white transition flex items-center"><i class="fas fa-chevron-right text-xs mr-2 text-red-500"></i> Camere</a></li>
+                    <li><a href="/#ghiduri" class="text-gray-400 hover:text-white transition flex items-center"><i class="fas fa-chevron-right text-xs mr-2 text-red-500"></i> Blog</a></li>
+                    <li><a href="/#contact" class="text-gray-400 hover:text-white transition flex items-center"><i class="fas fa-chevron-right text-xs mr-2 text-red-500"></i> Contact</a></li>
                 </ul>
             </div>
             
@@ -393,7 +401,7 @@
                 &copy; 2025 Pensiunea Codruț. Toate drepturile rezervate.
             </p>
             <div class="mt-4 md:mt-0">
-                <a href="gdpr.html" class="text-gray-500 hover:text-white text-sm transition">Politica de confidențialitate</a>
+                <a href="/gdpr" class="text-gray-500 hover:text-white text-sm transition">Politica de confidențialitate</a>
             </div>
         </div>
     </div>
@@ -411,5 +419,6 @@
         menu.classList.toggle('hidden');
     });
   </script>
+  <script src="site.js?v=20260813-2" defer></script>
 </body>
 </html>
