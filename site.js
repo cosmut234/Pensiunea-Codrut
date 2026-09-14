@@ -243,21 +243,10 @@ document.documentElement.classList.add("js");
     });
   }
 
-  // Conversion events become active only when an analytics tag or Tag Manager
-  // data layer is installed. This file alone does not send data or set cookies.
+  // All contact events go through the visitor's current analytics choice.
   const sendAnalyticsEvent = (eventName, parameters) => {
     try {
-      if (typeof window.gtag === "function") {
-        window.gtag("event", eventName, {
-          ...parameters,
-          transport_type: "beacon",
-        });
-        return;
-      }
-
-      if (Array.isArray(window.dataLayer)) {
-        window.dataLayer.push({ event: eventName, ...parameters });
-      }
+      window.codrutAnalytics?.track(eventName, parameters);
     } catch (error) {
       console.warn("Analytics event could not be recorded.", error);
     }
@@ -289,8 +278,6 @@ document.documentElement.classList.add("js");
     if (!eventName) return;
     sendAnalyticsEvent(eventName, {
       contact_method: contactMethod,
-      link_text: (link.textContent || "").trim().replace(/\s+/g, " ").slice(0, 100),
-      link_url: href,
       page_path: window.location.pathname,
       page_language: document.documentElement.lang || "ro",
     });
