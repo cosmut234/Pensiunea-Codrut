@@ -18,12 +18,12 @@ const pages = [
   "inchiriere-integrala-pensiune-moieciu.html",
 ];
 const errors = [];
+const sources = new Map(pages.map((page) => [page, readFileSync(resolve(root, page), "utf8")]));
 
 const count = (source, pattern) => (source.match(pattern) || []).length;
 
 for (const page of pages) {
-  const file = resolve(root, page);
-  const html = readFileSync(file, "utf8");
+  const html = sources.get(page);
 
   for (const [label, pattern] of [
     ["<head>", /<head(?:\s[^>]*)?>/gi],
@@ -44,22 +44,48 @@ for (const page of pages) {
     }
   }
 
-  const refs = [...html.matchAll(/(?:src|href)=["']([^"']+)["']/gi)].map((match) => match[1]);
+  const refs = [...html.matchAll(/(?:src|href)=(["'])(.*?)\1/gi)].map((match) => match[2]);
   for (const ref of refs) {
-    if (/^(?:https?:|mailto:|tel:|#|data:)/i.test(ref)) continue;
-    let cleanRef = ref.split("?")[0].split("#")[0];
-    if (!cleanRef) continue;
+    if (/^(?:mailto:|tel:|data:)/i.test(ref)) continue;
+    let url;
+    let cleanRef;
+    let fragment;
     try {
-      cleanRef = decodeURIComponent(cleanRef);
+      url = new URL(ref.replace(/&amp;/g, "&"), `https://pensiuneacodrut.com/${page}`);
+      if (url.origin !== "https://pensiuneacodrut.com") continue;
+      cleanRef = decodeURIComponent(url.pathname).replace(/^\//, "");
+      fragment = decodeURIComponent(url.hash.slice(1));
     } catch {
       errors.push(`${page}: invalid URL encoding in ${ref}`);
       continue;
     }
-    cleanRef = cleanRef.startsWith("/") ? cleanRef.slice(1) : cleanRef;
     if (!cleanRef) cleanRef = "index.html";
     if (!/\.[a-z0-9]+$/i.test(cleanRef)) cleanRef += ".html";
-    if (!existsSync(resolve(root, cleanRef))) errors.push(`${page}: missing local route or file ${cleanRef}`);
+    const target = resolve(root, cleanRef);
+    if (!existsSync(target)) {
+      errors.push(`${page}: missing local route or file ${cleanRef}`);
+      continue;
+    }
+    if (fragment && cleanRef.endsWith(".html")) {
+      const targetHtml = sources.get(cleanRef) || readFileSync(target, "utf8");
+      const ids = new Set([...targetHtml.matchAll(/\sid=(["'])(.*?)\1/gi)].map((match) => match[2]));
+      if (!ids.has(fragment)) errors.push(`${page}: missing fragment #${fragment} in ${cleanRef}`);
+    }
   }
+
+  if (/<form\b/i.test(html)) errors.push(`${page}: contact must use direct links without a form`);
+  if (!/href=(["'])tel:\+40742599860\1/i.test(html)) errors.push(`${page}: missing direct telephone link`);
+  if (!/href=(["'])https:\/\/wa\.me\/40742599860(?:\?[^"']*)?\1/i.test(html)) errors.push(`${page}: missing direct WhatsApp link`);
+  const mobileActions = html.match(/<(?:div|nav|aside)\b[^>]*class=(["'])[^"']*\bmobile-actions\b[^"']*\1[^>]*>([\s\S]*?)<\/(?:div|nav|aside)>/i)?.[2];
+  if (!mobileActions) {
+    errors.push(`${page}: missing mobile contact actions`);
+  } else {
+    if (!/href=(["'])https:\/\/wa\.me\/40742599860(?:\?[^"']*)?\1/i.test(mobileActions)) errors.push(`${page}: mobile WhatsApp must open a direct link`);
+    if (!/href=(["'])tel:\+40742599860\1/i.test(mobileActions)) errors.push(`${page}: mobile actions need a direct telephone link`);
+  }
+  const analyticsScript = html.search(/<script\b[^>]*\bsrc=(["'])\/?analytics\.js(?:\?[^"']*)?\1/i);
+  const siteScript = html.search(/<script\b[^>]*\bsrc=(["'])\/?site\.js(?:\?[^"']*)?\1/i);
+  if (analyticsScript < 0 || siteScript < analyticsScript) errors.push(`${page}: load analytics.js before site.js`);
 
   for (const forbidden of ["cdn.tailwindcss.com", "images.unsplash.com", "munti.webp", 'href="#"']) {
     if (html.includes(forbidden)) errors.push(`${page}: forbidden reference ${forbidden}`);
@@ -96,4 +122,4 @@ if (errors.length) {
   process.exit(1);
 }
 
-console.log(`Site verificat: ${pages.length} pagini, JSON-LD valid, resurse locale prezente.`);
+console.log(`Site verificat: ${pages.length} pagini, JSON-LD valid, resurse și ancore prezente, contact direct fără formulare.`);
