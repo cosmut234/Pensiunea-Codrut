@@ -94,12 +94,12 @@
   };
 
   const labels = isEnglish ? {
-    title: "Your privacy matters",
-    text: "With your permission, we use Google Analytics cookies to understand visits and clicks on our contact buttons. You can refuse and use the entire website.",
+    title: "Optional cookies",
+    text: "Google Analytics measures visits and contact clicks only if you accept. You can refuse.",
     accept: "Accept", reject: "Refuse", settings: "Cookie settings", policy: "Privacy policy (Romanian)",
   } : {
-    title: "Tu alegi ce măsurăm",
-    text: "Cu acordul tău, folosim cookie-uri Google Analytics pentru a înțelege vizitele și clicurile pe butoanele de contact. Poți refuza și folosi întregul site.",
+    title: "Cookie-uri opționale",
+    text: "Google Analytics măsoară vizitele și clicurile de contact doar dacă accepți. Poți refuza.",
     accept: "Acceptă", reject: "Refuză", settings: "Setări cookie-uri", policy: "Politica de confidențialitate",
   };
 

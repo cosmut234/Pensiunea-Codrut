@@ -42,12 +42,15 @@ const { resolve, extname } = require('node:path');
     const page = await context.newPage();
     page.on('pageerror', error => errors.push(error.message));
     await page.goto(base);
+    assert.equal(await page.locator('form').count(), 0, 'The site offers direct contact without a form');
     assert.equal(await page.locator('[data-cookie-banner]').count(), 1, 'Visitors must be able to accept or refuse analytics');
     assert.equal(tagRequests.length, 0, 'No Google tag before consent');
     await page.locator('[data-cookie-reject]').click();
     await page.reload();
     assert.equal(tagRequests.length, 0, 'Refusal must survive reload without loading Google');
     assert.equal(await page.locator('[data-cookie-banner]').isVisible(), false);
+    await page.evaluate(() => window.codrutAnalytics.track('click_whatsapp', { contact_method: 'whatsapp' }));
+    assert.equal(await page.evaluate(() => window.dataLayer?.filter(entry => entry[0] === 'event').length || 0), 0, 'Refused contact clicks must not be recorded');
     await page.locator('[data-cookie-settings]').click();
     await page.locator('[data-cookie-accept]').click();
     await page.waitForFunction(() => window.dataLayer?.some(entry => entry[0] === 'config'));
@@ -83,27 +86,12 @@ const { resolve, extname } = require('node:path');
     assert(events.some(entry => entry[1] === 'click_whatsapp'));
     assert(events.some(entry => entry[1] === 'click_phone'));
     assert(!JSON.stringify(events).includes('PRIVATE_'), 'Contact text and message URLs must not be sent');
-    await page.evaluate(() => {
-      window.open = () => null;
-      const form = document.querySelector('[data-availability-form]');
-      const year = new Date().getFullYear() + 1;
-      form.elements.arrival.value = `${year}-10-10`;
-      form.elements.departure.value = `${year}-10-12`;
-      form.elements.stayType.selectedIndex = 1;
-      form.requestSubmit();
-    });
-    const submission = await page.evaluate(() => {
-      const command = window.dataLayer.find(entry => entry[0] === 'event' && entry[1] === 'submit_availability');
-      return command ? command[2] : null;
-    });
-    assert(submission, 'Valid availability request produces a contact event');
-    assert(!JSON.stringify(submission).includes('-10-'), 'Stay dates must not be sent to analytics');
     if (process.env.ANALYTICS_REAL_TAG) {
       await new Promise((resolve, reject) => {
         const deadline = Date.now() + 15000;
         const check = () => {
-          if (['click_whatsapp', 'click_phone', 'submit_availability'].every(name => collections.some(request => request.includes(`en=${name}`)))) return resolve();
-          if (Date.now() > deadline) return reject(new Error('Google tag did not dispatch all three contact events'));
+          if (['click_whatsapp', 'click_phone'].every(name => collections.some(request => request.includes(`en=${name}`)))) return resolve();
+          if (Date.now() > deadline) return reject(new Error('Google tag did not dispatch both direct contact events'));
           setTimeout(check, 100);
         };
         check();
@@ -120,6 +108,12 @@ const { resolve, extname } = require('node:path');
     for (const path of ['/', '/en', '/gdpr', '/atractii', '/ciubar', '/family', '/moieciuvsbran', '/trasee', '/weekend', '/cazare-moieciu-cu-ciubar', '/cazare-familii-moieciu', '/inchiriere-integrala-pensiune-moieciu']) {
       await page.goto(base + path);
       assert.equal(await page.locator('[data-cookie-settings]').count(), 1, `Settings available on ${path}`);
+      assert.equal(await page.locator('form').count(), 0, `Direct contact without a form on ${path}`);
+      assert.equal(await page.locator('.mobile-actions a[href^="https://wa.me/40742599860"]').count(), 1, `Mobile WhatsApp opens directly on ${path}`);
+      assert.equal(await page.locator('.mobile-actions a[href="tel:+40742599860"]').count(), 1, `Mobile telephone opens directly on ${path}`);
+      if (await page.locator('body.article-page, body.guide-page, body.commercial-page').count()) {
+        assert.equal(await page.locator('[data-header]').evaluate(header => header.classList.contains('is-scrolled')), true, `Solid header at the top of ${path}`);
+      }
     }
     await page.goto(base + '/en');
     await page.locator('[data-cookie-settings]').click();
@@ -179,7 +173,16 @@ const { resolve, extname } = require('node:path');
     assert.equal(tagRequests.length, 5, 'A stale granted preference must not load Google after withdrawal');
     assert.equal((await context.cookies()).find(cookie => cookie.name === 'codrut_analytics_consent')?.value, 'denied', 'Withdrawal is saved in the essential preference cookie');
     assert.equal(await page.locator('[data-cookie-banner]').isVisible(), false, 'Saved refusal keeps the banner closed');
-    console.log('Analytics verified: consent, refusal, reload, withdrawal, cookies, contact events, 12 pages, RO/EN and mobile/desktop.');
+    const noJsContext = await browser.newContext({ javaScriptEnabled: false, viewport: { width: 390, height: 844 } });
+    await noJsContext.route('**/*', route => route.request().url().startsWith(base) ? route.continue() : route.abort());
+    const noJsPage = await noJsContext.newPage();
+    for (const path of ['/', '/en', '/gdpr', '/atractii', '/ciubar', '/family', '/moieciuvsbran', '/trasee', '/weekend', '/cazare-moieciu-cu-ciubar', '/cazare-familii-moieciu', '/inchiriere-integrala-pensiune-moieciu']) {
+      await noJsPage.goto(base + path);
+      assert.equal(await noJsPage.locator('.mobile-actions a[href^="https://wa.me/40742599860"]').isVisible(), true, `WhatsApp remains available without JavaScript on ${path}`);
+      assert.equal(await noJsPage.locator('.mobile-actions a[href="tel:+40742599860"]').isVisible(), true, `Telephone remains available without JavaScript on ${path}`);
+    }
+    await noJsContext.close();
+    console.log('Analytics verified: consent, refusal, reload, withdrawal, cookies, direct contact events, 12 pages, RO/EN, mobile/desktop and contact without JavaScript.');
     if (process.env.ANALYTICS_REAL_TAG) console.log(`Real Google tag verified; ${collections.length} collection requests intercepted, none sent to reports.`);
     await context.close();
   } finally {

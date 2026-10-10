@@ -1,9 +1,13 @@
 User-agent: *
 Allow: /
-
-# Zone tehnice care nu trebuie accesate de crawlere.
 Disallow: /node_modules/
 Disallow: /vendor/
 
-# Pagina GDPR rămâne accesibilă crawlerelor pentru ca directiva noindex din pagină să poată fi citită.
+# Acces pentru căutarea ChatGPT; regulile pentru antrenare rămân neschimbate.
+User-agent: OAI-SearchBot
+Allow: /
+Disallow: /node_modules/
+Disallow: /vendor/
+
+# GDPR este accesibil pentru citirea directivei noindex.
 Sitemap: https://pensiuneacodrut.com/sitemap.xml
