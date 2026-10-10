@@ -1,5 +1,49 @@
 (function () {
   "use strict";
+  const attributionPolicy = (function createAttributionPolicy(location, document) {
+    const profiles = [
+      { source: "instagram", medium: "social", campaign: "profil-2026-10" },
+      { source: "facebook", medium: "social", campaign: "profil-2026-10" },
+    ];
+
+    function approvedCampaign() {
+      const params = new URLSearchParams(location.search || "");
+      const keys = ["utm_source", "utm_medium", "utm_campaign"];
+      if (keys.some(key => params.getAll(key).length !== 1)) return {};
+      const match = profiles.find(profile =>
+        profile.source === params.get("utm_source") &&
+        profile.medium === params.get("utm_medium") &&
+        profile.campaign === params.get("utm_campaign"));
+      if (!match) return {};
+      // The returned values are literals from the reviewed profile, never raw URL values.
+      return {
+        campaign_source: match.source,
+        campaign_medium: match.medium,
+        campaign_name: match.campaign,
+      };
+    }
+
+    function safeReferrer() {
+      if (!document.referrer) return "";
+      try {
+        const referrer = new URL(document.referrer);
+        if (!["http:", "https:"].includes(referrer.protocol)) return "";
+        return referrer.origin + "/";
+      } catch {
+        return "";
+      }
+    }
+
+    return {
+      configFields() {
+        return {
+          page_location: location.origin + location.pathname,
+          page_referrer: safeReferrer(),
+          ...approvedCampaign(),
+        };
+      },
+    };
+  })(location, document);
 
   const measurementId = "G-WFJ6KDGGWN";
   const storageKey = "codrut.analytics-consent.v1";
@@ -84,8 +128,7 @@
       allow_ad_personalization_signals: false,
       cookie_expires: lifetime / 1000,
       cookie_update: false,
-      page_location: location.origin + location.pathname,
-      page_referrer: document.referrer ? document.referrer.split(/[?#]/)[0] : "",
+      ...attributionPolicy.configFields(),
     });
     const script = document.createElement("script");
     script.async = true;
