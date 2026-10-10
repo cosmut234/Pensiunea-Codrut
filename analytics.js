@@ -4,6 +4,7 @@
     const profiles = [
       { source: "instagram", medium: "social", campaign: "profil-2026-10" },
       { source: "facebook", medium: "social", campaign: "profil-2026-10" },
+      { source: "tiktok", medium: "social", campaign: "profil-2026-10" },
     ];
 
     function approvedCampaign() {

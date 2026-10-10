@@ -11,6 +11,7 @@ const campaign = 'profil-2026-10';
 const cases = [
   { name: 'Instagram campaign', query: `utm_source=instagram&utm_medium=social&utm_campaign=${campaign}&message=PRIVATE_MESSAGE&phone=PRIVATE_PHONE`, source: 'instagram' },
   { name: 'Facebook campaign', query: `utm_source=facebook&utm_medium=social&utm_campaign=${campaign}`, source: 'facebook' },
+  { name: 'TikTok campaign', query: `utm_source=tiktok&utm_medium=social&utm_campaign=${campaign}&ttclid=PRIVATE_CLICK`, source: 'tiktok' },
   { name: 'Unknown source', query: `utm_source=other&utm_medium=social&utm_campaign=${campaign}` },
   { name: 'Wrong medium', query: `utm_source=instagram&utm_medium=cpc&utm_campaign=${campaign}` },
   { name: 'Unknown campaign', query: 'utm_source=instagram&utm_medium=social&utm_campaign=PRIVATE_CAMPAIGN' },
